@@ -1,0 +1,18 @@
+I:\COURSES\AITEIT3\BITY3\IN710 OOSD C#\IN710 OOSD 2014 Practicals\Bridge Dealers\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+I:\COURSES\AITEIT3\BITY3\IN710 OOSD C#\IN710 OOSD 2014 Practicals\Bridge Dealers\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Users\Patricia\Documents\Work\IN710 OOSD 2016\IN710_2016_TeachingSessions\IN710 OOSD 2016 Week 01\Bridge Dealers for Practical\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
