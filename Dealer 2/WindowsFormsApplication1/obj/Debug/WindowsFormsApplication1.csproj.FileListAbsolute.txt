@@ -16,3 +16,5 @@ H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\ob
 H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 H:\My Documents\Visual Studio 2013\Projects\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
