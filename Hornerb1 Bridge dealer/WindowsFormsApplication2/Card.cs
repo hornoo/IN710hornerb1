@@ -19,14 +19,17 @@ namespace WindowsFormsApplication2
         private int rank;
 
  
+        public Card ()
+        {
 
+        }
         public Card(CardSuit suit, int rank)
         {
             this.suit = suit;
             this.rank = rank;
         }
 
-        internal CardSuit Suit
+        public CardSuit Suit
         {
             get { return suit; }
             set { suit = value; }

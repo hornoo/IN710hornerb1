@@ -12,7 +12,6 @@ namespace WindowsFormsApplication2
         const int HANDSIZE = 13;
         const int CARDRANKRANGE = 13;
         const int HANDS = 4;
-
         Card[] cardstack;
         Hand[] bridgeHands;
         
@@ -22,7 +21,7 @@ namespace WindowsFormsApplication2
             cardstack = new Card[DECKSIZE];
             bridgeHands = new Hand[HANDS];
             createDeck();
-
+            createHands();
         }
 
         public void createDeck()
@@ -39,6 +38,15 @@ namespace WindowsFormsApplication2
                     Console.WriteLine("Card #" + j +  " " + cardstack[j].Suit + cardstack[j].faceRank());
 
                 }
+            }
+        }
+
+        public void createHands()
+        {
+            for( int i = 0; i < bridgeHands.Length; i ++)
+            {
+                bridgeHands[i] = new Hand((PlayerHand)i); 
+            
             }
         }
 
@@ -59,6 +67,11 @@ namespace WindowsFormsApplication2
 
 
             }
+
+            foreach(Card card in cardstack){
+
+                Console.WriteLine(card.faceRank() + card.Suit);
+            }
         }
 
 
@@ -67,17 +80,19 @@ namespace WindowsFormsApplication2
             int handIndex = 0;
             int handCount = 0;
 
+            
             for (int i = 0; i < cardstack.Length; i++)
             {
+                Console.WriteLine(i + " " + cardstack[i].faceRank());
                 bridgeHands[handIndex].HandCards[handCount] = cardstack[i];
                 handIndex++;
 
-                if (handIndex == 4)
+                if (handIndex == 3)
                 {
                     handIndex = 0;
                     handCount++;
                 }
-            }
+            } 
 
         }
 

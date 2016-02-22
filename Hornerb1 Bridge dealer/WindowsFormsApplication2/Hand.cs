@@ -4,16 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+enum PlayerHand { N,S,E,W};
+
 namespace WindowsFormsApplication2
 {
     class Hand
     {
         private Card[] handCards;
         private int handSize = 13;
+        private PlayerHand player;
 
-        public Hand(Card[] handCards)
+        public Hand(PlayerHand player)
         {
-            this.handCards = handCards;
+            this.player = player;
+            Card[] handCards = new Card[handSize];
+        }
+
+        public PlayerHand Player
+        {
+            get { return player; }
+            set { player = value; }
         }
 
         public int HandSize
@@ -23,11 +33,14 @@ namespace WindowsFormsApplication2
         }
 
 
-        internal Card[] HandCards
+        public Card[] HandCards
         {
             get { return handCards; }
             set { handCards = value; }
         }
+
+
+
 
 
         // Return High card Points value of the hand.
@@ -43,6 +56,8 @@ namespace WindowsFormsApplication2
             return hcp;
         }
 
+
+        //Sort array of cards by suit
         public void sortHand()
         {
             for (int i = 0; i < handCards.Length; i++)

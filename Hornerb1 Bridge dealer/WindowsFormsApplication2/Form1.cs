@@ -22,6 +22,8 @@ namespace WindowsFormsApplication2
         private void dealButton_Click(object sender, EventArgs e)
         {
             Deck gameDeck = new Deck();
+            gameDeck.shuffle();
+            gameDeck.Deal();
 
 
 

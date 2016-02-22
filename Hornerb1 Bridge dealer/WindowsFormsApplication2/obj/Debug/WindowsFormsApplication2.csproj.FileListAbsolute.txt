@@ -7,3 +7,12 @@ c:\users\richa_000\documents\visual studio 2013\Projects\WindowsFormsApplication
 c:\users\richa_000\documents\visual studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
 c:\users\richa_000\documents\visual studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 c:\users\richa_000\documents\visual studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\Hornerb1 Bridge dealer\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
