@@ -14,6 +14,12 @@ namespace WindowsFormsApplication2
         private int handSize = 13;
         private PlayerHand player;
 
+        
+        public Hand()
+        {
+        }
+        
+        
         public Hand(PlayerHand player)
         {
             this.player = player;

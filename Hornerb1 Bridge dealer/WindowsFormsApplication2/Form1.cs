@@ -27,16 +27,16 @@ namespace WindowsFormsApplication2
             gameDeck.shuffle();
             gameDeck.Deal();
 
+            clearFormlists();
+
             for(int i = 0; i < gameDeck.BridgeHands.Length; i++){
                     gameDeck.BridgeHands[i].sortHand();
 
                 }
 
             printScoresToList();
-
+            HandWin();
                 
-                 
-
             }
 
 
@@ -50,7 +50,24 @@ namespace WindowsFormsApplication2
 
         private void HandWin()
         {
-       
+            Hand temp = gameDeck.BridgeHands[0];
+
+            foreach(Hand hand in gameDeck.BridgeHands)
+            {
+                if(hand.highCardPoint() > temp.highCardPoint())
+                {
+                    temp = hand;
+                }
+            }
+
+            topScoreTextBox.Text = "Hand " + temp.Player;
+
+        }
+
+        private void clearFormlists()
+        {
+            scoreListBox.Items.Clear();
+            playerScoreList.Items.Clear();
         }
 
         private void printScoresToList() 
