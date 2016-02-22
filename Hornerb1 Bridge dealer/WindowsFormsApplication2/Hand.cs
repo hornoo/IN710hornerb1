@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2
         public Hand(PlayerHand player)
         {
             this.player = player;
-            Card[] handCards = new Card[handSize];
+            handCards = new Card[handSize];
         }
 
         public PlayerHand Player
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication2
         }
 
 
-        //Sort array of cards by suit
+        //Sort array of cards by Rank
         public void sortHand()
         {
             for (int i = 0; i < handCards.Length; i++)
@@ -66,7 +66,7 @@ namespace WindowsFormsApplication2
                 {
                     Card temp;
 
-                    if(handCards[j].Suit > handCards[j + 1].Suit)
+                    if(handCards[j].Rank < handCards[j + 1].Rank)
                     {
                         temp = handCards[j + 1];
                         handCards[j + 1] = handCards[j];

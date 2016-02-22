@@ -12,6 +12,8 @@ namespace WindowsFormsApplication2
 {
     public partial class Form1 : Form
     {
+        Deck gameDeck;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,17 +23,76 @@ namespace WindowsFormsApplication2
 
         private void dealButton_Click(object sender, EventArgs e)
         {
-            Deck gameDeck = new Deck();
+            gameDeck = new Deck();
             gameDeck.shuffle();
             gameDeck.Deal();
 
+            for(int i = 0; i < gameDeck.BridgeHands.Length; i++){
+                    gameDeck.BridgeHands[i].sortHand();
+
+                }
+
+            printScoresToList();
+
+                
+                 
+
+            }
 
 
-        }
+
+        
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void HandWin()
+        {
+       
+        }
+
+        private void printScoresToList() 
+        {
+
+            for(int i = 0; i < gameDeck.BridgeHands.Length; i++)
+            {
+            scoreListBox.Items.Add("Hand " + gameDeck.BridgeHands[i].Player);
+
+            string diamonds = "D \t";
+            string hearts = "H \t";
+            string clubs = "C \t";
+            string spades = "S \t";
+
+                foreach (Card card in gameDeck.BridgeHands[i].HandCards)
+                {
+                    switch (card.Suit)
+                    {
+                        case CardSuit.D: diamonds += card.faceRank();
+                            break;
+                        case CardSuit.H: hearts += card.faceRank();
+                            break;
+                        case CardSuit.C: clubs += card.faceRank();
+                            break;
+                        case CardSuit.S: spades += card.faceRank();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                scoreListBox.Items.Add(diamonds);
+                scoreListBox.Items.Add(hearts);
+                scoreListBox.Items.Add(clubs);
+                scoreListBox.Items.Add(spades);
+
+                scoreListBox.Items.Add("HCP: " + gameDeck.BridgeHands[i].highCardPoint());
+                playerScoreList.Items.Add("Hand " + gameDeck.BridgeHands[i].Player + " " + gameDeck.BridgeHands[i].highCardPoint());
+   
+             }
+
+            
         }
     }
 }

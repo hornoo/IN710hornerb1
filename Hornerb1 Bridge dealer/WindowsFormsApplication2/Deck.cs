@@ -14,6 +14,7 @@ namespace WindowsFormsApplication2
         const int HANDS = 4;
         Card[] cardstack;
         Hand[] bridgeHands;
+
         
 
         public Deck()
@@ -22,6 +23,19 @@ namespace WindowsFormsApplication2
             bridgeHands = new Hand[HANDS];
             createDeck();
             createHands();
+        }
+
+
+        internal Hand[] BridgeHands
+        {
+            get { return bridgeHands; }
+            set { bridgeHands = value; }
+        }
+
+        public Card[] Cardstack
+        {
+            get { return cardstack; }
+            set { cardstack = value; }
         }
 
         public void createDeck()
@@ -87,7 +101,7 @@ namespace WindowsFormsApplication2
                 bridgeHands[handIndex].HandCards[handCount] = cardstack[i];
                 handIndex++;
 
-                if (handIndex == 3)
+                if (handIndex == 4)
                 {
                     handIndex = 0;
                     handCount++;
