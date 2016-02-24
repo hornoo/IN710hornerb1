@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TestVS2015
 {
-    public class Hand
+    public class Hand : IComparable
     {
         public List<Card> CardsInHand { get; set; }
         public int TotalHCP
@@ -33,6 +33,15 @@ namespace TestVS2015
             //CardsInHand.Sort();
             
             return 0;
+        }
+
+        public int CompareTo(object obj)
+        {
+            Hand otherHand = obj as Hand;
+
+            //return this.TotalHCP.CompareTo(otherHand.TotalHCP);
+
+            return otherHand.TotalHCP.CompareTo(this.TotalHCP);
         }
     }
 }

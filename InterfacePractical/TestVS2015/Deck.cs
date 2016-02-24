@@ -61,6 +61,9 @@ namespace TestVS2015
 
                 dealtHands.Add(currentHand);
             } // all hands dealt
+
+            dealtHands.Sort();
+
             return dealtHands;
         } // end Deal
 
