@@ -21,6 +21,7 @@ namespace TestVS2015
         {   
             foreach (Hand h in hands)
             {
+                
                 PrintHand(displayBox, h);
                 displayBox.Items.Add("------------------------------------------");
             }
@@ -32,6 +33,8 @@ namespace TestVS2015
             String heartString = "H:\t";
             String diamondString = "D:\t";
             String clubString = "C:\t";
+
+            
 
             // Remember the ShortRank data member in the Card class?
             // Here's where we use it...

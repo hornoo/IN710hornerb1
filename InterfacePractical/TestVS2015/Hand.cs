@@ -22,12 +22,16 @@ namespace TestVS2015
             CardsInHand.Add(card);
         }
 
+
+        //why does this return 0? maybe to confirm it has run?
         public int ComputeHCP()
         {
             TotalHCP = 0;
             foreach (Card c in CardsInHand)
                 TotalHCP += c.HCP;
-
+            
+            //CardsInHand.Sort();
+            
             return 0;
         }
     }
