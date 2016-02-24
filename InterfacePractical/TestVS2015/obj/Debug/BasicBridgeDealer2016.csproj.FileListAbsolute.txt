@@ -27,3 +27,12 @@ H:\My Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\Bas
 H:\My Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.Form1.resources
 H:\My Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.Properties.Resources.resources
 H:\My Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\BasicBridgeDealer2016.csproj.GenerateResource.Cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\bin\Debug\TestVS2015.exe.config
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\BasicBridgeDealer2016.csprojResolveAssemblyReference.cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.Form1.resources
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\TestVS2015.Properties.Resources.resources
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\obj\Debug\BasicBridgeDealer2016.csproj.GenerateResource.Cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\bin\Debug\TestVS2015.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\TestVS2015\bin\Debug\TestVS2015.pdb

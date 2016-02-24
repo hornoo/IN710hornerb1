@@ -107,10 +107,22 @@ namespace TestVS2015
 
         public int CompareTo(object obj)
         {
+            //Create other object to compare with this object
             Card otherCard = obj as Card;
 
-           // return this.rank.CompareTo(otherCard.rank);
-            return otherCard.rank.CompareTo(this.rank);
-        }
+            //Store value returned from compareing this and other cards rank
+            int cardSortValue = otherCard.rank.CompareTo(this.rank);
+
+            //if the ranks are the same, 0 will be returned and we then need to sort by the cards suit.
+            if (cardSortValue == 0)
+            {
+                //compare the siut of this and the other card and return the value with reference to there suit hierarchy.
+                return otherCard.Suit.CompareTo(this.Suit);
+            }
+            else
+                // else return the value from compairing their rank.
+                return cardSortValue;
+            }
+       
     }
 }
