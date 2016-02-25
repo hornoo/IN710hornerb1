@@ -1,0 +1,7 @@
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\bin\Debug\BasicBridgeDealer2016Tests.dll
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\bin\Debug\BasicBridgeDealer2016Tests.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\bin\Debug\TestVS2015.exe
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\bin\Debug\TestVS2015.pdb
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\obj\Debug\BasicBridgeDealer2016Tests.csprojResolveAssemblyReference.cache
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\obj\Debug\BasicBridgeDealer2016Tests.dll
+C:\Users\richa_000\Documents\GitHub\IN710hornerb1\InterfacePractical\BasicBridgeDealer2016Tests\obj\Debug\BasicBridgeDealer2016Tests.pdb

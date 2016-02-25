@@ -34,6 +34,8 @@ namespace TestVS2015
 
         // A Property with logic on write (set)
         private RankValue rank;
+        private int p1;
+        private int p2;
         public RankValue Rank
         {
             get
@@ -98,6 +100,18 @@ namespace TestVS2015
                     break;
             }
 
+        }
+
+        public Card(int p1, int p2)
+        {
+            // TODO: Complete member initialization
+            this.p1 = p1;
+            this.p2 = p2;
+        }
+
+        public Card()
+        {
+            // TODO: Complete member initialization
         }
 
         public override string ToString()
