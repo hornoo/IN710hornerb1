@@ -131,7 +131,7 @@ namespace TestVS2015
             if (cardSortValue == 0)
             {
                 //compare the siut of this and the other card and return the value with reference to there suit hierarchy.
-                return otherCard.Suit.CompareTo(this.Suit);
+                return this.Suit.CompareTo(otherCard.Suit);
             }
             else
                 // else return the value from compairing their rank.

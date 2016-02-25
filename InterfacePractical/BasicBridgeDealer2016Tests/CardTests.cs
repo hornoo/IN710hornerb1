@@ -14,20 +14,41 @@ namespace TestVS2015.Tests
         public void CardTest()
         {
             Card card1 = new Card((SuitValue)0, (RankValue)8);
-            //Assert.AreEqual("Two of Spades", card1.ToString());
-            Assert.AreEqual("T", card1.Rank);
+            Assert.AreEqual("T", card1.ShortRank);
         }
 
         [TestMethod()]
         public void ToStringTest()
         {
-            Assert.Fail();
+            Card card1 = new Card((SuitValue)0, (RankValue)8);
+            
+            Assert.AreEqual("Ten of Spades", card1.ToString());
+
         }
 
         [TestMethod()]
         public void CompareToTest()
         {
-            Assert.Fail();
+            
+            Card card1 = new Card((SuitValue)(0),(RankValue)1);
+            Card card2 = new Card((SuitValue)(1),(RankValue)1);
+            Card card3 = new Card((SuitValue)(2),(RankValue)1);
+            Card card4 = new Card((SuitValue)(3),(RankValue)2);
+            Card card5 = new Card((SuitValue)(0),(RankValue)3);
+
+
+            List<Card> sortedCardList = new List<Card>() { card5, card4, card1, card2, card3 };
+            List<Card> cardList = new List<Card>() { card2, card4, card1, card3, card5 };
+
+            cardList.Sort();
+            
+
+            for (int i = 0; i < sortedCardList.Count; i ++)
+            {
+                //Console.WriteLine("sorted " + sortedCardList[i].ToString() + " | unsorted" + cardList[i].ToString());
+                Assert.AreEqual(sortedCardList[i].ToString(), cardList[i].ToString());
+            }
+  
         }
     }
 }
