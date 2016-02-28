@@ -32,7 +32,7 @@
             this.butDelMovie = new System.Windows.Forms.Button();
             this.butSearchYear = new System.Windows.Forms.Button();
             this.butPrintAllMov = new System.Windows.Forms.Button();
-            this.listBox = new System.Windows.Forms.ListBox();
+            this.listBoxPrintMoviesResults = new System.Windows.Forms.ListBox();
             this.textBoxYearSearchInput = new System.Windows.Forms.TextBox();
             this.textBoxDeleteByYearMovieInput = new System.Windows.Forms.TextBox();
             this.textBoxInputMovieYear = new System.Windows.Forms.TextBox();
@@ -43,6 +43,9 @@
             this.labelMovieDirectorInput = new System.Windows.Forms.Label();
             this.labelSearchByYear = new System.Windows.Forms.Label();
             this.labelDeleteByYear = new System.Windows.Forms.Label();
+            this.labelIAddYearError = new System.Windows.Forms.Label();
+            this.labelTitleInputError = new System.Windows.Forms.Label();
+            this.labelDirectorInputError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // butAddMovie
@@ -53,15 +56,17 @@
             this.butAddMovie.TabIndex = 0;
             this.butAddMovie.Text = "Add Movie";
             this.butAddMovie.UseVisualStyleBackColor = true;
+            this.butAddMovie.Click += new System.EventHandler(this.butAddMovie_Click);
             // 
             // butDelMovie
             // 
-            this.butDelMovie.Location = new System.Drawing.Point(17, 176);
+            this.butDelMovie.Location = new System.Drawing.Point(17, 213);
             this.butDelMovie.Name = "butDelMovie";
             this.butDelMovie.Size = new System.Drawing.Size(75, 23);
             this.butDelMovie.TabIndex = 1;
             this.butDelMovie.Text = "Delete Movie";
             this.butDelMovie.UseVisualStyleBackColor = true;
+            this.butDelMovie.Click += new System.EventHandler(this.butDelMovie_Click);
             // 
             // butSearchYear
             // 
@@ -71,6 +76,7 @@
             this.butSearchYear.TabIndex = 2;
             this.butSearchYear.Text = "Search";
             this.butSearchYear.UseVisualStyleBackColor = true;
+            this.butSearchYear.Click += new System.EventHandler(this.butSearchYear_Click);
             // 
             // butPrintAllMov
             // 
@@ -80,14 +86,15 @@
             this.butPrintAllMov.TabIndex = 3;
             this.butPrintAllMov.Text = "Print All";
             this.butPrintAllMov.UseVisualStyleBackColor = true;
+            this.butPrintAllMov.Click += new System.EventHandler(this.butPrintAllMov_Click);
             // 
-            // listBox
+            // listBoxPrintMoviesResults
             // 
-            this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(122, 342);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(442, 173);
-            this.listBox.TabIndex = 4;
+            this.listBoxPrintMoviesResults.FormattingEnabled = true;
+            this.listBoxPrintMoviesResults.Location = new System.Drawing.Point(122, 342);
+            this.listBoxPrintMoviesResults.Name = "listBoxPrintMoviesResults";
+            this.listBoxPrintMoviesResults.Size = new System.Drawing.Size(442, 173);
+            this.listBoxPrintMoviesResults.TabIndex = 4;
             // 
             // textBoxYearSearchInput
             // 
@@ -98,7 +105,7 @@
             // 
             // textBoxDeleteByYearMovieInput
             // 
-            this.textBoxDeleteByYearMovieInput.Location = new System.Drawing.Point(185, 179);
+            this.textBoxDeleteByYearMovieInput.Location = new System.Drawing.Point(185, 211);
             this.textBoxDeleteByYearMovieInput.Name = "textBoxDeleteByYearMovieInput";
             this.textBoxDeleteByYearMovieInput.Size = new System.Drawing.Size(379, 20);
             this.textBoxDeleteByYearMovieInput.TabIndex = 6;
@@ -122,7 +129,7 @@
             // labelMovieTitleInput
             // 
             this.labelMovieTitleInput.AutoSize = true;
-            this.labelMovieTitleInput.Location = new System.Drawing.Point(119, 76);
+            this.labelMovieTitleInput.Location = new System.Drawing.Point(119, 95);
             this.labelMovieTitleInput.Name = "labelMovieTitleInput";
             this.labelMovieTitleInput.Size = new System.Drawing.Size(27, 13);
             this.labelMovieTitleInput.TabIndex = 9;
@@ -130,14 +137,14 @@
             // 
             // textBoxMovieTitleInput
             // 
-            this.textBoxMovieTitleInput.Location = new System.Drawing.Point(185, 73);
+            this.textBoxMovieTitleInput.Location = new System.Drawing.Point(185, 92);
             this.textBoxMovieTitleInput.Name = "textBoxMovieTitleInput";
             this.textBoxMovieTitleInput.Size = new System.Drawing.Size(379, 20);
             this.textBoxMovieTitleInput.TabIndex = 10;
             // 
             // textBoxMovieDirectorInput
             // 
-            this.textBoxMovieDirectorInput.Location = new System.Drawing.Point(185, 99);
+            this.textBoxMovieDirectorInput.Location = new System.Drawing.Point(185, 136);
             this.textBoxMovieDirectorInput.Name = "textBoxMovieDirectorInput";
             this.textBoxMovieDirectorInput.Size = new System.Drawing.Size(379, 20);
             this.textBoxMovieDirectorInput.TabIndex = 11;
@@ -145,7 +152,7 @@
             // labelMovieDirectorInput
             // 
             this.labelMovieDirectorInput.AutoSize = true;
-            this.labelMovieDirectorInput.Location = new System.Drawing.Point(119, 102);
+            this.labelMovieDirectorInput.Location = new System.Drawing.Point(119, 139);
             this.labelMovieDirectorInput.Name = "labelMovieDirectorInput";
             this.labelMovieDirectorInput.Size = new System.Drawing.Size(44, 13);
             this.labelMovieDirectorInput.TabIndex = 12;
@@ -163,17 +170,44 @@
             // labelDeleteByYear
             // 
             this.labelDeleteByYear.AutoSize = true;
-            this.labelDeleteByYear.Location = new System.Drawing.Point(119, 182);
+            this.labelDeleteByYear.Location = new System.Drawing.Point(119, 218);
             this.labelDeleteByYear.Name = "labelDeleteByYear";
             this.labelDeleteByYear.Size = new System.Drawing.Size(29, 13);
             this.labelDeleteByYear.TabIndex = 14;
             this.labelDeleteByYear.Text = "Year";
+            // 
+            // labelIAddYearError
+            // 
+            this.labelIAddYearError.AutoSize = true;
+            this.labelIAddYearError.Location = new System.Drawing.Point(185, 73);
+            this.labelIAddYearError.Name = "labelIAddYearError";
+            this.labelIAddYearError.Size = new System.Drawing.Size(0, 13);
+            this.labelIAddYearError.TabIndex = 15;
+            // 
+            // labelTitleInputError
+            // 
+            this.labelTitleInputError.AutoSize = true;
+            this.labelTitleInputError.Location = new System.Drawing.Point(185, 120);
+            this.labelTitleInputError.Name = "labelTitleInputError";
+            this.labelTitleInputError.Size = new System.Drawing.Size(0, 13);
+            this.labelTitleInputError.TabIndex = 16;
+            // 
+            // labelDirectorInputError
+            // 
+            this.labelDirectorInputError.AutoSize = true;
+            this.labelDirectorInputError.Location = new System.Drawing.Point(185, 159);
+            this.labelDirectorInputError.Name = "labelDirectorInputError";
+            this.labelDirectorInputError.Size = new System.Drawing.Size(0, 13);
+            this.labelDirectorInputError.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 533);
+            this.Controls.Add(this.labelDirectorInputError);
+            this.Controls.Add(this.labelTitleInputError);
+            this.Controls.Add(this.labelIAddYearError);
             this.Controls.Add(this.labelDeleteByYear);
             this.Controls.Add(this.labelSearchByYear);
             this.Controls.Add(this.labelMovieDirectorInput);
@@ -184,7 +218,7 @@
             this.Controls.Add(this.textBoxInputMovieYear);
             this.Controls.Add(this.textBoxDeleteByYearMovieInput);
             this.Controls.Add(this.textBoxYearSearchInput);
-            this.Controls.Add(this.listBox);
+            this.Controls.Add(this.listBoxPrintMoviesResults);
             this.Controls.Add(this.butPrintAllMov);
             this.Controls.Add(this.butSearchYear);
             this.Controls.Add(this.butDelMovie);
@@ -202,7 +236,7 @@
         private System.Windows.Forms.Button butDelMovie;
         private System.Windows.Forms.Button butSearchYear;
         private System.Windows.Forms.Button butPrintAllMov;
-        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.ListBox listBoxPrintMoviesResults;
         private System.Windows.Forms.TextBox textBoxYearSearchInput;
         private System.Windows.Forms.TextBox textBoxDeleteByYearMovieInput;
         private System.Windows.Forms.TextBox textBoxInputMovieYear;
@@ -213,6 +247,9 @@
         private System.Windows.Forms.Label labelMovieDirectorInput;
         private System.Windows.Forms.Label labelSearchByYear;
         private System.Windows.Forms.Label labelDeleteByYear;
+        private System.Windows.Forms.Label labelIAddYearError;
+        private System.Windows.Forms.Label labelTitleInputError;
+        private System.Windows.Forms.Label labelDirectorInputError;
     }
 }
 
