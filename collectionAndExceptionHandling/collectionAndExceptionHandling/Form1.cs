@@ -15,6 +15,7 @@ namespace collectionAndExceptionHandling
         BestMovieDataBase movieDataBase; 
         MovieInput InputWorker;
         MoviePrinter OutputWorker;
+        FormInputErrorFeedback ErrorFeedBackWorker;
         
 
         public Form1()
@@ -23,6 +24,7 @@ namespace collectionAndExceptionHandling
             movieDataBase = new BestMovieDataBase();
             InputWorker = new MovieInput();
             OutputWorker = new MoviePrinter();
+            ErrorFeedBackWorker = new FormInputErrorFeedback();
         }
 
 
@@ -32,31 +34,7 @@ namespace collectionAndExceptionHandling
 
            // movieDateBase.AddMovie(InputWorker.insertMovie(textBoxInputMovieYear,labelIAddYearError,textBoxMovieTitleInput, labelTitleInputError, textBoxMovieDirectorInput, labelDirectorInputError);
 
-
-            //Not sure about logic below, should I have another class of handeling errors and presenting the error? 
             //Check format of year, and text input, present warning if invalid. If all inputs ok create movie object and add to database\dictionary.
-            /*
-           if((InputWorker.CheckYearInput(textBoxInputMovieYear, labelIAddYearError)) &&
-
-            (InputWorker.CheckStringInput(textBoxMovieTitleInput, labelTitleInputError)) &&
-
-            (InputWorker.CheckStringInput(textBoxMovieDirectorInput, labelDirectorInputError))) {
-
-               //if move is added to dictionary with out any collision clear text boxs and waning labels, give feedback.
-                if(movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)) == 1)
-                {
-                    clearAllFormInputs();
-                    labelDirectorInputError.Text = "Movie added Sucessfully";
-                }else
-                {
-                    labelIAddYearError.Text = "";
-                    labelTitleInputError.Text = "";
-                    labelDirectorInputError.Text = "Movie aleady exists in database at year.";
-                }
-
-            }
-            */
-
             if(ValidateAllFieldInputs())
             {
                 if (movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)) == 1)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace collectionAndExceptionHandling
 {
@@ -17,14 +18,28 @@ namespace collectionAndExceptionHandling
         string intOutOfyearRange;
         string stringToLong = "Input to long, Max of 50 charaters";
         string fieldLeftBlank = "Field cannot be blank";
+        string movieaAddSucessful = "Movie added Sucessfully";
+        string movieNotAddedExisits = "Movie aleady exists in database at year.";
+        List<string> errorStringlist;
 
         public FormInputErrorFeedback()
         {
             currentYear = DateTime.Now.Year;
             intOutOfyearRange = "Year must be between" + FirstOscarYear + " and " + currentYear;
+
+            errorStringlist = new List<string>(){
+            intContainsString,
+            intOutOfyearRange,
+            stringToLong,
+            fieldLeftBlank,
+            movieaAddSucessful,
+            movieNotAddedExisits
+            };
+
         }
 
-
+        public void DisplayErrorMessage(int errorCode, )
+        
 
 
     }
