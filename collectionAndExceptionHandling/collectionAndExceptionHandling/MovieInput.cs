@@ -19,11 +19,11 @@ namespace collectionAndExceptionHandling
         }
 
         //Check year input from form is valid return true if number between 1927 and current year. Check for non numeric charaters and present errors where required
-        public bool CheckYearInput(TextBox inputTextBox, Label errorLabel)
+        public int CheckYearInput(TextBox inputTextBox)
         {
-            bool yearIsOk = true;
+            bool yearIsOk = false;
             int yearInput = 0;
-            errorLabel.Text = "";
+            int yearErrorForReturn = 0;
             
             
             try
@@ -34,7 +34,8 @@ namespace collectionAndExceptionHandling
             {
                 Console.WriteLine(e.Message);
                 yearIsOk = false;
-                errorLabel.Text = "Year must be a four digit number, eg \"2001\" is ok, \"2 thousand and 1\" not ok";
+                yearErrorForReturn = 1;
+                
             }
             catch(System.OverflowException e)
             {
@@ -49,13 +50,13 @@ namespace collectionAndExceptionHandling
 
                 if ((yearInput <= currentYear) && (yearInput >= FirstOscarYear))
                 {
-                    errorLabel.Text = "";
+                    yearErrorForReturn = 0;
                     yearIsOk = true;
                     Console.WriteLine("movie year ok");
                 }
                 else
                 {
-                    errorLabel.Text = "Year must be between" + FirstOscarYear + " and " + currentYear;
+                    yearErrorForReturn = 2;
                     yearIsOk = false;
                     Console.WriteLine("movie out of range");
 
@@ -63,36 +64,39 @@ namespace collectionAndExceptionHandling
 
             }
 
-            return yearIsOk;
+
+            if(!yearIsOk)
+            {
+                yearErrorForReturn = 7;
+            }
+
+            return yearErrorForReturn;
 
         }
 
         //Check input from a textbox is a string and not over 50 charaters long, return if successful.
-        public bool CheckStringInput(TextBox inputTextBox, Label errorLabel) 
+        public int CheckStringInput(TextBox inputTextBox) 
         {
-            
-            
+                     
             int maxStringLength = 50;
-            errorLabel.Text = "";
+            
 
             if (inputTextBox.TextLength > maxStringLength)
             {
-                errorLabel.Text = "Input to long, Max of 50 charaters";
-                return false;
+                
+                return 3;
             }
             if (inputTextBox.TextLength < 1)
             {
-                errorLabel.Text = "Field cannot be blank";
-                return false;
+               
+                return 4;
             }
             else
             {
-                errorLabel.Text = "";
-                return true;
+                return 0;
             }
             
         }
-
 
 
         // should I be adding movie to data base here? and covering all error messages in here as well?
