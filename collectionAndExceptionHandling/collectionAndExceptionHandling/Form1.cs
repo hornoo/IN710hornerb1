@@ -12,43 +12,74 @@ namespace collectionAndExceptionHandling
 {
     public partial class Form1 : Form
     {
-        BestMovieDataBase movieDateBase = new BestMovieDataBase();
-        MovieInput InputWorker = new MovieInput();
-        MoviePrinter OutputWorker = new MoviePrinter();
+        BestMovieDataBase movieDataBase; 
+        MovieInput InputWorker;
+        MoviePrinter OutputWorker;
+        
 
         public Form1()
         {
             InitializeComponent();
-            
+            movieDataBase = new BestMovieDataBase();
+            InputWorker = new MovieInput();
+            OutputWorker = new MoviePrinter();
         }
+
 
         private void butAddMovie_Click(object sender, EventArgs e)
         {
 
 
-            if((InputWorker.CheckYearInput(textBoxInputMovieYear, labelIAddYearError)) &&
+           // movieDateBase.AddMovie(InputWorker.insertMovie(textBoxInputMovieYear,labelIAddYearError,textBoxMovieTitleInput, labelTitleInputError, textBoxMovieDirectorInput, labelDirectorInputError);
+
+
+            //Not sure about logic below, should I have another class of handeling errors and presenting the error? 
+            //Check format of year, and text input, present warning if invalid. If all inputs ok create movie object and add to database\dictionary.
+           if((InputWorker.CheckYearInput(textBoxInputMovieYear, labelIAddYearError)) &&
 
             (InputWorker.CheckStringInput(textBoxMovieTitleInput, labelTitleInputError)) &&
 
             (InputWorker.CheckStringInput(textBoxMovieDirectorInput, labelDirectorInputError))) {
 
+               //if move is added to dictionary with out any collision clear text boxs and waning labels, give feedback.
+                if(movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)) == 1)
+                {
+                    labelIAddYearError.Text = "";
+                    labelTitleInputError.Text = "";
+                    textBoxInputMovieYear.Clear();
+                    textBoxMovieDirectorInput.Clear();
+                    textBoxMovieTitleInput.Clear();
+                    labelDirectorInputError.Text = "Movie added Sucessfully";
+                }else
+                {
+                    labelIAddYearError.Text = "";
+                    labelTitleInputError.Text = "";
+                    labelDirectorInputError.Text = "Movie aleady exists in database at year.";
+                }
+
             }
+
+
+          
 
         }
 
         private void butDelMovie_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void butSearchYear_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void butPrintAllMov_Click(object sender, EventArgs e)
         {
-            OutputWorker.printAllMovies(movieDateBase.MovieTable, listBoxPrintMoviesResults);
+            //Print contents of data base to listbox.
+            OutputWorker.printAllMovies(movieDataBase.MovieTable, listBoxPrintMoviesResults);
         }
 
 

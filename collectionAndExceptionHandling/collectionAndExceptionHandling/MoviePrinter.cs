@@ -16,6 +16,10 @@ namespace collectionAndExceptionHandling
 
         public void printAllMovies(Dictionary<int,Movie> Movies, ListBox listBoxToPrinto)
         {
+            //Clear items from list box
+            listBoxToPrinto.Items.Clear();
+
+            //Print each item out to list box
             foreach(KeyValuePair<int, Movie> CurrentMovie in Movies)
             {
                 listBoxToPrinto.Items.Add(CurrentMovie.Value.ToString());

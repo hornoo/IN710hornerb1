@@ -11,13 +11,14 @@ namespace collectionAndExceptionHandling
     class MovieInput
     {
         const int FirstOscarYear = 1927;
-        int currentYear = DateTime.Now.Year;
+        int currentYear;
 
         public MovieInput()
         {
-            
+            currentYear = DateTime.Now.Year;
         }
 
+        //Check year input from form is valid return true if number between 1927 and current year. Check for non numeric charaters and present errors where required
         public bool CheckYearInput(TextBox inputTextBox, Label errorLabel)
         {
             bool yearIsOk = true;
@@ -27,7 +28,7 @@ namespace collectionAndExceptionHandling
             
             try
             {
-                yearInput = Convert.ToInt32(inputTextBox.Text);
+                yearInput = Convert.ToInt32(inputTextBox.Text.Trim());
             }
             catch(System.FormatException e)
             {
@@ -66,7 +67,7 @@ namespace collectionAndExceptionHandling
 
         }
 
-
+        //Check input from a textbox is a string and not over 50 charaters long, return if successful.
         public bool CheckStringInput(TextBox inputTextBox, Label errorLabel) 
         {
             
@@ -92,13 +93,20 @@ namespace collectionAndExceptionHandling
             
         }
 
-        public void insertMovie(TextBox yearTextbox, TextBox titletextBox, TextBox directortextbox, BestMovieDataBase moviedatabase)
+
+
+        // should I be adding movie to data base here? and covering all error messages in here as well?
+
+        //Create a movie from supplied textboxs, return movie.
+        public Movie CreateMovie(TextBox yearTextbox, TextBox titletextBox, TextBox directortextbox)
         {
-            int year = Convert.ToInt32(yearTextbox);
+            int movieYear;
+            
+            movieYear = Convert.ToInt32(yearTextbox.Text.ToString().Trim());
 
-            Movie newMovie = new Movie(year, titletextBox.ToString(),directortextbox.ToString());
+            Movie newMovie = new Movie(movieYear, titletextBox.Text.ToString().Trim(),directortextbox.Text.ToString().Trim());
 
-            moviedatabase.AddMovie(year,newMovie);
+            return newMovie;
         }
 
 

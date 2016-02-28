@@ -8,6 +8,7 @@ namespace collectionAndExceptionHandling
 {
     class BestMovieDataBase
     {
+        //not sure if this needs to be public
         public Dictionary<int, Movie> MovieTable { get; set; }
 
         public BestMovieDataBase()
@@ -15,6 +16,7 @@ namespace collectionAndExceptionHandling
             SeedDataBase();
         }
 
+        //methof to seed database with movies initially.
         public void SeedDataBase()
         {
 
@@ -34,27 +36,40 @@ namespace collectionAndExceptionHandling
 
         }
 
-        public int AddMovie(int key, Movie movie)
+        //Add movie to data base, return is if was added sucessfully or not.
+        public int AddMovie(Movie movie)
         {
-            int movieAdded;
-
-            if (MovieTable.ContainsKey(key))
+           
+            //dont think i need to check fo rnull, this for was when code was different.
+            if (movie == null)
+            {   
+                return 0;
+            }
+            //  Check if movie/key already in dictionary/database, return 0 if it is else add to database and return 1.
+            else if (MovieTable.ContainsKey(movie.Year))
             {
-                movieAdded = 0;
+                return 0;
             }
             else
             {
-                MovieTable.Add(key, movie);
-                movieAdded = 1;
+                MovieTable.Add(movie.Year, movie);
+                return 1;
             }
 
-            return movieAdded;
    
         }
 
-        public void RemoveMovie(int key)
+        public int RemoveMovie(int key)
         {
-            MovieTable.Remove(key);
+            if (MovieTable.ContainsKey(key))
+            {
+                MovieTable.Remove(key);
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
 
