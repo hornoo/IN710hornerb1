@@ -40,20 +40,20 @@ namespace collectionAndExceptionHandling
         public int AddMovie(Movie movie)
         {
            
-            //dont think i need to check fo rnull, this for was when code was different.
+            //dont think i need to check for null, this for was when code was different.
             if (movie == null)
             {   
-                return 0;
+                return 7;
             }
             //  Check if movie/key already in dictionary/database, return 0 if it is else add to database and return 1.
             else if (MovieTable.ContainsKey(movie.Year))
             {
-                return 0;
+                return 6;
             }
             else
             {
                 MovieTable.Add(movie.Year, movie);
-                return 1;
+                return 5;
             }
 
    

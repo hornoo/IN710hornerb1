@@ -21,7 +21,7 @@ namespace collectionAndExceptionHandling
         //Check year input from form is valid return true if number between 1927 and current year. Check for non numeric charaters and present errors where required
         public int CheckYearInput(TextBox inputTextBox)
         {
-            bool yearIsOk = false;
+            bool yearIsOk = true;
             int yearInput = 0;
             int yearErrorForReturn = 0;
             
@@ -65,7 +65,7 @@ namespace collectionAndExceptionHandling
             }
 
 
-            if(!yearIsOk)
+            if((!yearIsOk) && (yearErrorForReturn == 0))
             {
                 yearErrorForReturn = 7;
             }
@@ -79,11 +79,12 @@ namespace collectionAndExceptionHandling
         {
                      
             int maxStringLength = 50;
+
+            Console.WriteLine(inputTextBox.TextLength);
             
 
             if (inputTextBox.TextLength > maxStringLength)
             {
-                
                 return 3;
             }
             if (inputTextBox.TextLength < 1)

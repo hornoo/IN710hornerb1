@@ -37,17 +37,7 @@ namespace collectionAndExceptionHandling
             //Check format of year, and text input, present warning if invalid. If all inputs ok create movie object and add to database\dictionary.
             if(ValidateAllFieldInputs())
             {
-                if (movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)) == 1)
-                {
-                    clearAllFormInputs();
-                    labelDirectorInputError.Text = "Movie added Sucessfully";
-                }
-                else
-                {
-                    labelIAddYearError.Text = "";
-                    labelTitleInputError.Text = "";
-                    labelDirectorInputError.Text = "Movie aleady exists in database at year.";
-                }
+                ErrorFeedBackWorker.DisplayErrorMessage(movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)),labelDirectorInputError);
             }
           
 
@@ -85,11 +75,11 @@ namespace collectionAndExceptionHandling
             bool allFieldsOk = false;
             List<bool> listBoolTextFieldValidates = new List<bool>();
 
-            listBoolTextFieldValidates.Add(InputWorker.CheckYearInput(textBoxInputMovieYear, labelIAddYearError));
-            listBoolTextFieldValidates.Add(InputWorker.CheckStringInput(textBoxMovieTitleInput, labelTitleInputError));
-            listBoolTextFieldValidates.Add(InputWorker.CheckStringInput(textBoxMovieDirectorInput, labelDirectorInputError));
+            listBoolTextFieldValidates.Add(ErrorFeedBackWorker.DisplayErrorMessage(InputWorker.CheckYearInput(textBoxInputMovieYear),labelIAddYearError));
+            listBoolTextFieldValidates.Add(ErrorFeedBackWorker.DisplayErrorMessage(InputWorker.CheckStringInput(textBoxMovieTitleInput), labelTitleInputError));
+            listBoolTextFieldValidates.Add(ErrorFeedBackWorker.DisplayErrorMessage(InputWorker.CheckStringInput(textBoxMovieDirectorInput), labelDirectorInputError));
 
-            if (listBoolTextFieldValidates.Contains(allFieldsOk))
+            if (listBoolTextFieldValidates.Contains(true))
             {
                 allFieldsOk = false;
             }
@@ -98,10 +88,10 @@ namespace collectionAndExceptionHandling
                 allFieldsOk = true;
             }
 
-
-
             return allFieldsOk;
 
         }
+
+        
     }
 }

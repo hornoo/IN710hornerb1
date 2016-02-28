@@ -51,6 +51,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInputErrorFeedback.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieInput.cs" />
     <Compile Include="MoviePrinter.cs" />

@@ -20,6 +20,8 @@ namespace collectionAndExceptionHandling
         string fieldLeftBlank = "Field cannot be blank";
         string movieaAddSucessful = "Movie added Sucessfully";
         string movieNotAddedExisits = "Movie aleady exists in database at year.";
+        string noError = "";
+        string undefiledError = "Error Undefined";
         List<string> errorStringlist;
 
         public FormInputErrorFeedback()
@@ -28,17 +30,36 @@ namespace collectionAndExceptionHandling
             intOutOfyearRange = "Year must be between" + FirstOscarYear + " and " + currentYear;
 
             errorStringlist = new List<string>(){
+            noError,
             intContainsString,
             intOutOfyearRange,
             stringToLong,
             fieldLeftBlank,
             movieaAddSucessful,
-            movieNotAddedExisits
+            movieNotAddedExisits,
+            undefiledError
+
             };
 
         }
 
-        public void DisplayErrorMessage(int errorCode, )
+        public bool DisplayErrorMessage(int errorCode, Label errorOutPutLabel)
+        {
+            bool isAnError = false;
+
+            if(errorCode > 0)
+            {
+                isAnError = true;
+            }
+            else
+            {
+                isAnError = false;
+            }
+            errorOutPutLabel.Text = errorStringlist[errorCode];
+
+
+            return isAnError;
+        }
         
 
 
