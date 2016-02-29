@@ -29,7 +29,7 @@ namespace collectionAndExceptionHandling
             }
         }
 
-        public void printAllMovies(Dictionary<int,Movie> Movies, ListBox listBoxToPrintTo)
+        public void printAllMovies(SortedDictionary<int,Movie> Movies, ListBox listBoxToPrintTo)
         {
             //Clear items from list box
             listBoxToPrintTo.Items.Clear();

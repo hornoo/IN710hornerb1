@@ -9,7 +9,7 @@ namespace collectionAndExceptionHandling
     class BestMovieDataBase
     {
         //not sure if this needs to be public
-        public Dictionary<int, Movie> MovieTable { get; set; }
+        public SortedDictionary<int, Movie> MovieTable { get; set; }
 
         public BestMovieDataBase()
         {
@@ -20,7 +20,7 @@ namespace collectionAndExceptionHandling
         public void SeedDataBase()
         {
 
-            MovieTable = new Dictionary<int, Movie>();
+            MovieTable = new SortedDictionary<int, Movie>();
 
             //Seed movies into table;
             Movie movie1 = new Movie(2000, "Gladiator", "Ridley Scott");
