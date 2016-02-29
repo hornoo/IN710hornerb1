@@ -4,6 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/*
+	
+	Name: Richard Horne
+	Title: Best Movie Database
+	Date: 29/02/2016
+	Description: This Best move database creates a sorted dictionary of movies, it handels movies being added , removed and searched.
+    
+*/
+
 namespace collectionAndExceptionHandling
 {
     class BestMovieDataBase
@@ -13,10 +23,11 @@ namespace collectionAndExceptionHandling
 
         public BestMovieDataBase()
         {
+            //Seed database when instantiated
             SeedDataBase();
         }
 
-        //methof to seed database with movies initially.
+        //method to seed database with movies initially.
         public void SeedDataBase()
         {
 
@@ -45,7 +56,7 @@ namespace collectionAndExceptionHandling
             {   
                 return 7;
             }
-            //  Check if movie/key already in dictionary/database, return 0 if it is else add to database and return 1.
+            //  Check if movie/key already in dictionary/database, return 6 if it is else add to database and return 1.
             else if (MovieTable.ContainsKey(movie.Year))
             {
                 return 6;
@@ -59,6 +70,7 @@ namespace collectionAndExceptionHandling
    
         }
 
+        //Check if moveie for year is in data base if it isreturn 9 otherwise remove movie from dictionary.
         public int RemoveMovie(int key)
         {
             if (MovieTable.ContainsKey(key))
@@ -72,6 +84,7 @@ namespace collectionAndExceptionHandling
             }
         }
 
+        //check if movie exists  in data base if it does, retuen the movie otherwise return null movie object.
         public Movie SearchForMovie(int movieYear)
         {
             if (MovieTable.ContainsKey(movieYear))
