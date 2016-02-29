@@ -35,9 +35,13 @@ namespace collectionAndExceptionHandling
            // movieDateBase.AddMovie(InputWorker.insertMovie(textBoxInputMovieYear,labelIAddYearError,textBoxMovieTitleInput, labelTitleInputError, textBoxMovieDirectorInput, labelDirectorInputError);
 
             //Check format of year, and text input, present warning if invalid. If all inputs ok create movie object and add to database\dictionary.
-            if(ValidateAllFieldInputs())
+
+           
+
+            if(ValidateAllFieldInputsForAddingMovie())
             {
                 ErrorFeedBackWorker.DisplayErrorMessage(movieDataBase.AddMovie(InputWorker.CreateMovie(textBoxInputMovieYear, textBoxMovieTitleInput, textBoxMovieDirectorInput)),labelDirectorInputError);
+                
             }
           
 
@@ -45,13 +49,29 @@ namespace collectionAndExceptionHandling
 
         private void butDelMovie_Click(object sender, EventArgs e)
         {
+            
 
+            if (ValidateYearField(textBoxDeleteByYearMovieInput, labelDeleteMovieError))
+            {
+                ErrorFeedBackWorker.DisplayErrorMessage(movieDataBase.RemoveMovie(Convert.ToInt32(textBoxDeleteByYearMovieInput.Text.Trim())), labelDeleteMovieError);
+                
+            }
 
         }
 
         private void butSearchYear_Click(object sender, EventArgs e)
         {
+            
 
+            if (ValidateYearField(textBoxYearSearchInput, labelSearchErrorInput))
+            {
+                
+                ErrorFeedBackWorker.DisplayErrorMessage(
+                                                        OutputWorker.printSearchedMovie(
+                                                                                        movieDataBase.SearchForMovie(Convert.ToInt32(textBoxYearSearchInput.Text.Trim()))
+                                                                                       , listBoxPrintMoviesResults)
+                                                       , labelSearchErrorInput);
+            }
 
         }
 
@@ -68,9 +88,12 @@ namespace collectionAndExceptionHandling
             textBoxInputMovieYear.Clear();
             textBoxMovieDirectorInput.Clear();
             textBoxMovieTitleInput.Clear();
+            labelDeleteMovieError.Text = "";
+            labelDirectorInputError.Text = "";
+
         }
 
-        private bool ValidateAllFieldInputs ()
+        private bool ValidateAllFieldInputsForAddingMovie ()
         {
             bool allFieldsOk = false;
             List<bool> listBoolTextFieldValidates = new List<bool>();
@@ -90,6 +113,11 @@ namespace collectionAndExceptionHandling
 
             return allFieldsOk;
 
+        }
+
+        private bool ValidateYearField(TextBox inputYearTextBox, Label Outputlabel)
+        {
+            return !ErrorFeedBackWorker.DisplayErrorMessage(InputWorker.CheckYearInput(inputYearTextBox), Outputlabel);
         }
 
         

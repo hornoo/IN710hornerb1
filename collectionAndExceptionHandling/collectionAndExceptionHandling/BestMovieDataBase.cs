@@ -64,14 +64,25 @@ namespace collectionAndExceptionHandling
             if (MovieTable.ContainsKey(key))
             {
                 MovieTable.Remove(key);
-                return 1;
+                return 8;
             }
             else
             {
-                return 0;
+                return 9;
             }
         }
 
+        public Movie SearchForMovie(int movieYear)
+        {
+            if (MovieTable.ContainsKey(movieYear))
+            {
+                return MovieTable[movieYear];
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
     }

@@ -14,14 +14,18 @@ namespace collectionAndExceptionHandling
 
 
         //error messages
-        string intContainsString = "Year must be a four digit number, eg \"2001\" is ok, \"2 thousand and 1\" not ok";
-        string intOutOfyearRange;
-        string stringToLong = "Input to long, Max of 50 charaters";
-        string fieldLeftBlank = "Field cannot be blank";
-        string movieaAddSucessful = "Movie added Sucessfully";
-        string movieNotAddedExisits = "Movie aleady exists in database at year.";
-        string noError = "";
-        string undefiledError = "Error Undefined";
+        string intContainsString = "Year must be a four digit number, eg \"2001\" is ok, \"2 thousand and 1\" not ok"; //0
+        string intOutOfyearRange; //1
+        string stringToLong = "Input to long, Max of 50 charaters"; //2
+        string fieldLeftBlank = "Field cannot be blank"; //3
+        string movieaAddSucessful = "Movie added Sucessfully"; //4
+        string movieNotAddedExisits = "Movie aleady exists in database at year."; //5
+        string noError = ""; //6
+        string undefiledError = "Error Undefined"; //7
+        string movieDeleted = "Movie Deleted from database"; //8
+        string MovieDoesntExistdelete = "Movie does not exist in database to delete"; //9
+        string MovieDoesntExistSearch = "Movie search did not return a movie"; //10
+
         List<string> errorStringlist;
 
         public FormInputErrorFeedback()
@@ -37,7 +41,10 @@ namespace collectionAndExceptionHandling
             fieldLeftBlank,
             movieaAddSucessful,
             movieNotAddedExisits,
-            undefiledError
+            undefiledError,
+            movieDeleted,
+            MovieDoesntExistdelete,
+            MovieDoesntExistSearch
 
             };
 

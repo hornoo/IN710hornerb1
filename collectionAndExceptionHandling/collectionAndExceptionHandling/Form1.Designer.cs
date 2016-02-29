@@ -46,6 +46,8 @@
             this.labelIAddYearError = new System.Windows.Forms.Label();
             this.labelTitleInputError = new System.Windows.Forms.Label();
             this.labelDirectorInputError = new System.Windows.Forms.Label();
+            this.labelDeleteMovieError = new System.Windows.Forms.Label();
+            this.labelSearchErrorInput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // butAddMovie
@@ -200,11 +202,29 @@
             this.labelDirectorInputError.Size = new System.Drawing.Size(0, 13);
             this.labelDirectorInputError.TabIndex = 17;
             // 
+            // labelDeleteMovieError
+            // 
+            this.labelDeleteMovieError.AutoSize = true;
+            this.labelDeleteMovieError.Location = new System.Drawing.Point(185, 234);
+            this.labelDeleteMovieError.Name = "labelDeleteMovieError";
+            this.labelDeleteMovieError.Size = new System.Drawing.Size(0, 13);
+            this.labelDeleteMovieError.TabIndex = 18;
+            // 
+            // labelSearchErrorInput
+            // 
+            this.labelSearchErrorInput.AutoSize = true;
+            this.labelSearchErrorInput.Location = new System.Drawing.Point(185, 321);
+            this.labelSearchErrorInput.Name = "labelSearchErrorInput";
+            this.labelSearchErrorInput.Size = new System.Drawing.Size(0, 13);
+            this.labelSearchErrorInput.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 533);
+            this.Controls.Add(this.labelSearchErrorInput);
+            this.Controls.Add(this.labelDeleteMovieError);
             this.Controls.Add(this.labelDirectorInputError);
             this.Controls.Add(this.labelTitleInputError);
             this.Controls.Add(this.labelIAddYearError);
@@ -224,7 +244,6 @@
             this.Controls.Add(this.butDelMovie);
             this.Controls.Add(this.butAddMovie);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +269,8 @@
         private System.Windows.Forms.Label labelIAddYearError;
         private System.Windows.Forms.Label labelTitleInputError;
         private System.Windows.Forms.Label labelDirectorInputError;
+        private System.Windows.Forms.Label labelDeleteMovieError;
+        private System.Windows.Forms.Label labelSearchErrorInput;
     }
 }
 

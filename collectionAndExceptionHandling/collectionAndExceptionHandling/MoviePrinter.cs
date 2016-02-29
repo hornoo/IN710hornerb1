@@ -14,15 +14,30 @@ namespace collectionAndExceptionHandling
 
         }
 
-        public void printAllMovies(Dictionary<int,Movie> Movies, ListBox listBoxToPrinto)
+        public int printSearchedMovie(Movie movie, ListBox listBoxToPrintTo)
+        {
+            listBoxToPrintTo.Items.Clear();
+
+            if (movie == null)
+            {
+                return 10;
+            }
+            else
+            {
+                listBoxToPrintTo.Items.Add(movie.ToString());
+                return 0;
+            }
+        }
+
+        public void printAllMovies(Dictionary<int,Movie> Movies, ListBox listBoxToPrintTo)
         {
             //Clear items from list box
-            listBoxToPrinto.Items.Clear();
+            listBoxToPrintTo.Items.Clear();
 
             //Print each item out to list box
             foreach(KeyValuePair<int, Movie> CurrentMovie in Movies)
             {
-                listBoxToPrinto.Items.Add(CurrentMovie.Value.ToString());
+                listBoxToPrintTo.Items.Add(CurrentMovie.Value.ToString());
             }
         }
 
