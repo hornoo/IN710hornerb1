@@ -54,7 +54,14 @@ namespace RainbowChicken2016
         //==============================================================================
         public void Move()
         {
-            throw new NotImplementedException();
+            Pellet nodeWalker = headPointer;
+            while(nodeWalker != null)
+            {
+                nodeWalker.Move();
+                nodeWalker = nodeWalker.Next;
+            }
+
+            //throw new NotImplementedException();
         }
 
         //==============================================================================
