@@ -119,6 +119,7 @@ namespace RainbowChicken2016
             else
             {
                 Pellet nodewalker = headPointer;
+                nodewalker = nodewalker.Next;
 
                 while(nodewalker != null)
                 {
@@ -134,6 +135,7 @@ namespace RainbowChicken2016
                         }
                     }
 
+                    
 
                 }
 
