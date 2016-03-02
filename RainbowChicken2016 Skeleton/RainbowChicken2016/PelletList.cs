@@ -103,7 +103,42 @@ namespace RainbowChicken2016
         //==============================================================================
         public void DeleteOne(Pellet pelletToDelete)
         {
-            throw new NotImplementedException();
+            if(pelletToDelete == headPointer)
+            {
+                if(Count() == 0)
+                {
+                    headPointer = null;
+                    tailPointer = null;
+                }
+                else
+                {
+                    headPointer = pelletToDelete.Next;
+                }
+
+            }
+            else
+            {
+                Pellet nodewalker = headPointer;
+
+                while(nodewalker != null)
+                {
+                    if(nodewalker.Next == pelletToDelete)
+                    {
+                        if(pelletToDelete.Next == null)
+                        {
+                            tailPointer = nodewalker;
+                        }
+                        else
+                        {
+                            nodewalker.Next = pelletToDelete.Next;
+                        }
+                    }
+
+
+                }
+
+            }
+            //throw new NotImplementedException();
         }
 
         //==============================================================================
@@ -119,7 +154,7 @@ namespace RainbowChicken2016
                 {
                     DeleteOne(nodeWalker);
                 }
-                nodeWalker = nodeWalker.Next;
+                
             }
             //throw new NotImplementedException();
         }
