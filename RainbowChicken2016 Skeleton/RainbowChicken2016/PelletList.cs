@@ -27,9 +27,9 @@ namespace RainbowChicken2016
         public void addPellet(Pellet newPellet)
         {
 
-            if(Count() == 0)
+            if(headPointer == null)
             {
-                newPellet.Next = null;
+                
                 headPointer = newPellet;
                 tailPointer = newPellet;
 
@@ -105,7 +105,7 @@ namespace RainbowChicken2016
         {
             if(pelletToDelete == headPointer)
             {
-                if(Count() == 0)
+                if(Count() == 1)
                 {
                     headPointer = null;
                     tailPointer = null;
@@ -119,23 +119,24 @@ namespace RainbowChicken2016
             else
             {
                 Pellet nodewalker = headPointer;
-                nodewalker = nodewalker.Next;
 
-                while(nodewalker != null)
+                
+
+                while(nodewalker.Next != pelletToDelete)
                 {
-                    if(nodewalker.Next == pelletToDelete)
-                    {
-                        if(pelletToDelete.Next == null)
+
+                    nodewalker = nodewalker.Next;
+
+                    if(pelletToDelete.Next == null)
                         {
                             tailPointer = nodewalker;
+                            nodewalker.Next = null;
                         }
                         else
                         {
                             nodewalker.Next = pelletToDelete.Next;
                         }
-                    }
-
-                    
+                                  
 
                 }
 
@@ -156,6 +157,8 @@ namespace RainbowChicken2016
                 {
                     DeleteOne(nodeWalker);
                 }
+
+                nodeWalker = nodeWalker.Next;
                 
             }
             //throw new NotImplementedException();
