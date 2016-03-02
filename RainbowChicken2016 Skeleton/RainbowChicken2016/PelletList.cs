@@ -26,6 +26,7 @@ namespace RainbowChicken2016
         //==============================================================================
         public void addPellet(Pellet newPellet)
         {
+
             throw new NotImplementedException();
         }
 
@@ -34,7 +35,18 @@ namespace RainbowChicken2016
         //==============================================================================
         public int Count()
         {
-            throw new NotImplementedException();
+            int count = 0;
+
+            Pellet nodeWalker = headPointer;
+
+            while(nodeWalker != null)
+            {
+                count++;
+                nodeWalker = nodeWalker.Next;
+            }
+
+            return count;
+            //throw new NotImplementedException();
         }
 
         //==============================================================================
