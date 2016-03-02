@@ -120,24 +120,23 @@ namespace RainbowChicken2016
             {
                 Pellet nodewalker = headPointer;
 
-                
-
                 while(nodewalker.Next != pelletToDelete)
                 {
 
                     nodewalker = nodewalker.Next;
 
-                    if(pelletToDelete.Next == null)
+                    if(nodewalker.Next == pelletToDelete)
+                    {
+
+                        nodewalker.Next = pelletToDelete.Next;
+
+                        if (tailPointer == pelletToDelete)
                         {
                             tailPointer = nodewalker;
-                            nodewalker.Next = null;
                         }
-                        else
-                        {
-                            nodewalker.Next = pelletToDelete.Next;
-                        }
+                    }
+                    
                                   
-
                 }
 
             }
