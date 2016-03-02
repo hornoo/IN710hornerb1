@@ -99,7 +99,17 @@ namespace RainbowChicken2016
         //==============================================================================
         public void DeleteNotAlive()
         {
-            throw new NotImplementedException();
+            Pellet nodeWalker = headPointer;
+
+            while(nodeWalker != null)
+            {
+                if(nodeWalker.IsAlive == false)
+                {
+                    DeleteOne(nodeWalker);
+                }
+                nodeWalker = nodeWalker.Next;
+            }
+            //throw new NotImplementedException();
         }
 
         //==============================================================================
