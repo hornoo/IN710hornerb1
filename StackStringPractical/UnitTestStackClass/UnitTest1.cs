@@ -64,5 +64,26 @@ namespace UnitTestStackClass
             Assert.AreEqual(oneCount, result);
 
         }
+
+
+        [TestMethod]
+        public void Count_ofAStackWith1ItemAfterPeek_Returns1()
+        {
+            Stack testStack = new Stack();
+
+            StringNode testStringNodeOne = new StringNode("this is a testString 1");
+
+
+            testStack.push(testStringNodeOne);
+
+            int oneCount = 1;
+
+            int CountResult = testStack.Count();
+
+            string stringFromPeek = testStack.Peek();
+
+            Assert.AreEqual(oneCount, CountResult);
+
+        }
     }
 }

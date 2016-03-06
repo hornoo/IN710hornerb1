@@ -34,9 +34,9 @@ namespace StackStringPractical
             return null;
         }
 
-        public String Peak()
+        public String Peek()
         {
-            return null;
+            return tailPointer.stringObject;
         }
 
         public int Count()
