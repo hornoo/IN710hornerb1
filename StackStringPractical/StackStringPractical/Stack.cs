@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackStringPractical
 {
-    class Stack
+    public class Stack
     {
         StringNode headpointer = null;
         StringNode tailPointer = null;
