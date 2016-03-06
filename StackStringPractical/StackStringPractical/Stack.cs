@@ -31,7 +31,39 @@ namespace StackStringPractical
 
         public String Pop() 
         {
-            return null;
+            string returnString;
+
+            if(headpointer == null)
+            {
+                throw new NullReferenceException("Cannot pop an EmptyStack, no string to return");
+            }
+            else if(headpointer == tailPointer)
+            {
+                returnString = tailPointer.stringObject;
+
+                headpointer = null;
+                tailPointer = null;
+            }else
+            {
+                returnString = tailPointer.stringObject;
+
+                StringNode nodeWalker = headpointer;
+
+                while (nodeWalker.Next != null)
+                {
+                    nodeWalker = nodeWalker.Next;
+
+                    if (nodeWalker.Next == tailPointer)
+                    {
+                        tailPointer = nodeWalker;
+                        nodeWalker.Next = null;
+                    }
+
+                }
+
+            }
+
+            return returnString;
         }
 
         public String Peek()
