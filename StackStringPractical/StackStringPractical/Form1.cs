@@ -16,5 +16,10 @@ namespace StackStringPractical
         {
             InitializeComponent();
         }
+
+
+
+        
+
     }
 }

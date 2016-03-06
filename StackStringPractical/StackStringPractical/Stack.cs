@@ -8,11 +8,11 @@ namespace StackStringPractical
 {
     class Stack
     {
-        List<String> stackStringlist;
+        private List<String> stackStringList;
 
         public Stack()
         {
-            stackStringlist = new List<String>();
+            stackStringList = new List<String>();
         }
 
         public void push(string newString)
@@ -32,7 +32,7 @@ namespace StackStringPractical
 
         public int Count()
         {
-            return 1;
+            return stackStringList.Count;
         }
 
         public bool isEmpty() 
