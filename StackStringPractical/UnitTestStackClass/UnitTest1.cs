@@ -16,8 +16,12 @@ namespace UnitTestStackClass
             Stack testStack;
             
             testStack = new Stack();
-            
-            
+
+            int zeroCount = 0;
+
+            int result = testStack.Count();
+
+            Assert.AreEqual(zeroCount, result); 
 
         }
     }

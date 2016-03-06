@@ -16,9 +16,17 @@ namespace StackStringPractical
             
         }
 
-        public void push(string newString)
+        public void push(StringNode newStringNode)
         {
-
+            if(headpointer == null)
+            {
+                headpointer = newStringNode;
+                tailPointer = newStringNode;
+            }else
+            {
+                tailPointer.Next = newStringNode;
+                tailPointer = newStringNode;
+            }
         }
 
         public String Pop() 
@@ -33,7 +41,19 @@ namespace StackStringPractical
 
         public int Count()
         {
-            return 1;
+            int count = 0;
+
+            StringNode nodewalker = headpointer;
+
+            while(nodewalker != null)
+            {
+                count++;
+
+                nodewalker = nodewalker.Next;
+
+            }
+
+            return count;
         }
 
         public bool isEmpty() 

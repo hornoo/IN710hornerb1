@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackStringPractical
 {
-    class StringNode
+   public class StringNode
     {
         public String stringObject { get; set; }
 
