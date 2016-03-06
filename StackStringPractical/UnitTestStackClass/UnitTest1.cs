@@ -24,5 +24,22 @@ namespace UnitTestStackClass
             Assert.AreEqual(zeroCount, result); 
 
         }
+
+        [TestMethod]
+        public void Count_ofAStackWith1Item_Returns1()
+        {
+            Stack testStack = new Stack();
+
+            StringNode testStringOne = new StringNode("this is a testString");
+
+            testStack.push(testStringOne);
+
+            int oneCount = 1;
+
+            int result = testStack.Count();
+
+            Assert.AreEqual(oneCount, result);
+
+        }
     }
 }
