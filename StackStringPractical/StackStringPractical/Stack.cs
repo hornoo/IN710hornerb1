@@ -105,9 +105,16 @@ namespace StackStringPractical
         }
 
         public bool isEmpty() 
-        {   
-
-            return false;
+        {
+            if (headpointer == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
         }
 
      

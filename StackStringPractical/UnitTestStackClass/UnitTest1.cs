@@ -323,6 +323,74 @@ namespace UnitTestStackClass
             Assert.AreEqual(popCount, expectPopcount);
         }
 
+        [TestMethod]
+        public void PopString_ofAStackWith3ItemsPopTo0_isEmptyTrue()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+            string testString3 = "this is the 3rd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+            StringNode testStringNodethree = new StringNode(testString3);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+            testStack.Pop();
+            testStack.Pop();
+            testStack.Pop();
+
+
+
+            bool result = testStack.isEmpty();
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void PopString_ofAStackWith3ItemsPopTo1_isEmptyfalse()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+            string testString3 = "this is the 3rd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+            StringNode testStringNodethree = new StringNode(testString3);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+            testStack.Pop();
+            testStack.Pop();
+            
+
+
+
+            bool result = testStack.isEmpty();
+
+            Assert.IsTrue(!result);
+        }
+
+        [TestMethod]
+        public void siEmpty_ofAnewStack_isEmptyfalse()
+        {
+            Stack testStack = new Stack();
+
+            bool result = testStack.isEmpty();
+
+            Assert.IsTrue(result);
+        }
+
 
 
     }
