@@ -85,5 +85,42 @@ namespace UnitTestStackClass
             Assert.AreEqual(oneCount, CountResult);
 
         }
+
+        [TestMethod]
+        public void Peekstring_ofAStackWith1ItemAfterPeek_ReturnsPeekString()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+
+            testStack.push(testStringNodeOne);
+
+
+            string stringFromPeek = testStack.Peek();
+
+            Assert.AreEqual(stringFromPeek, testString);
+        }
+
+        [TestMethod]
+        public void Peekstring_ofAStackWith2ItemAfterPeek_ReturnslastPeekString()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+
+            string stringFromPeek = testStack.Peek();
+
+            Assert.AreEqual(stringFromPeek, testString2);
+        }
     }
 }
