@@ -47,20 +47,28 @@ namespace StackStringPractical
             {
                 returnString = tailPointer.stringObject;
 
-                StringNode nodeWalker = headpointer;
-
-                while (nodeWalker.Next != null)
+                if (headpointer.Next == tailPointer)
                 {
-                    nodeWalker = nodeWalker.Next;
-
-                    if (nodeWalker.Next == tailPointer)
-                    {
-                        tailPointer = nodeWalker;
-                        nodeWalker.Next = null;
-                    }
-
+                    tailPointer = headpointer;
+                    tailPointer.Next = null;
                 }
+                else
+                {
 
+                    StringNode nodeWalker = headpointer;
+
+                    while (nodeWalker.Next != null)
+                    {
+                        nodeWalker = nodeWalker.Next;
+
+                        if (nodeWalker.Next == tailPointer)
+                        {
+                            tailPointer = nodeWalker;
+                            nodeWalker.Next = null;
+                        }
+
+                    }
+                }
             }
 
             return returnString;
