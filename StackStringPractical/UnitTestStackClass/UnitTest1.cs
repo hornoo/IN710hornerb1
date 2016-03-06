@@ -149,11 +149,11 @@ namespace UnitTestStackClass
 
         //https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx
         [TestMethod]
-        [ExpectedException(typeof(System.NullReferenceException),"fgisghiuos")]
+        [ExpectedException(typeof(System.NullReferenceException))]
         public void Peekstring_ofAStackWith0ItemAfterPeek_ThrowsExcption()
         {
 
-            //test passes but doesnt seem to check output error message
+            
             Stack testStack = new Stack();
 
             testStack.Peek();
@@ -235,6 +235,7 @@ namespace UnitTestStackClass
         }
 
         [TestMethod]
+        [ExpectedException(typeof(System.NullReferenceException))]
         public void PopAllString_ofAStackWith3ItemAfterPop_returnexception()
         {
             Stack testStack = new Stack();
@@ -252,13 +253,45 @@ namespace UnitTestStackClass
             testStack.push(testStringNodeTwo);
             testStack.push(testStringNodethree);
 
-            string stringFromPop = testStack.Pop();
-            stringFromPop = testStack.Pop();
-            stringFromPop = testStack.Pop();
-
-            Assert.AreEqual(stringFromPop, testString);
+             testStack.Pop();
+             testStack.Pop();
+             testStack.Pop();
+             testStack.Pop();
+ 
         }
 
+
+        [TestMethod]
+        public void PopString_ofAStackWith3ItemsPopTo0ThenBackto3_CountReturn3()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+            string testString3 = "this is the 3rd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+            StringNode testStringNodethree = new StringNode(testString3);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+            testStack.Pop();
+            testStack.Pop();
+            testStack.Pop();
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+            int popCount = testStack.Count();
+            int expectPopcount = 3;
+
+            Assert.AreEqual(popCount, expectPopcount);
+        }
 
 
 
