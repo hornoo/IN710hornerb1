@@ -36,7 +36,15 @@ namespace StackStringPractical
 
         public String Peek()
         {
-            return tailPointer.stringObject;
+
+            if (tailPointer == null)
+            {
+                throw new NullReferenceException("Cannot peek at EmptyStack, no string to return");
+            }
+            else
+            {
+                return tailPointer.stringObject;
+            }
         }
 
         public int Count()

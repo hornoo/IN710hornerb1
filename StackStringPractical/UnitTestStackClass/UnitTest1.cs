@@ -145,5 +145,20 @@ namespace UnitTestStackClass
 
             Assert.AreEqual(stringFromPeek, testString3);
         }
+
+
+        //https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx
+        [TestMethod]
+        [ExpectedException(typeof(System.NullReferenceException),"fgisghiuos")]
+        public void Peekstring_ofAStackWith0ItemAfterPeek_ThrowsExcption()
+        {
+
+            //test passes but doesnt seem to check output error message
+            Stack testStack = new Stack();
+
+            testStack.Peek();
+           
+        }
+
     }
 }
