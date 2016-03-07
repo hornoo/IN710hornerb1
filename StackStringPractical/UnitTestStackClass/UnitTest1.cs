@@ -435,7 +435,7 @@ namespace UnitTestStackClass
 
             string toStringString = testStack.ToString();
 
-            string expectedString = "0 this is a testString 1 ";
+            string expectedString = "0 this is a testString 1, ";
 
             Assert.AreEqual(toStringString, expectedString);
            
