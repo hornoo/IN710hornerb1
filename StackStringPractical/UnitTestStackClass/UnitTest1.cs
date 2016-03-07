@@ -424,10 +424,14 @@ namespace UnitTestStackClass
         public void ToString_StackTostring1item_string()
         {
             Stack testStack = new Stack();
+
             string testString = "this is a testString 1";
+
             StringNode testStringNodeOne = new StringNode(testString);
 
             testStack.push(testStringNodeOne);
+
+
 
             string toStringString = testStack.ToString();
 
@@ -435,6 +439,47 @@ namespace UnitTestStackClass
 
             Assert.AreEqual(toStringString, expectedString);
            
+        }
+
+        [TestMethod]
+        public void ToString_StackTostring3item_string()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+            string testString3 = "this is the 3rd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+            StringNode testStringNodethree = new StringNode(testString3);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+
+
+            string toStringString = testStack.ToString();
+
+            string expectedString = "0 this is a testString 1, 1 this is the 2nd test String, 2 this is the 3rd test String, ";
+
+            Assert.AreEqual(expectedString, toStringString);
+
+        }
+
+        [TestMethod]
+        public void ToString_StackTostring0item_string()
+        {
+            Stack testStack = new Stack();
+
+            string toStringString = testStack.ToString();
+
+            string expectedString = "Stack is empty.";
+
+            Assert.AreEqual(expectedString, toStringString);
+
         }
 
 

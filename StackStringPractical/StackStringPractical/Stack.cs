@@ -122,14 +122,28 @@ namespace StackStringPractical
             StringNode nodeWalker = headpointer;
             int count = 0;
             string returnString = "";
-            while(nodeWalker.Next != null)
-            {
-                returnString += count.ToString() + " " + nodeWalker.stringObject.Trim() + " ";
-                
-                count++;
 
-                nodeWalker = nodeWalker.Next;
+            if(headpointer == null)
+            {
+                return "Stack is empty.";
+
+            }else if(headpointer == tailPointer)
+            {
+
+                return count.ToString() + " " + nodeWalker.stringObject + " ";
             }
+            else{
+
+                while(nodeWalker != null)
+                {
+                    returnString += count.ToString() + " " + nodeWalker.stringObject + ", ";
+                
+                    count++;
+
+                    nodeWalker = nodeWalker.Next;
+                }
+            }
+
             return returnString;
         }
 
