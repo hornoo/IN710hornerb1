@@ -39,7 +39,8 @@
             // 
             this.pbxChicken.BackColor = System.Drawing.SystemColors.ControlText;
             this.pbxChicken.Image = global::RainbowChicken2016.Properties.Resources.chicken;
-            this.pbxChicken.Location = new System.Drawing.Point(379, 422);
+            this.pbxChicken.Location = new System.Drawing.Point(274, 357);
+            this.pbxChicken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbxChicken.Name = "pbxChicken";
             this.pbxChicken.Size = new System.Drawing.Size(64, 64);
             this.pbxChicken.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -51,9 +52,10 @@
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCount.ForeColor = System.Drawing.Color.Red;
-            this.lblCount.Location = new System.Drawing.Point(27, 23);
+            this.lblCount.Location = new System.Drawing.Point(20, 19);
+            this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(31, 32);
+            this.lblCount.Size = new System.Drawing.Size(24, 26);
             this.lblCount.TabIndex = 1;
             this.lblCount.Text = "0";
             // 
@@ -64,12 +66,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(586, 449);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.pbxChicken);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Incredible Rainbow Spitting Chicken";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
