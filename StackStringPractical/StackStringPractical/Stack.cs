@@ -117,6 +117,22 @@ namespace StackStringPractical
            
         }
 
+        public override string ToString()
+        {
+            StringNode nodeWalker = headpointer;
+            int count = 0;
+            string returnString = "";
+            while(nodeWalker.Next != null)
+            {
+                returnString += count.ToString() + " " + nodeWalker.stringObject.Trim() + " ";
+                
+                count++;
+
+                nodeWalker = nodeWalker.Next;
+            }
+            return returnString;
+        }
+
      
     }
 }

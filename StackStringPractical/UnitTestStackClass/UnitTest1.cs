@@ -141,9 +141,38 @@ namespace UnitTestStackClass
             testStack.push(testStringNodeTwo);
             testStack.push(testStringNodethree);
 
+            testStack.Peek();
+
             string stringFromPeek = testStack.Peek();
 
             Assert.AreEqual(stringFromPeek, testString3);
+        }
+
+
+        [TestMethod]
+        public void Peekstring_ofAStackWith3ItemAfterPeekPopedToFirst_ReturnslastPeekString()
+        {
+            Stack testStack = new Stack();
+
+            string testString = "this is a testString 1";
+            string testString2 = "this is the 2nd test String";
+            string testString3 = "this is the 3rd test String";
+
+            StringNode testStringNodeOne = new StringNode(testString);
+            StringNode testStringNodeTwo = new StringNode(testString2);
+            StringNode testStringNodethree = new StringNode(testString3);
+
+
+            testStack.push(testStringNodeOne);
+            testStack.push(testStringNodeTwo);
+            testStack.push(testStringNodethree);
+
+            testStack.Pop();
+            testStack.Pop();
+
+            string stringFromPeek = testStack.Peek();
+
+            Assert.AreEqual(stringFromPeek, testString);
         }
 
 
@@ -324,7 +353,7 @@ namespace UnitTestStackClass
         }
 
         [TestMethod]
-        public void PopString_ofAStackWith3ItemsPopTo0_isEmptyTrue()
+        public void isEmpty_ofAStackWith3ItemsPopTo0_isEmptyTrue()
         {
             Stack testStack = new Stack();
 
@@ -353,7 +382,7 @@ namespace UnitTestStackClass
         }
 
         [TestMethod]
-        public void PopString_ofAStackWith3ItemsPopTo1_isEmptyfalse()
+        public void isEmpty_ofAStackWith3ItemsPopTo1_isEmptyfalse()
         {
             Stack testStack = new Stack();
 
@@ -382,13 +411,30 @@ namespace UnitTestStackClass
         }
 
         [TestMethod]
-        public void siEmpty_ofAnewStack_isEmptyfalse()
+        public void isEmpty_ofAnewStack_isEmptyfalse()
         {
             Stack testStack = new Stack();
 
             bool result = testStack.isEmpty();
 
             Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void ToString_StackTostring1item_string()
+        {
+            Stack testStack = new Stack();
+            string testString = "this is a testString 1";
+            StringNode testStringNodeOne = new StringNode(testString);
+
+            testStack.push(testStringNodeOne);
+
+            string toStringString = testStack.ToString();
+
+            string expectedString = "0 this is a testString 1 ";
+
+            Assert.AreEqual(toStringString, expectedString);
+           
         }
 
 
