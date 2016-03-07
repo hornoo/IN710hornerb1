@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 	Name: Richard Horne
 	Title: String stack
 	Date: 07/03/2016
-	Description: This is my mplementation of a stack (Last in, first out). Using a type of link list ADO
+	Description: This is my implementation of a stack (Last in, first out). Using a type of link list ADO
         
 */
 
@@ -30,8 +30,10 @@ namespace StackStringPractical
         //Method to push StringNode into stack
         public void push(String newString)
         {
+            //create string node and set its sting property to the sting passed in
             StringNode newStringNode = new StringNode(newString);
 
+            //if the string is null throw and exception
             if (newStringNode.stringObject == null)
             {
                 throw new NullReferenceException("Cannot push null string to stack");
