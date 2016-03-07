@@ -18,6 +18,7 @@ namespace StackStringPractical
 
         public void push(StringNode newStringNode)
         {
+
             if(headpointer == null)
             {
                 headpointer = newStringNode;
