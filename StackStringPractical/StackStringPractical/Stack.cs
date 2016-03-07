@@ -28,19 +28,30 @@ namespace StackStringPractical
         }
 
         //Method to push StringNode into stack
-        public void push(StringNode newStringNode)
+        public void push(String newString)
         {
-            //Check stack is empty ,if so point the head and tail at new string node
-            if(headpointer == null)
+            StringNode newStringNode = new StringNode(newString);
+
+            if (newStringNode.stringObject == null)
             {
-                headpointer = newStringNode;
-                tailPointer = newStringNode;
-                
-            //Set the current tail pointers .net to point at the new node and set the new node to be the tail pointer.
-            }else
+                throw new NullReferenceException("Cannot push null string to stack");
+            }
+            else
             {
-                tailPointer.Next = newStringNode;
-                tailPointer = newStringNode;
+
+                //Check stack is empty ,if so point the head and tail at new string node
+                if (headpointer == null)
+                {
+                    headpointer = newStringNode;
+                    tailPointer = newStringNode;
+
+                    //Set the current tail pointers .net to point at the new node and set the new node to be the tail pointer.
+                }
+                else
+                {
+                    tailPointer.Next = newStringNode;
+                    tailPointer = newStringNode;
+                }
             }
         }
 
