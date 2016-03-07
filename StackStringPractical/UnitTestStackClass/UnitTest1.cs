@@ -30,9 +30,9 @@ namespace UnitTestStackClass
         {
             Stack testStack = new Stack();
 
-            StringNode testStringOne = new StringNode("this is a testString");
 
-            testStack.push(testStringOne);
+
+            testStack.push("this is a testString");
 
             int oneCount = 1;
 
@@ -47,15 +47,11 @@ namespace UnitTestStackClass
         {
             Stack testStack = new Stack();
 
-            StringNode testStringOne = new StringNode("this is a testString 1");
-            StringNode testStringTwo = new StringNode("this is a testString 2");
-            StringNode testStringThree = new StringNode("this is a testString 3");
-            StringNode testStringFour = new StringNode("this is a testString 4");
 
-            testStack.push(testStringOne);
-            testStack.push(testStringTwo);
-            testStack.push(testStringThree);
-            testStack.push(testStringFour);
+            testStack.push("this is a testString 1");
+            testStack.push("this is a testString 2");
+            testStack.push("this is a testString 3");
+            testStack.push("this is a testString 4");
 
             int oneCount = 4;
 
@@ -71,10 +67,7 @@ namespace UnitTestStackClass
         {
             Stack testStack = new Stack();
 
-            StringNode testStringNodeOne = new StringNode("this is a testString 1");
-
-
-            testStack.push(testStringNodeOne);
+            testStack.push("this is a testString 1");
 
             int oneCount = 1;
 
@@ -93,9 +86,8 @@ namespace UnitTestStackClass
 
             string testString = "this is a testString 1";
 
-            StringNode testStringNodeOne = new StringNode(testString);
 
-            testStack.push(testStringNodeOne);
+            testStack.push(testString);
 
 
             string stringFromPeek = testStack.Peek();
@@ -111,12 +103,8 @@ namespace UnitTestStackClass
             string testString = "this is a testString 1";
             string testString2 = "this is the 2nd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
+            testStack.push(testString);
+            testStack.push(testString2);
 
             string stringFromPeek = testStack.Peek();
 
@@ -132,14 +120,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Peek();
 
@@ -158,14 +141,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Pop();
             testStack.Pop();
@@ -198,14 +176,11 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
 
 
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             string stringFromPeek = testStack.Pop();
             int popCount = testStack.Count();
@@ -223,14 +198,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             string stringFromPop = testStack.Pop();
             
@@ -247,14 +217,11 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
 
 
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             string stringFromPop = testStack.Pop();
             stringFromPop = testStack.Pop();
@@ -273,14 +240,10 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
 
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
              testStack.Pop();
              testStack.Pop();
@@ -299,22 +262,17 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Pop();
             testStack.Pop();
             testStack.Pop();
 
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             int popCount = testStack.Count();
             int expectPopcount = 3;
@@ -331,14 +289,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Pop();
             testStack.Pop();
@@ -361,14 +314,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Pop();
             testStack.Pop();
@@ -390,14 +338,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
             testStack.Pop();
             testStack.Pop();
@@ -427,9 +370,7 @@ namespace UnitTestStackClass
 
             string testString = "this is a testString 1";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-
-            testStack.push(testStringNodeOne);
+            testStack.push(testString);
 
 
 
@@ -450,14 +391,9 @@ namespace UnitTestStackClass
             string testString2 = "this is the 2nd test String";
             string testString3 = "this is the 3rd test String";
 
-            StringNode testStringNodeOne = new StringNode(testString);
-            StringNode testStringNodeTwo = new StringNode(testString2);
-            StringNode testStringNodethree = new StringNode(testString3);
-
-
-            testStack.push(testStringNodeOne);
-            testStack.push(testStringNodeTwo);
-            testStack.push(testStringNodethree);
+            testStack.push(testString);
+            testStack.push(testString2);
+            testStack.push(testString3);
 
 
 
@@ -481,6 +417,8 @@ namespace UnitTestStackClass
             Assert.AreEqual(expectedString, toStringString);
 
         }
+
+
 
 
 
