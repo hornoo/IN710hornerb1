@@ -418,6 +418,18 @@ namespace UnitTestStackClass
 
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(System.NullReferenceException))]
+        public void push_NullStringToStack_throwException()
+        {
+            Stack testStack = new Stack();
+
+            String testString = null;
+
+            testStack.push(testString);
+
+
+        }
 
 
 
