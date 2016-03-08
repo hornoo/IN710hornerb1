@@ -16,12 +16,24 @@ namespace Game_Character
         {
             InitializeComponent();
 
-            groupBox2.
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
             
         }
+
+        private void btnAddCharacter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBattle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

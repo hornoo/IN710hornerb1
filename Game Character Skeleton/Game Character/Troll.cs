@@ -10,8 +10,8 @@ namespace Game_Character
     public class Troll : Character
     {
 
-        public Troll(String characterName, ListBox gameOutput)
-            : base(characterName, gameOutput)
+        public Troll(String characterName)
+            : base(characterName)
         {
             weapon = new Bow();
         }

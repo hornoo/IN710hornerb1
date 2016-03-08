@@ -46,12 +46,14 @@
   <ItemGroup>
     <Compile Include="Bow.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CharaterInput.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManager.cs" />
     <Compile Include="IWeapon.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knife.cs" />

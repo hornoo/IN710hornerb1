@@ -10,8 +10,8 @@ namespace Game_Character
     public class Queen : Character
     {
 
-        public Queen(String characterName, ListBox gameOutput)
-            : base(characterName, gameOutput)
+        public Queen(String characterName)
+            : base(characterName)
         {
             weapon = new Bow();
         }
