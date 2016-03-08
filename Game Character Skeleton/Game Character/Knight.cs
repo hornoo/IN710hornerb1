@@ -11,7 +11,7 @@ namespace Game_Character
 
         public Knight(String characterName):base(characterName)
         {
-
+            weapon = new Knife();
         }
 
         public override string Declaim()

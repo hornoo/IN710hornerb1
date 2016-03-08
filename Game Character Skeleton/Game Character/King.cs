@@ -10,7 +10,7 @@ namespace Game_Character
     {
         public King(String characterName):base(characterName)
         {
-
+            weapon = new Sword();
         }
         public override string Declaim()
         {
