@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_Character
 {
     public class Knight : Character
     {
 
-        public Knight(String characterName):base(characterName)
+        public Knight(String characterName, ListBox gameOutput)
+            : base(characterName, gameOutput)
         {
             weapon = new Knife();
         }

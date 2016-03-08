@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_Character
 {
-    public class Character
+    public abstract class Character
     {
         protected String characterName;
-        protected IWeapon weapon;
+        protected ListBox gameOutput;
+        protected IWeapon weapon{get; set;}
 
-        public Character(String characterName)
+        public Character(String characterName, ListBox gameOutput)
         {
             this.characterName = characterName;
+            this.gameOutput = gameOutput;
         }
 
         public String StateName()

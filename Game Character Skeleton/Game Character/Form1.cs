@@ -15,6 +15,13 @@ namespace Game_Character
         public Form1()
         {
             InitializeComponent();
+
+            groupBox2.
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }
