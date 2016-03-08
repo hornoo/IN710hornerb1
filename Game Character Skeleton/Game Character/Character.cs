@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    class Character
+    public class Character
     {
         protected String characterName;
+        protected IWeapon weapon;
 
         public Character(String characterName)
         {

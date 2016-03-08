@@ -11,7 +11,7 @@ namespace Game_Character
 
         public Queen(String characterName):base(characterName)
         {
-
+            weapon = new Bow();
         }
         public override string Declaim()
         {
