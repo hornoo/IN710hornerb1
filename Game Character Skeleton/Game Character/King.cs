@@ -8,7 +8,10 @@ namespace Game_Character
 {
     public class King : Character
     {
+        public King(String characterName):base(characterName)
+        {
 
+        }
         public override string Declaim()
         {
             return "I am the most mighty King!";

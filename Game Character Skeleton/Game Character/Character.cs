@@ -8,11 +8,16 @@ namespace Game_Character
 {
     class Character
     {
-        protected String charaterName;
+        protected String characterName;
+
+        public Character(String characterName)
+        {
+            this.characterName = characterName;
+        }
 
         public String StateName()
         {
-            return "My name is " + charaterName + "!";
+            return "My name is " + characterName + "!";
         }
 
         public abstract String Declaim();

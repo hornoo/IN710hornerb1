@@ -8,6 +8,11 @@ namespace Game_Character
 {
     public class Troll : Character
     {
+
+        public Troll(String characterName):base(characterName)
+        {
+
+        }
         public override string Declaim()
         {
             return "Trolls don't have time to chat!";    

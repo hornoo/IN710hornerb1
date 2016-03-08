@@ -8,6 +8,12 @@ namespace Game_Character
 {
     public class Knight : Character
     {
+
+        public Knight(String characterName):base(characterName)
+        {
+
+        }
+
         public override string Declaim()
         {
             return "I am a chivalrous Knight!";
