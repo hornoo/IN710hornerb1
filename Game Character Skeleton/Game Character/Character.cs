@@ -10,11 +10,11 @@ namespace Game_Character
     {
         protected String charaterName;
 
-        public String Statename()
+        public String StateName()
         {
             return "My name is " + charaterName + "!";
         }
 
-        public abstract String Declare();
+        public abstract String Declaim();
     }
 }

@@ -9,9 +9,9 @@ namespace Game_Character
     class King : Character
     {
 
-        public override string Declare()
+        public override string Declaim()
         {
-            throw new NotImplementedException();
+            return "I am the most mighty King!";
         } 
 
 
