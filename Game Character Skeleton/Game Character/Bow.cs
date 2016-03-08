@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    public interface IWeapon
+    public class Bow : IWeapon
     {
-        String UseWeapon();
+
+        public string UseWeapon()
+        {
+            return "Ishoot with my bow!";
+        }
     }
 }
