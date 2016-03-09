@@ -9,10 +9,10 @@ namespace Game_Character
 {
     public abstract class Character
     {
-        protected String characterName;
+        public String characterName { get; set; }
         //protected ListBox gameOutput;
-        protected IWeapon weapon{get; set;}
-        protected bool isInbattle;
+        public IWeapon weapon{get; set;}
+        public bool isInbattle{get; set;}
 
         public Character(String characterName)
         {

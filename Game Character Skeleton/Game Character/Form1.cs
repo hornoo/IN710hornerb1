@@ -15,7 +15,8 @@ namespace Game_Character
         public Form1()
         {
             InitializeComponent();
-
+            GameManager gameWorker = new GameManager();
+            CharaterInput formTextInputWorker = new CharaterInput(); 
             
         }
 
@@ -34,6 +35,11 @@ namespace Game_Character
 
         }
 
+
+        public void Addplayer()
+        {
+
+        }
 
     }
 }
