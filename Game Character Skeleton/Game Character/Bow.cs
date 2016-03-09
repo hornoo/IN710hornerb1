@@ -8,7 +8,7 @@ namespace Game_Character
 {
     public class Bow : IWeapon
     {
-
+        //Sword class implements the Iweapon interface, code for the Sword useweapon method
         public string UseWeapon()
         {
             return "Ishoot with my bow!";
