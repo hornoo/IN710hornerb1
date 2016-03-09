@@ -41,6 +41,11 @@ namespace Game_Character
         private void button1_Click(object sender, EventArgs e)
         {
 
+
+            foreach(object item in checkedListBox2.CheckedItems)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
 
         public void DisplayPlayers(Dictionary<String,Character> PlayersToDisplay)
@@ -87,6 +92,14 @@ namespace Game_Character
         {
             checkedListBox1.Items.Clear();
             checkedListBox2.Items.Clear();
+        }
+
+        public IWeapon selectedWeapon()
+        {
+            if (rdBow.Checked)
+            {
+                return new Bow();
+            }else if
         }
 
     }

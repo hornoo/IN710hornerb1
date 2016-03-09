@@ -37,6 +37,11 @@ namespace Game_Character
             }
         }
 
+        public void changeWeapon(IWeapon newWeapon, String player)
+        {
+            gameCharaterDic[player].weapon = newWeapon;
+        }
+
 
     }
 }
