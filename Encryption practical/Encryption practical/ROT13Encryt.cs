@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Encryption_practical
 {
-    class ROT13Encryt : IEncryptMachine
+    public class ROT13Encryt : IEncryptMachine
     {
 
-
+        public ROT13Encryt()
+        {
+        }
 
         public string EncryptDecrypt(string inputString)
         {
@@ -43,7 +45,7 @@ namespace Encryption_practical
                 inPutStringInCharArray[i] = (char)number;
             }
 
-            String outPutString = inPutStringInCharArray.ToString(); 
+            String outPutString = new String(inPutStringInCharArray); 
 
             return outPutString;
         }

@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Encryption_practical
 {
-    class ReverseEncrption : IEncryptMachine
+   public class ReverseEncrption : IEncryptMachine
     {
+
+
 
         public string EncryptDecrypt(string inputString)
         {
-            String outputString ="";
+            
 
             char[] inPutStringInCharArray = inputString.ToCharArray();
 
-            for (int i = inPutStringInCharArray.Length; i > 0; i-- )
-            {
-                outputString += inPutStringInCharArray[i];
-            }
+            Array.Reverse(inPutStringInCharArray);
 
-                return outputString;
+            String outputString = new String(inPutStringInCharArray);
+
+            return outputString;
 
         }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Encryption_practical
 {
-    interface IEncryptMachine
+   public interface IEncryptMachine
     {
-        public String EncryptDecrypt(String inputString);
+        String EncryptDecrypt(String inputString);
 
 
     }
