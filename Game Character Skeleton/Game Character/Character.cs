@@ -5,6 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+enum characterType
+{
+    king,Queen,Knight,Troll
+}
+
 namespace Game_Character
 {
     public abstract class Character

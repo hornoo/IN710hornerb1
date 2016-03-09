@@ -10,7 +10,7 @@ namespace Game_Character
     public class GameManager
     {
 
-        private Dictionary<String, Character> gameCharaterDic { get; set; }
+        public Dictionary<String, Character> gameCharaterDic { get; set; }
        
 
         public GameManager()
