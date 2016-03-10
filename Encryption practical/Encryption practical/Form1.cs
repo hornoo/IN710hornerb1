@@ -12,9 +12,39 @@ namespace Encryption_practical
 {
     public partial class Form1 : Form
     {
+
+        TextParser textParser;
+
         public Form1()
         {
             InitializeComponent();
+            textParser = new TextParser();
+        }
+
+        private void ButEncrypt_Click(object sender, EventArgs e)
+        {
+            encryptText();
+        }
+
+        private void ButDecrypt_Click(object sender, EventArgs e)
+        {
+            encryptText();
+        }
+
+        public void encryptText()
+        {
+            String inputString = tbInPut.Text;
+
+            if (rdRot13.Checked)
+            {
+                textParser.encryptionmachine = new ROT13Encryt();
+            }
+            else
+            {
+                textParser.encryptionmachine = new ReverseEncrption();
+            }
+
+            tbOutput.Text = textParser.EncryptDecrypt(inputString);
         }
     }
 }
