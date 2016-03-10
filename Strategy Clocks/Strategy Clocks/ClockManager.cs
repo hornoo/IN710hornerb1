@@ -17,14 +17,28 @@ namespace Strategy_Clocks
 
         public void StartClock() 
         {
-
+            ClockMachine.on();
         }
 
         public void StopClock()
         {
-
+            ClockMachine.off();
         }
 
+        public void ShowClock()
+        {
+            ClockMachine.ShowClock();
+        }
+
+        public void HideClock()
+        {
+            ClockMachine.HideClock();
+        }
+
+        public void updateDisplay()
+        {
+            ClockMachine.UpdateTimeDisplay();
+        }
 
 
     }

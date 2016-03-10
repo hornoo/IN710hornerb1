@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.analogClock1 = new AnalogClockControl.AnalogClock();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdDigital = new System.Windows.Forms.RadioButton();
@@ -35,6 +36,7 @@
             this.btStart = new System.Windows.Forms.Button();
             this.btStop = new System.Windows.Forms.Button();
             this.lbDigital = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +116,10 @@
             this.lbDigital.TabIndex = 4;
             this.lbDigital.Text = "00:00:00";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +148,7 @@
         private System.Windows.Forms.Button btStart;
         private System.Windows.Forms.Button btStop;
         private System.Windows.Forms.Label lbDigital;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

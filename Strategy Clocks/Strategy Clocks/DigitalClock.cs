@@ -7,19 +7,24 @@ using System.Windows.Forms;
 
 namespace Strategy_Clocks
 {
+
     public class DigitalClock : IClock
     {
         Label timeDisplay;
         Timer timer;
+        int timerIntervl = 1000;
 
-        public DigitalClock(Label digitalClock)
+        public DigitalClock(Label digitalClock, Timer timerFromform)
         {
             timeDisplay = digitalClock;
+            timer = timerFromform;
+            timer.Interval = timerIntervl;
         }
 
         public void on()
         {
-            throw new NotImplementedException();
+            timer.Start();
+            
         }
 
         public void off()
@@ -29,7 +34,7 @@ namespace Strategy_Clocks
 
         public void UpdateTimeDisplay()
         {
-            throw new NotImplementedException();
+            timeDisplay.Text = DateTime.Now.ToString();
         }
 
         public void ShowClock()
@@ -41,5 +46,8 @@ namespace Strategy_Clocks
         {
             throw new NotImplementedException();
         }
+
+
+        
     }
 }

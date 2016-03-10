@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Strategy_Clocks
 {
-    interface IClock
+    public interface IClock
     {
         void on();
         void off();
