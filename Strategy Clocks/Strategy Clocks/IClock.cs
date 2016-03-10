@@ -8,5 +8,10 @@ namespace Strategy_Clocks
 {
     interface IClock
     {
+        void on();
+        void off();
+        void UpdateTimeDisplay();
+        void ShowClock();
+        void HideClock();
     }
 }

@@ -32,6 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdDigital = new System.Windows.Forms.RadioButton();
             this.rdAnalogue = new System.Windows.Forms.RadioButton();
+            this.btStart = new System.Windows.Forms.Button();
+            this.btStop = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             this.rdDigital.TabStop = true;
             this.rdDigital.Text = "Digital";
             this.rdDigital.UseVisualStyleBackColor = true;
-            this.rdDigital.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdDigital.CheckedChanged += new System.EventHandler(this.rdDigital_CheckedChanged);
             // 
             // rdAnalogue
             // 
@@ -83,11 +85,31 @@
             this.rdAnalogue.UseVisualStyleBackColor = true;
             this.rdAnalogue.CheckedChanged += new System.EventHandler(this.rdAnalogue_CheckedChanged);
             // 
+            // btStart
+            // 
+            this.btStart.Location = new System.Drawing.Point(42, 51);
+            this.btStart.Name = "btStart";
+            this.btStart.Size = new System.Drawing.Size(75, 23);
+            this.btStart.TabIndex = 2;
+            this.btStart.Text = "Start Clock";
+            this.btStart.UseVisualStyleBackColor = true;
+            // 
+            // btStop
+            // 
+            this.btStop.Location = new System.Drawing.Point(42, 86);
+            this.btStop.Name = "btStop";
+            this.btStop.Size = new System.Drawing.Size(75, 23);
+            this.btStop.TabIndex = 3;
+            this.btStop.Text = "Stop Clock";
+            this.btStop.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 360);
+            this.Controls.Add(this.btStop);
+            this.Controls.Add(this.btStart);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.analogClock1);
             this.Name = "Form1";
@@ -104,6 +126,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdDigital;
         private System.Windows.Forms.RadioButton rdAnalogue;
+        private System.Windows.Forms.Button btStart;
+        private System.Windows.Forms.Button btStop;
     }
 }
 

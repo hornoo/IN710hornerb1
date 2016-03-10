@@ -16,5 +16,22 @@ namespace Strategy_Clocks
         {
             InitializeComponent();
         }
+
+        private void rdAnalogue_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdDigital_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
     }
 }
