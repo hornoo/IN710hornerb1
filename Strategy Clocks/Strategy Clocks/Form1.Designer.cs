@@ -34,6 +34,7 @@
             this.rdAnalogue = new System.Windows.Forms.RadioButton();
             this.btStart = new System.Windows.Forms.Button();
             this.btStop = new System.Windows.Forms.Button();
+            this.lbDigital = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,11 +43,11 @@
             this.analogClock1.Draw1MinuteTicks = true;
             this.analogClock1.Draw5MinuteTicks = true;
             this.analogClock1.HourHandColor = System.Drawing.Color.DarkMagenta;
-            this.analogClock1.Location = new System.Drawing.Point(80, 179);
+            this.analogClock1.Location = new System.Drawing.Point(33, 99);
             this.analogClock1.MinuteHandColor = System.Drawing.Color.Green;
             this.analogClock1.Name = "analogClock1";
             this.analogClock1.SecondHandColor = System.Drawing.Color.Red;
-            this.analogClock1.Size = new System.Drawing.Size(150, 150);
+            this.analogClock1.Size = new System.Drawing.Size(249, 249);
             this.analogClock1.TabIndex = 0;
             this.analogClock1.TicksColor = System.Drawing.Color.Black;
             // 
@@ -103,11 +104,22 @@
             this.btStop.Text = "Stop Clock";
             this.btStop.UseVisualStyleBackColor = true;
             // 
+            // lbDigital
+            // 
+            this.lbDigital.AutoSize = true;
+            this.lbDigital.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDigital.Location = new System.Drawing.Point(51, 192);
+            this.lbDigital.Name = "lbDigital";
+            this.lbDigital.Size = new System.Drawing.Size(212, 55);
+            this.lbDigital.TabIndex = 4;
+            this.lbDigital.Text = "00:00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 360);
+            this.Controls.Add(this.lbDigital);
             this.Controls.Add(this.btStop);
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.groupBox1);
@@ -117,6 +129,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,6 +141,7 @@
         private System.Windows.Forms.RadioButton rdAnalogue;
         private System.Windows.Forms.Button btStart;
         private System.Windows.Forms.Button btStop;
+        private System.Windows.Forms.Label lbDigital;
     }
 }
 

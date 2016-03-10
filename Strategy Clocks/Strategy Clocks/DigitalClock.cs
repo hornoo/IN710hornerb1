@@ -12,7 +12,10 @@ namespace Strategy_Clocks
         Label timeDisplay;
         Timer timer;
 
-
+        public DigitalClock(Label digitalClock)
+        {
+            timeDisplay = digitalClock;
+        }
 
         public void on()
         {
