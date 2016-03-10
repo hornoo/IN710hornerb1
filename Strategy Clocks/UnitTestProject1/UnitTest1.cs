@@ -11,8 +11,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void DigitalClock_StringOutPut_stringOfTimeCorrectFormatt();
         {
-            
-            //DigitalClock textclock = new DigitalClock(Testlabel1);
+            Label testLable = new Label();
+            Timer testTimer = new Timer();
+            DigitalClock textclock = new DigitalClock(testLable, testTimer);
         }
     }
 }
