@@ -62,7 +62,7 @@
             this.groupBox1.Size = new System.Drawing.Size(112, 73);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Select Clock";
             // 
             // rdDigital
             // 
@@ -79,6 +79,7 @@
             // rdAnalogue
             // 
             this.rdAnalogue.AutoSize = true;
+            this.rdAnalogue.Checked = true;
             this.rdAnalogue.Location = new System.Drawing.Point(7, 20);
             this.rdAnalogue.Name = "rdAnalogue";
             this.rdAnalogue.Size = new System.Drawing.Size(70, 17);
@@ -96,6 +97,7 @@
             this.btStart.TabIndex = 2;
             this.btStart.Text = "Start Clock";
             this.btStart.UseVisualStyleBackColor = true;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // btStop
             // 
@@ -105,6 +107,7 @@
             this.btStop.TabIndex = 3;
             this.btStop.Text = "Stop Clock";
             this.btStop.UseVisualStyleBackColor = true;
+            this.btStop.Click += new System.EventHandler(this.btStop_Click);
             // 
             // lbDigital
             // 
@@ -115,6 +118,7 @@
             this.lbDigital.Size = new System.Drawing.Size(212, 55);
             this.lbDigital.TabIndex = 4;
             this.lbDigital.Text = "00:00:00";
+            this.lbDigital.Visible = false;
             // 
             // timer1
             // 

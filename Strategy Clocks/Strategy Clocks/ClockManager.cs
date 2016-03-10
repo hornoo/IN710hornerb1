@@ -8,6 +8,7 @@ namespace Strategy_Clocks
 {
     public class ClockManager
     {
+        //set up reference to clock object on form
         public IClock ClockMachine {get; set;}
 
         public ClockManager()
@@ -15,26 +16,25 @@ namespace Strategy_Clocks
 
         }
 
+        //start clock
         public void StartClock() 
         {
             ClockMachine.on();
         }
 
+        //stop clock
         public void StopClock()
         {
             ClockMachine.off();
         }
 
-        public void ShowClock()
+        //togggle visablity of clock//
+        public void ShowAndHideClock()
         {
-            ClockMachine.ShowClock();
+            ClockMachine.ToggleClockVis();
         }
 
-        public void HideClock()
-        {
-            ClockMachine.HideClock();
-        }
-
+        //update clock time(digital clock only)
         public void updateDisplay()
         {
             ClockMachine.UpdateTimeDisplay();
