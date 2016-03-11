@@ -33,12 +33,14 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         {
             List<Critter> returnCritterList = new List<Critter>();
 
-            int critterType = Enum.Parse(ESpecies,speciesName);
+            ESpecies spiecesSearchItem = (ESpecies) Enum.Parse(typeof(ESpecies),speciesName,false);
 
-            returnCritterList = critterList.FindAll(ESpecies speciesName);
+            returnCritterList = critterList.FindAll(Critter => Critter.Species == spiecesSearchItem);
+
+            return returnCritterList;
 
             /* YOUR CODE HERE */
-            throw new NotImplementedException();    // Remove after you write the method
+           // throw new NotImplementedException();    // Remove after you write the method
         }
 
 

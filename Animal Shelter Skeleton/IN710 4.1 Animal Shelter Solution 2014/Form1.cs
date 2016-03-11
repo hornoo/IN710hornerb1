@@ -23,6 +23,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
