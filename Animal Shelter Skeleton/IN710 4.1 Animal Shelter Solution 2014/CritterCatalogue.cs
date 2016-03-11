@@ -31,16 +31,19 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         //=======================================================================
         public List<Critter> CritterQuery(string speciesName)
         {
+            //Create new list to return
             List<Critter> returnCritterList = new List<Critter>();
 
+            //convert string back to enum(conversion is not case sensitive. 
+            //https://msdn.microsoft.com/en-us/library/essfb559%28v=vs.110%29.aspx
             ESpecies spiecesSearchItem = (ESpecies) Enum.Parse(typeof(ESpecies),speciesName,false);
 
+            //find all criters with enum of spieces entered and returna list of them. 
             returnCritterList = critterList.FindAll(Critter => Critter.Species == spiecesSearchItem);
 
+            //return the list of critters
             return returnCritterList;
 
-            /* YOUR CODE HERE */
-           // throw new NotImplementedException();    // Remove after you write the method
         }
 
 
