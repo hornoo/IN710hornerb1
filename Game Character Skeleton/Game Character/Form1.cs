@@ -91,15 +91,10 @@ namespace Game_Character
             {
                 displayDic = gameWorker.AddCharater(new Knight(txtName.Text.Trim()));
             }
-            else if (rdTroll.Checked)
+            else 
             {
-                displayDic = gameWorker.AddCharater(new King(txtName.Text.Trim()));
+                displayDic = gameWorker.AddCharater(new Troll(txtName.Text.Trim()));
             }
-            else
-            {
-                DisplayPlayers(gameWorker.gameCharaterDic);
-            }
-
 
             DisplayPlayers(displayDic);
      

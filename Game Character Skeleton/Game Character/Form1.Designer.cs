@@ -68,7 +68,7 @@
             this.panel1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 169);
+            this.panel1.Size = new System.Drawing.Size(539, 169);
             this.panel1.TabIndex = 8;
             // 
             // label1
@@ -173,7 +173,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 196);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 338);
+            this.panel2.Size = new System.Drawing.Size(539, 338);
             this.panel2.TabIndex = 20;
             // 
             // label3
@@ -228,7 +228,7 @@
             this.listBox1.Location = new System.Drawing.Point(222, 80);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(222, 235);
+            this.listBox1.Size = new System.Drawing.Size(300, 235);
             this.listBox1.TabIndex = 20;
             // 
             // panel3
@@ -238,7 +238,7 @@
             this.panel3.Controls.Add(this.checkedListBox2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(483, 9);
+            this.panel3.Location = new System.Drawing.Point(574, 10);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 524);
@@ -330,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 551);
+            this.ClientSize = new System.Drawing.Size(815, 551);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
