@@ -12,17 +12,19 @@ namespace Encryption_practical
 {
     public partial class Form1 : Form
     {
-
+        // Set text pasing worker
         TextParser textParser;
 
         public Form1()
         {
             InitializeComponent();
+
+            //Initilise text parsing worker
             textParser = new TextParser();
         }
 
         private void ButEncrypt_Click(object sender, EventArgs e)
-        {
+        {   //Run method
             encryptText();
         }
 
@@ -33,6 +35,7 @@ namespace Encryption_practical
 
         public void encryptText()
         {
+            //Check whick radio button is selected, passin correct encryption machine, run encryption method on input string and pass output to text box.
             String inputString = tbInPut.Text;
 
             if (rdRot13.Checked)

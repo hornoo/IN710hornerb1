@@ -9,7 +9,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void DigitalClock_StringOutPut_stringOfTimeCorrectFormatt();
+        public void DigitalClock_StringOutPut_stringOfTimeCorrectFormatt()
         {
             Label testLable = new Label();
             Timer testTimer = new Timer();

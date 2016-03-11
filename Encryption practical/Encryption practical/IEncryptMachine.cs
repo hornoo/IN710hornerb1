@@ -8,8 +8,8 @@ namespace Encryption_practical
 {
    public interface IEncryptMachine
     {
+       //Required methods for a encryption machine
         String EncryptDecrypt(String inputString);
-
 
     }
 }

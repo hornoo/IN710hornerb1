@@ -17,7 +17,7 @@ namespace Encryption_practical
        }
 
        public String EncryptDecrypt(String inputString)
-       {
+       {// run encription methond of encrytion machine on sting thats passed in.
            return encryptionmachine.EncryptDecrypt(inputString);
        }
 
