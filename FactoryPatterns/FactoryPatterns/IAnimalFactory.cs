@@ -8,5 +8,6 @@ namespace FactoryPatterns
 {
     interface IAnimalFactory
     {
+
     }
 }

@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace FactoryPatterns
 {
-    class Australia
+    class Australia : Continent
     {
+                public Australia(int nAnimalTypes, Random r)
+            : base(r, nAnimalTypes)
+        {
+           // animalFactory = new AustraliaAnimalFactory();
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace FactoryPatterns
 {
-    class NorthAmerica
+    public class NorthAmerica : Continent
     {
+
+        public NorthAmerica(int nAnimalTypes, Random r)
+            : base(r, nAnimalTypes)
+        {
+           // animalFactory = new NorthAmericaAnimalFactory();
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
