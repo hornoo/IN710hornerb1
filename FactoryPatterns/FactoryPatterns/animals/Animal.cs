@@ -12,8 +12,9 @@ namespace FactoryPatterns
         protected String speciesName;
         protected String feedingBehaviour;
         protected String mainFoodType;
+        protected Bitmap image;
 
-        public Bitmap image { get; }
+        public Bitmap Image { get { return image; } }
 
         public override string ToString()
         {

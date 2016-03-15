@@ -44,19 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Australia.cs" />
-    <Compile Include="Continent.cs" />
+    <Compile Include="animals\Animal.cs" />
+    <Compile Include="Continents\Australia.cs" />
+    <Compile Include="Continents\Continent.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IAnimalFactory.cs" />
-    <Compile Include="Koala.cs" />
-    <Compile Include="NorthAmerica.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Factories\IAnimalFactory.cs" />
+    <Compile Include="animals\Koala.cs" />
+    <Compile Include="Continents\NorthAmerica.cs" />
+    <Compile Include="Factories\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
