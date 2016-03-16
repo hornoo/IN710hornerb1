@@ -8,7 +8,7 @@ namespace FactoryPatterns
 {
     public abstract class Continent
     {
-        public const int ANIMA_SIM_COUNT = 4;
+        public const int ANIMA_SIML_COUNT = 4;
 
         protected Random r;
         protected int nAnimalTypes;
@@ -20,7 +20,20 @@ namespace FactoryPatterns
             this.nAnimalTypes = nAnimalTypes;
         }
 
-        public abstract override string ToString();
+        public List<Animal> runSim()
+        {
+            List<Animal> returnListAnimals = new List<Animal>();
+
+
+            for (int i = 0; i < ANIMA_SIML_COUNT; i++ )
+            {
+                int animalFactorAnimalIndex = r.Next(nAnimalTypes);
+                returnListAnimals.Add(animalFactory.createAnimal(animalFactorAnimalIndex));
+            }
+
+                return returnListAnimals;
+
+        }
    
     }
 }
