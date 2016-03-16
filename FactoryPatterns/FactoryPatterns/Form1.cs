@@ -25,16 +25,17 @@ namespace FactoryPatterns
             randomIntGenetator = new Random();
             northAmericaCont = new NorthAmerica(3, randomIntGenetator);
             australiaCont = new Australia(3, randomIntGenetator);
+            UIOutWorker = new UIOuput(formCanvas, listBox1);
         }
 
         private void btAuz_Click(object sender, EventArgs e)
         {
-
+            UIOutWorker.drawAndlistAnimal(australiaCont.runSim());
         }
 
         private void btUSA_Click(object sender, EventArgs e)
         {
-
+            UIOutWorker.drawAndlistAnimal(northAmericaCont.runSim());
         }
     }
 }

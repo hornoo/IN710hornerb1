@@ -24,11 +24,13 @@ namespace FactoryPatterns
         {
             List<Animal> returnListAnimals = new List<Animal>();
 
+            Animal newAnimal = null;
 
             for (int i = 0; i < ANIMA_SIML_COUNT; i++ )
             {
-                int animalFactorAnimalIndex = r.Next(nAnimalTypes);
-                returnListAnimals.Add(animalFactory.createAnimal(animalFactorAnimalIndex));
+                int animalFactorAnimalIndex = r.Next(nAnimalTypes - 1);
+                newAnimal = animalFactory.createAnimal(animalFactorAnimalIndex);
+                returnListAnimals.Add(newAnimal);
             }
 
                 return returnListAnimals;
