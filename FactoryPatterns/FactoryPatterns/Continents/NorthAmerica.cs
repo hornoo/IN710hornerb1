@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FactoryPatterns
 {
     public class NorthAmerica : Continent
@@ -12,12 +13,8 @@ namespace FactoryPatterns
         public NorthAmerica(int nAnimalTypes, Random r)
             : base(r, nAnimalTypes)
         {
-           // animalFactory = new NorthAmericaAnimalFactory();
+            animalFactory = new NorthAmericaAnimalFactory();
         }
 
-        public override string ToString()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

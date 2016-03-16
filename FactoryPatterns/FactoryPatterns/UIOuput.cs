@@ -37,6 +37,16 @@ namespace FactoryPatterns
 
        }
 
+       public void clearListbox(ListBox boxToClear)
+       {
+           boxToClear.Items.Clear();
+       }
+
+       public void clearCanvasImages(Graphics canvasToClear)
+       {
+           canvas.Clear(Color.FromName("Control"));
+       }
+
 
 
 

@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryPatterns.Factories
+namespace FactoryPatterns
 {
     public class AustralianAnimalFactory : IAnimalFactory
     {
+        public AustralianAnimalFactory()
+        { 
+        }
+
         public Animal createAnimal(int animalCode)
         {
             Animal newAnimal = null;

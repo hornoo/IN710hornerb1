@@ -30,11 +30,15 @@ namespace FactoryPatterns
 
         private void btAuz_Click(object sender, EventArgs e)
         {
+            UIOutWorker.clearListbox(listBox1);
+            UIOutWorker.clearCanvasImages(formCanvas);
             UIOutWorker.drawAndlistAnimal(australiaCont.runSim());
         }
 
         private void btUSA_Click(object sender, EventArgs e)
         {
+            UIOutWorker.clearListbox(listBox1);
+            UIOutWorker.clearCanvasImages(formCanvas);
             UIOutWorker.drawAndlistAnimal(northAmericaCont.runSim());
         }
     }

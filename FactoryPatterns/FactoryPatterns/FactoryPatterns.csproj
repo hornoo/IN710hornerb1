@@ -53,7 +53,7 @@
     <Compile Include="Continents\Australia.cs" />
     <Compile Include="Continents\Continent.cs" />
     <Compile Include="Factories\AustralianAnimalFactory.cs" />
-    <Compile Include="Factories\NorthAmericanAnimalFacotry.cs" />
+    <Compile Include="Factories\NorthAmericaAnimalFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

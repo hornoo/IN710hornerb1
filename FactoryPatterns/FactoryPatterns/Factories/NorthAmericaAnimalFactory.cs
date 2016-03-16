@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryPatterns.Factories
+namespace FactoryPatterns
 {
-    class NorthAmericanAnimalFacotry : IAnimalFactory
+    public class NorthAmericaAnimalFactory : IAnimalFactory
     {
+        public NorthAmericaAnimalFactory()
+        {
+
+        }
 
         public Animal createAnimal(int animalCode)
         {
             Animal newAnimal = null;
 
-            switch(animalCode)
+            switch (animalCode)
             {
                 case 0:
                     newAnimal = new Armadillo();

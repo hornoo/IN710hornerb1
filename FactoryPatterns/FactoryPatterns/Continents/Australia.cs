@@ -11,12 +11,8 @@ namespace FactoryPatterns
                 public Australia(int nAnimalTypes, Random r)
             : base(r, nAnimalTypes)
         {
-           // animalFactory = new AustraliaAnimalFactory();
+            animalFactory = new AustralianAnimalFactory();
         }
 
-        public override string ToString()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
