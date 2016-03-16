@@ -7,14 +7,14 @@ using System.Drawing;
 
 namespace FactoryPatterns.animals
 {
-    public class Puma : Animal
+    class Tasmaniandevil : Animal
     {
-        public Puma()
+        public Tasmaniandevil()
         {
-            speciesName = "Puma";
+            speciesName = "Tasmanian Devil";
             feedingBehaviour = "Carnivore";
-            mainFoodType = "Deer";
-            image = new Bitmap("animalImages/puma.jpg");
+            mainFoodType = "Snakes";
+            image = new Bitmap("animalImages/taz.jpg");
         }
     }
 }

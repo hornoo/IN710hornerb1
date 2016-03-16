@@ -14,7 +14,7 @@ namespace FactoryPatterns
             speciesName = "Koala";
             feedingBehaviour = "Herbivor";
             mainFoodType = "Leafs";
-            image = new Bitmap("animalImages/koala");
+            image = new Bitmap("animalImages/koala.jpg");
         }
     }
 }

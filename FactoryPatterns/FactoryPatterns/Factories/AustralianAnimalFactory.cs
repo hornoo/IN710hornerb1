@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryPatterns
+namespace FactoryPatterns.Factories
 {
-    public interface IAnimalFactory
+    class AustralianAnimalFactory
     {
-        Animal createAnimal(int animalCode);
     }
 }
