@@ -12,8 +12,8 @@ namespace FactoryPatterns
         public Crocodile()
         {
             speciesName = "Crocodile";
-            feedingBehaviour = "Carnivore";
-            mainFoodType = "Any small animal";
+            feedingBehaviour = "carnivore";
+            mainFoodType = "any small animal";
             image = new Bitmap("animalImages/crock.jpg");
         }
 

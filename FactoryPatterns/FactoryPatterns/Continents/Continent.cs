@@ -8,7 +8,7 @@ namespace FactoryPatterns
 {
     public abstract class Continent
     {
-        public const int ANIMA_SIML_COUNT = 4;
+        public const int ANIMA_SIML_COUNT = 5;
 
         protected Random r;
         protected int nAnimalTypes;

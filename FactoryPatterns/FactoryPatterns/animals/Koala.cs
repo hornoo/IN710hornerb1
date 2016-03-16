@@ -12,8 +12,8 @@ namespace FactoryPatterns
         public Koala()
         {
             speciesName = "Koala";
-            feedingBehaviour = "Herbivor";
-            mainFoodType = "Leafs";
+            feedingBehaviour = "herbivor";
+            mainFoodType = "leafs";
             image = new Bitmap("animalImages/koala.jpg");
         }
     }

@@ -12,8 +12,8 @@ namespace FactoryPatterns
         public Armadillo()
         {
             speciesName = "Armadillo";
-            feedingBehaviour = "Omnivore";
-            mainFoodType = "Insects";
+            feedingBehaviour = "omnivore";
+            mainFoodType = "insects";
             image = new Bitmap("animalImages/armadillo.jpg");
         }
     }

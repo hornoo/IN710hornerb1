@@ -12,8 +12,8 @@ namespace FactoryPatterns
         public Tasmaniandevil()
         {
             speciesName = "Tasmanian Devil";
-            feedingBehaviour = "Carnivore";
-            mainFoodType = "Snakes";
+            feedingBehaviour = "carnivore";
+            mainFoodType = "snakes";
             image = new Bitmap("animalImages/taz.jpg");
         }
     }

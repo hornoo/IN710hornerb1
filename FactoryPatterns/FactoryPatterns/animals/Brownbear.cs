@@ -12,7 +12,7 @@ namespace FactoryPatterns
         public Brownbear() 
         {
             speciesName = "Brown Bear";
-            feedingBehaviour = "Omnivore";
+            feedingBehaviour = "omnivore";
             mainFoodType = "Moose";
             image = new Bitmap("animalImages/brownbear.jpg");
         }

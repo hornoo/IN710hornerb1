@@ -12,7 +12,7 @@ namespace FactoryPatterns
         public Puma()
         {
             speciesName = "Puma";
-            feedingBehaviour = "Carnivore";
+            feedingBehaviour = "carnivore";
             mainFoodType = "Deer";
             image = new Bitmap("animalImages/puma.jpg");
         }
