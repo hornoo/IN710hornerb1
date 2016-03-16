@@ -29,9 +29,10 @@ namespace FactoryPatterns
 
            foreach(Animal currentAnimal in inputAnimalList)
            {
-               canvas.DrawImage(currentAnimal.Image,xpos,ypos);
+               canvas.DrawImage(currentAnimal.Image,xpos,ypos,currentAnimal.Image.Width,currentAnimal.Image.Height);
                outPutListbox.Items.Add(currentAnimal.ToString());
                ypos += currentAnimal.Image.Height;
+               Console.WriteLine(ypos);
 
            }
 
