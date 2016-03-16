@@ -8,6 +8,8 @@ namespace FactoryPatterns
 {
     public interface IAnimalFactory
     {
+       
         Animal createAnimal(int animalCode);
+        int AvaliableAnimalCount();
     }
 }

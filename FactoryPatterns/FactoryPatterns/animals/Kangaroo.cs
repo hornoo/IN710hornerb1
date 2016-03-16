@@ -8,6 +8,7 @@ namespace FactoryPatterns
 {
     public class Kangaroo : Animal
     {
+        //Set properties of child animal when their construcotr is called.
         public Kangaroo()
         {
             speciesName = "Kangaroo";

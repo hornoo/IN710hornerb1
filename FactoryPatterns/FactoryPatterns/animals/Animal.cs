@@ -9,6 +9,7 @@ namespace FactoryPatterns
 {
     public abstract class Animal
     {
+        //list of fieds required for Parent class
         protected String speciesName;
         protected String feedingBehaviour;
         protected String mainFoodType;
@@ -16,6 +17,7 @@ namespace FactoryPatterns
 
         public Bitmap Image { get { return image; } }
 
+        //Tostring override, prints info about animal.
         public override string ToString()
         {
             String returnString = "I'm " + speciesName + ".";

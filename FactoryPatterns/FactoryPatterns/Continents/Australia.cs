@@ -8,10 +8,11 @@ namespace FactoryPatterns
 {
     class Australia : Continent
     {
-                public Australia(int nAnimalTypes, Random r)
-            : base(r, nAnimalTypes)
+                public Australia(Random r)
+            : base(r)
         {
             animalFactory = new AustralianAnimalFactory();
+            nAnimalTypes = animalFactory.AvaliableAnimalCount();
         }
 
     }

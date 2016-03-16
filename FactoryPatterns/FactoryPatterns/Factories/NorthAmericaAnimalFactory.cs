@@ -8,9 +8,12 @@ namespace FactoryPatterns
 {
     public class NorthAmericaAnimalFactory : IAnimalFactory
     {
+
+        const int avaliableAnimalCount = 4;
+
         public NorthAmericaAnimalFactory()
         {
-
+            
         }
 
         public Animal createAnimal(int animalCode)
@@ -34,6 +37,12 @@ namespace FactoryPatterns
             }
 
             return newAnimal;
+        }
+
+
+        public int AvaliableAnimalCount()
+        {
+            return avaliableAnimalCount;
         }
     }
 }
