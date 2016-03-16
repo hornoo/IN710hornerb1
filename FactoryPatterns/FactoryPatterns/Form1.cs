@@ -23,8 +23,8 @@ namespace FactoryPatterns
             InitializeComponent();
             formCanvas = CreateGraphics();
             randomIntGenetator = new Random();
-            northAmericaCont = new NorthAmerica(3, randomIntGenetator);
-            australiaCont = new Australia(3, randomIntGenetator);
+            northAmericaCont = new NorthAmerica(4, randomIntGenetator);
+            australiaCont = new Australia(4, randomIntGenetator);
             UIOutWorker = new UIOuput(formCanvas, listBox1);
         }
 

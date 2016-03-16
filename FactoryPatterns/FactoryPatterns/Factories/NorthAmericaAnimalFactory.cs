@@ -28,6 +28,9 @@ namespace FactoryPatterns
                 case 2:
                     newAnimal = new Puma();
                     break;
+                case 3:
+                    newAnimal = new Bison();
+                    break;
             }
 
             return newAnimal;

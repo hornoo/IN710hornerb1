@@ -48,9 +48,11 @@
     <Compile Include="animals\Armadillo.cs" />
     <Compile Include="animals\Brownbear.cs" />
     <Compile Include="animals\Crocodile.cs" />
+    <Compile Include="animals\Kangaroo.cs" />
     <Compile Include="animals\Puma.cs" />
     <Compile Include="animals\Tasmaniandevil.cs" />
     <Compile Include="Continents\Australia.cs" />
+    <Compile Include="animals\Bison.cs" />
     <Compile Include="Continents\Continent.cs" />
     <Compile Include="Factories\AustralianAnimalFactory.cs" />
     <Compile Include="Factories\NorthAmericaAnimalFactory.cs" />

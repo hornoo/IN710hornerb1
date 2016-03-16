@@ -27,6 +27,9 @@ namespace FactoryPatterns
                 case 2:
                     newAnimal = new Tasmaniandevil();
                     break;
+                case 3:
+                    newAnimal = new Kangaroo();
+                    break;
             }
 
 
