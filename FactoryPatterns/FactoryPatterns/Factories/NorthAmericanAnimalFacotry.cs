@@ -16,10 +16,14 @@ namespace FactoryPatterns.Factories
             switch(animalCode)
             {
                 case 0:
-                    newAnimal = new Koala();
+                    newAnimal = new Armadillo();
                     break;
                 case 1:
-                    newAnimal = new 
+                    newAnimal = new Brownbear();
+                    break;
+                case 2:
+                    newAnimal = new Puma();
+                    break;
             }
 
             return newAnimal;
