@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPatterns
 {
-    public interface IAnimalFactory
+    public class AnimalFactory
     {
         //Interface to set required methods for animal factorys.
        

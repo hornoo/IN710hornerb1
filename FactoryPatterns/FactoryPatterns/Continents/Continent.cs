@@ -18,7 +18,7 @@ namespace FactoryPatterns
         protected int nAnimalTypes;
 
         //Animal factory to take care of creating animals
-        protected IAnimalFactory animalFactory;
+        protected AnimalFactory animalFactory;
 
 
         //Constructor requires reference to a random int gen and how many animals types are avaliable, the avaliable types are set in the child class constructor.

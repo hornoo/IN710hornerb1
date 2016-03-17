@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPatterns
 {
-    public class NorthAmericaAnimalFactory : IAnimalFactory
+    public class NorthAmericaAnimalFactory : AnimalFactory
     {
         //Amount of avaliable animals
         const int avaliableAnimalCount = 4;
