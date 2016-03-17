@@ -8,6 +8,7 @@ namespace FactoryPatterns
 {
     public interface IAnimalFactory
     {
+        //Interface to set required methods for animal factorys.
        
         Animal createAnimal(int animalCode);
         int AvaliableAnimalCount();

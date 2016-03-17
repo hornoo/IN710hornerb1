@@ -21,11 +21,10 @@ namespace FactoryPatterns
         protected IAnimalFactory animalFactory;
 
 
-        //Constructor requires reference to a random int gen and how many animals typs are avaliable.
+        //Constructor requires reference to a random int gen and how many animals types are avaliable, the avaliable types are set in the child class constructor.
         public Continent(Random r)
         {
-            this.r = r;
-            
+            this.r = r; 
         }
 
         //Generate require abount of animals randomly and return as a list of animal objects.

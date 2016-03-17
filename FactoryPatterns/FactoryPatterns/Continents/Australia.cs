@@ -8,7 +8,8 @@ namespace FactoryPatterns
 {
     class Australia : Continent
     {
-                public Australia(Random r)
+
+        public Australia(Random r)
             : base(r)
         {
             animalFactory = new AustralianAnimalFactory();
