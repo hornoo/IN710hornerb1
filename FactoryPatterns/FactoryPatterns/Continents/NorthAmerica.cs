@@ -13,7 +13,7 @@ namespace FactoryPatterns
             : base(r)
         {
             animalFactory = new NorthAmericaAnimalFactory();
-            nAnimalTypes = animalFactory.AvaliableAnimalCount();
+            nAnimalTypes = animalFactory.AvaliableAnimalCount;
         }
 
     }

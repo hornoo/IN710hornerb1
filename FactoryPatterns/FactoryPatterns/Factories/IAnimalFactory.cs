@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace FactoryPatterns
 {
-    public class AnimalFactory
+    public abstract class AnimalFactory
     {
-        //Interface to set required methods for animal factorys.
+
+        protected int avaliableAnimalCount;
+
+        public int AvaliableAnimalCount
+        {
+            get { return avaliableAnimalCount;  }
+        }
        
-        Animal createAnimal(int animalCode);
-        int AvaliableAnimalCount();
+        public abstract Animal createAnimal(int animalCode);
+
     }
 }

@@ -8,16 +8,14 @@ namespace FactoryPatterns
 {
     public class AustralianAnimalFactory : AnimalFactory
     {
-        //Amount of avaliable animals
-        const int avaliableAnimalCount = 4;
 
         public AustralianAnimalFactory()
         {
-            
+             avaliableAnimalCount = 4;
         }
 
         //Create animal from index passed in and return
-        public Animal createAnimal(int animalCode)
+        public override Animal createAnimal(int animalCode)
         {
             Animal newAnimal = null;
 
@@ -42,12 +40,5 @@ namespace FactoryPatterns
             return newAnimal;
         }
 
-
-
-        //return amount of avaliable animals
-        public int AvaliableAnimalCount()
-        {
-            return avaliableAnimalCount;
-        }
     }
 }
