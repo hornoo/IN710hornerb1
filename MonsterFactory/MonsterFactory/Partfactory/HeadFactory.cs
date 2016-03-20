@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MonsterFactory
 {
-    public interface IMonsterFactory
+    public class HeadFactory
     {
-        Head getMonsterhead();
-        Body getMonsterBody();
-        Legs getMonsterLegs();
+        switch
     }
 }

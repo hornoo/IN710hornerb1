@@ -14,18 +14,34 @@ namespace MonsterFactory
     {
         FairyFactory FairyFactoryWorker;
         FrankensteinFactory FrankFactoryWorker;
+        List<String> comboBoxList;
 
         public Form1()
         {
             InitializeComponent();
-            FairyFactoryWorker = new FairyFactory();
-            FrankFactoryWorker = new FrankensteinFactory();
+            //FairyFactoryWorker = new FairyFactory();
+            //FrankFactoryWorker = new FrankensteinFactory();
+            comboBoxList = new List<string>() { "Fairy", "Frankenstein" };
+            populateComboBox(cbhead, comboBoxList);
+            populateComboBox(cbbody, comboBoxList);
+            populateComboBox(cblegs, comboBoxList);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
 
+
+        }
+
+
+        public void populateComboBox(ComboBox combobox, List<String> stringList)
+        {
+            foreach(String currentStrin in stringList)
+            {
+                combobox.Items.Add(currentStrin);
+            }
+            combobox.SelectedIndex = 1;
         }
     }
 }

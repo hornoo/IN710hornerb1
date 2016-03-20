@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterFactory
 {
-    class Legs : BodyPart
+    public class Legs : BodyPart
     {
     }
 }

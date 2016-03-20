@@ -12,6 +12,7 @@ namespace MonsterFactory
 
         protected String pathToImage;
         
+        
 
         public String getImage()
         {

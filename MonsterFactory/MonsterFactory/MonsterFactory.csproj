@@ -63,6 +63,10 @@
     <Compile Include="Frankenstein\FrankHead.cs" />
     <Compile Include="Frankenstein\FrankLegs.cs" />
     <Compile Include="Factorys\IMonsterFactory.cs" />
+    <Compile Include="Partfactory\BodyFactory.cs" />
+    <Compile Include="Partfactory\HeadFactory.cs" />
+    <Compile Include="Partfactory\IBodyPartFactory.cs" />
+    <Compile Include="Partfactory\Legfactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
