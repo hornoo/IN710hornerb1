@@ -44,11 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CPU\LaptopCPU.cs" />
     <Compile Include="Factorys\BusCompFactory.cs" />
     <Compile Include="CPU\BusinessCPU.cs" />
+    <Compile Include="Factorys\LaptopFactory.cs" />
     <Compile Include="GPU\BusinessGPU.cs" />
+    <Compile Include="GPU\LaptopGPU.cs" />
     <Compile Include="PSU\BusinnesPSU.cs" />
     <Compile Include="PSU\GamingPSU.cs" />
+    <Compile Include="PSU\LaptopPSU.cs" />
     <Compile Include="PSU\MultimediaPSU.cs" />
     <Compile Include="PSU\PowerSupply.cs" />
     <Compile Include="RAM\BusinessRAM.cs" />
@@ -69,6 +73,7 @@
     <Compile Include="Factorys\MultimediaCompFactory.cs" />
     <Compile Include="CPU\MultimediaCPU.cs" />
     <Compile Include="GPU\MultimediaGPU.cs" />
+    <Compile Include="RAM\LaptopRAM.cs" />
     <Compile Include="RAM\MultimediaRAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

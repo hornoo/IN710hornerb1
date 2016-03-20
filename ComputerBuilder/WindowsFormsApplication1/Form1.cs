@@ -27,9 +27,12 @@ namespace WindowsFormsApplication1
             }else if(rbBus.Checked)
             {
                 FactoryWorker = new BusCompFactory();
-            }else
+            }else if(rbMultilM.Checked)
             {
                 FactoryWorker = new MultimediaCompFactory();
+            } else
+            {
+                FactoryWorker = new LaptopFactory();
             }
 
             

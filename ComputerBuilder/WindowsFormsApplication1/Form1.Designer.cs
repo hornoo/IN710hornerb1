@@ -34,11 +34,13 @@
             this.rbMultilM = new System.Windows.Forms.RadioButton();
             this.btPritnSpeck = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.rbLaptop = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbLaptop);
             this.groupBox1.Controls.Add(this.rbMultilM);
             this.groupBox1.Controls.Add(this.rbBus);
             this.groupBox1.Controls.Add(this.rbGame);
@@ -100,6 +102,17 @@
             this.listBox1.Size = new System.Drawing.Size(352, 173);
             this.listBox1.TabIndex = 2;
             // 
+            // rbLaptop
+            // 
+            this.rbLaptop.AutoSize = true;
+            this.rbLaptop.Location = new System.Drawing.Point(16, 100);
+            this.rbLaptop.Name = "rbLaptop";
+            this.rbLaptop.Size = new System.Drawing.Size(58, 17);
+            this.rbLaptop.TabIndex = 3;
+            this.rbLaptop.TabStop = true;
+            this.rbLaptop.Text = "Laptop";
+            this.rbLaptop.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +137,7 @@
         private System.Windows.Forms.RadioButton rbGame;
         private System.Windows.Forms.Button btPritnSpeck;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.RadioButton rbLaptop;
     }
 }
 
