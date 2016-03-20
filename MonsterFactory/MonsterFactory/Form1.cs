@@ -12,15 +12,13 @@ namespace MonsterFactory
 {
     public partial class Form1 : Form
     {
-        FairyFactory FairyFactoryWorker;
-        FrankensteinFactory FrankFactoryWorker;
+
         List<String> comboBoxList;
 
         public Form1()
         {
             InitializeComponent();
-            //FairyFactoryWorker = new FairyFactory();
-            //FrankFactoryWorker = new FrankensteinFactory();
+   
             comboBoxList = new List<string>() { "Fairy", "Frankenstein" };
             populateComboBox(cbhead, comboBoxList);
             populateComboBox(cbbody, comboBoxList);
