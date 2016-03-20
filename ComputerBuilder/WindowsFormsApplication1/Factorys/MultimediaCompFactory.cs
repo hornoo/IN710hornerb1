@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
         {
             return new MultimediaRAM();
         }
+
+        public PowerSupply makePSU()
+        {
+            return new MultimediaPSU();
+        }
     }
 }

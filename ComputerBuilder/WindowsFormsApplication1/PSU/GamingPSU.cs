@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public interface IComputerfactory
+    public class GamingPSU : PowerSupply
     {
-        CPU makeCpu();
-        GPU makeGPU();
-        RAM makeRAM();
-        PowerSupply makePSU();
+        public GamingPSU()
+        {
+            componentName = "EnerMax 800watt";
+            componentPrice = 400;
+        }
     }
 }

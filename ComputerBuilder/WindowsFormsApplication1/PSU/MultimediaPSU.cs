@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public abstract class RAM : ComputerComponent
+    public class MultimediaPSU : PowerSupply
     {
-        protected String channelValue;
-
-        public String calculateLatancey()
+        public MultimediaPSU()
         {
-            return null;
+            componentName = "Corsair 1500Watt";
+            componentPrice = 800;
         }
     }
 }

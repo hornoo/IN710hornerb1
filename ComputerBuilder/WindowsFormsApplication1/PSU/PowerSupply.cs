@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public abstract class RAM : ComputerComponent
+    public abstract class PowerSupply : ComputerComponent
     {
-        protected String channelValue;
 
-        public String calculateLatancey()
+        protected String EnergyStarCert;
+
+        public String CalculatePowerDraw()
         {
             return null;
         }
+
     }
 }

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public abstract class RAM : ComputerComponent
+    public class BusinnesPSU : PowerSupply
     {
-        protected String channelValue;
-
-        public String calculateLatancey()
+        public BusinnesPSU()
         {
-            return null;
+            componentName = "Generic 280 watt";
+            componentPrice = 63;
         }
     }
 }

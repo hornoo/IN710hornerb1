@@ -37,8 +37,9 @@ namespace WindowsFormsApplication1
             CPU curCPU = FactoryWorker.makeCpu();
             GPU curGPU = FactoryWorker.makeGPU();
             RAM curRAM = FactoryWorker.makeRAM();
+            PowerSupply curPSU = FactoryWorker.makePSU();
 
-            int totalPrice = curCPU.ComponentPrice + curGPU.ComponentPrice + curRAM.ComponentPrice;
+            int totalPrice = curCPU.ComponentPrice + curGPU.ComponentPrice + curRAM.ComponentPrice + curPSU.ComponentPrice;
 
             listBox1.Items.Clear();
 
@@ -48,6 +49,7 @@ namespace WindowsFormsApplication1
             listBox1.Items.Add(curCPU.ToString());
             listBox1.Items.Add(curGPU.ToString());
             listBox1.Items.Add(curRAM.ToString());
+            listBox1.Items.Add(curPSU.ToString());
 
             listBox1.Items.Add("=====================================");
 

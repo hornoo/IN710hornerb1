@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
         {
             return new BusinessRAM();
         }
+
+        public PowerSupply makePSU()
+        {
+            return new BusinnesPSU();
+        }
     }
 }

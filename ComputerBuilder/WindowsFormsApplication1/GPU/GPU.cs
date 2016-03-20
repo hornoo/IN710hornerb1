@@ -8,6 +8,11 @@ namespace WindowsFormsApplication1
 {
     public abstract class GPU : ComputerComponent
     {
+        protected String GPUManufactuer;
 
+        public String ChangeHeatSink()
+        {
+            return null;
+        }
     }
 }

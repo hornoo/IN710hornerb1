@@ -47,6 +47,10 @@
     <Compile Include="Factorys\BusCompFactory.cs" />
     <Compile Include="CPU\BusinessCPU.cs" />
     <Compile Include="GPU\BusinessGPU.cs" />
+    <Compile Include="PSU\BusinnesPSU.cs" />
+    <Compile Include="PSU\GamingPSU.cs" />
+    <Compile Include="PSU\MultimediaPSU.cs" />
+    <Compile Include="PSU\PowerSupply.cs" />
     <Compile Include="RAM\BusinessRAM.cs" />
     <Compile Include="ComputerComponent.cs" />
     <Compile Include="CPU\CPU.cs" />

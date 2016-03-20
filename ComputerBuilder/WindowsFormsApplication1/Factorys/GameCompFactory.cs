@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
         {
             return new GamingRAM();
         }
+
+        public PowerSupply makePSU()
+        {
+            return new GamingPSU();
+        }
     }
 }
