@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="bodyParts\Body.cs" />
     <Compile Include="bodyParts\BodyPart.cs" />
+    <Compile Include="Factorys\FairyFactory.cs" />
+    <Compile Include="Factorys\FrankensteinFactory.cs" />
     <Compile Include="Fairy\FairyBody.cs" />
     <Compile Include="Fairy\FairyHead.cs" />
     <Compile Include="Fairy\FairyLegs.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="Frankenstein\FrankBody.cs" />
     <Compile Include="Frankenstein\FrankHead.cs" />
     <Compile Include="Frankenstein\FrankLegs.cs" />
+    <Compile Include="Factorys\IMonsterFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
