@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class GameCompFactory : IComputerfactory
+    public class MultimediaCompFactory : IComputerfactory
     {
         public CPU makeCpu()
         {
-            return new GamingCPU();
+            return new MultimediaCPU();
         }
 
         public GPU makeGPU()
         {
-            return new GamingGPU();
+            return new MultimediaGPU();
         }
 
         public RAM makeRAM()
         {
-            return new 
+            return new MultimediaRAM();
         }
     }
 }

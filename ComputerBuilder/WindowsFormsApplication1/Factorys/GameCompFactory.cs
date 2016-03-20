@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class MultimediaCompFactory : IComputerfactory
+    public class GameCompFactory : IComputerfactory
     {
         public CPU makeCpu()
         {
-            throw new NotImplementedException();
+            return new GamingCPU();
         }
 
         public GPU makeGPU()
         {
-            throw new NotImplementedException();
+            return new GamingGPU();
         }
 
         public RAM makeRAM()
         {
-            throw new NotImplementedException();
+            return new GamingRAM();
         }
     }
 }

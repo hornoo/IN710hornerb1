@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class BusinessCPU : CPU
+    public class GamingGPU : GPU
     {
-        public BusinessCPU()
+        public GamingGPU()
         {
-            componentName = "Core i3-4170 3.7 GHz";
-            componentPrice = 211;
+            componentName = "nVidia GTX980";
+            componentPrice = 800;
         }
+
     }
 }

@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
     {
         public MultimediaCPU()
         {
-            componentName = "Intel® Xeon® Processor E7-4850 v3 (35M Cache, 2.20 GHz)";
+            componentName = "E7-4850  2.20 GHz";
             componentPrice = 3500;
         }
     }

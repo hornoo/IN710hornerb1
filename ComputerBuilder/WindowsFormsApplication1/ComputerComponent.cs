@@ -21,6 +21,9 @@ namespace WindowsFormsApplication1
             get { return componentPrice; }
         }
 
-
+        public override string ToString()
+        {
+            return componentName + "\t\t\t$" + componentPrice;
+        }
     }
 }

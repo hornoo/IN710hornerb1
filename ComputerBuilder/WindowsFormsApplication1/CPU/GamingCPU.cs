@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
     {
         public GamingCPU()
         {
-            componentName = "Intel® Core™ i7-6700T Processor (8M Cache, up to 3.60 GHz)";
+            componentName = "i7-6700T 3.60 GHz)";
             componentPrice = 500;
         }
 
