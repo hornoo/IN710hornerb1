@@ -3,10 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MonsterFactory
 {
-    class MonsterPrinter
+    public class MonsterPrinter
     {
+        public MonsterPrinter()
+        {
+
+        }
+
+        public void printMonster(List<PictureBox> printBoxes, MonsterBuilder monster)
+        {
+            printBoxes[0].ImageLocation = monster.headpicture();
+            printBoxes[1].ImageLocation = monster.bodyPictur();
+            printBoxes[2].ImageLocation = monster.legPicture();
+        }
     }
 }
