@@ -7,10 +7,17 @@ using System.Threading.Tasks;
 namespace MonsterFactory
 {
     
-    public abstract class BodyPart
+    public class BodyPart
     {
 
         protected String pathToImage;
+        protected String monsterType;
+
+        public BodyPart(String imagePath, String MonsterLabel)
+        {
+            pathToImage = imagePath;
+            monsterType = MonsterLabel;
+        }
         
         
 
