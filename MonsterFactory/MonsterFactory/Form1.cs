@@ -67,5 +67,10 @@ namespace MonsterFactory
             }
             combobox.SelectedIndex = 1;
         }
+
+        private void pbLegs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

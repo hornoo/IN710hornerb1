@@ -45,24 +45,28 @@
             this.pbhead.Location = new System.Drawing.Point(61, 43);
             this.pbhead.Name = "pbhead";
             this.pbhead.Size = new System.Drawing.Size(150, 150);
+            this.pbhead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbhead.TabIndex = 0;
             this.pbhead.TabStop = false;
             // 
             // pbbody
             // 
-            this.pbbody.Location = new System.Drawing.Point(61, 199);
+            this.pbbody.Location = new System.Drawing.Point(61, 190);
             this.pbbody.Name = "pbbody";
             this.pbbody.Size = new System.Drawing.Size(150, 150);
+            this.pbbody.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbbody.TabIndex = 1;
             this.pbbody.TabStop = false;
             // 
             // pbLegs
             // 
-            this.pbLegs.Location = new System.Drawing.Point(61, 355);
+            this.pbLegs.Location = new System.Drawing.Point(61, 336);
             this.pbLegs.Name = "pbLegs";
             this.pbLegs.Size = new System.Drawing.Size(150, 150);
+            this.pbLegs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLegs.TabIndex = 2;
             this.pbLegs.TabStop = false;
+            this.pbLegs.Click += new System.EventHandler(this.pbLegs_Click);
             // 
             // cbhead
             // 
