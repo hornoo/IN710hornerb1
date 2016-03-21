@@ -14,19 +14,31 @@ namespace MonsterFactory
 
         public BodyPart requiredpart(int partIndex)
         {
-            BodyPart head = null;
+            BodyPart part = null;
 
             switch (partIndex)
             {
                 case 0:
-                    head = new FairyHead();
+                    part = new BodyPart("images/Fairy_0.png", "Fairy");
                     break;
                 case 1:
-                    head = new FrankHead();
+                    part = new BodyPart("images/Frankenstein_0.png", "Frankenstein");
+                    break;
+                case 2:
+                    part = new BodyPart("images/Skeleton_0.png", "Skeleton");
+                    break;
+                case 3:
+                    part = new BodyPart("images/Vampire_0.png", "Vampire");
+                    break;
+                case 4:
+                    part = new BodyPart("images/Werewolf_0.png", "Werewolf");
+                    break;
+                case 5:
+                    part = new BodyPart("images/Witch_0.png", "Witch");
                     break;
             }
 
-            return head;
+            return part;
         }
     }
 }

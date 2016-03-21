@@ -30,7 +30,7 @@ namespace MonsterFactory
             outputImageBoxeList = new List<PictureBox>() { pbhead, pbbody, pbLegs };
 
    
-            comboBoxList = new List<string>() { "Fairy", "Frankenstein" };
+            comboBoxList = new List<string>() { "Fairy", "Frankenstein","Skeleton","Vampire","Werewolf","Witch" };
             populateComboBox(cbhead, comboBoxList);
             populateComboBox(cbbody, comboBoxList);
             populateComboBox(cblegs, comboBoxList);
