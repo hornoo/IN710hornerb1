@@ -14,6 +14,8 @@ namespace MonsterFactory
 
         }
 
+
+        //Print each part to picturbox
         public void printMonster(List<PictureBox> printBoxes, MonsterBuilder monster)
         {
             printBoxes[0].ImageLocation = monster.headpicture();

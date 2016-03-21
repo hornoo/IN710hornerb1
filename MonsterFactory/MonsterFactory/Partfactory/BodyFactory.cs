@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MonsterFactory
 {
     public class BodyFactory : IBodyPartFactory
-    {
+    {//Class to return part of monster required
         public BodyFactory()
         {
 

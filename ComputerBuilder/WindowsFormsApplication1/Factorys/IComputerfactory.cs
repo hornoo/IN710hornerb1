@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1
 {
     public interface IComputerfactory
-    {
+    {//interface for a computer factory, required methods
         CPU makeCpu();
         GPU makeGPU();
         RAM makeRAM();

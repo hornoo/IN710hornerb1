@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1
 {
     public abstract class ComputerComponent
-    {
+    {//Skeleton for b a component
         public String componentName;
         public int componentPrice;
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MonsterFactory
-{
+{//Class of a monster made up of varous parts passed in
     public class MonsterBuilder
     {
         public BodyPart monsterHead { get; set;}
@@ -19,6 +19,7 @@ namespace MonsterFactory
             monsterLegs = legs;
         }
 
+        //return selected parts when required
         public String headpicture()
         {
             return monsterHead.getImage();

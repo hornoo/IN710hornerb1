@@ -12,6 +12,7 @@ namespace MonsterFactory
 {
     public partial class Form1 : Form
     {
+        //Set References for objects 
         MonsterBuilder monsterbuilderWorker;
         HeadFactory headWorker;
         BodyFactory bodyWorker;
@@ -25,12 +26,16 @@ namespace MonsterFactory
         {
             InitializeComponent();
 
+            //instatiate required workers
             UIworker = new MonsterPrinter();
 
+            //List of picture boxs to print to
             outputImageBoxeList = new List<PictureBox>() { pbhead, pbbody, pbLegs };
 
-   
+            //list of avaliable monsters to choose parts from
             comboBoxList = new List<string>() { "Fairy", "Frankenstein","Skeleton","Vampire","Werewolf","Witch" };
+            
+            //Populate combo boxes
             populateComboBox(cbhead, comboBoxList);
             populateComboBox(cbbody, comboBoxList);
             populateComboBox(cblegs, comboBoxList);
@@ -40,7 +45,7 @@ namespace MonsterFactory
             bodyWorker = new BodyFactory();
             legsWorker = new Legfactory();
 
-
+            //Set initial monster on form
             monsterbuilderWorker = new MonsterBuilder(headWorker.requiredpart(cbhead.SelectedIndex),bodyWorker.requiredpart(cbbody.SelectedIndex),legsWorker.requiredpart(cblegs.SelectedIndex));
 
             UIworker.printMonster(outputImageBoxeList, monsterbuilderWorker);
@@ -49,16 +54,18 @@ namespace MonsterFactory
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //on button click get idex of xombo box seleted pass to worker whr then returns required part to make full monster
             monsterbuilderWorker.monsterHead = headWorker.requiredpart(cbhead.SelectedIndex);
             monsterbuilderWorker.monsterBody = bodyWorker.requiredpart(cbbody.SelectedIndex);
             monsterbuilderWorker.monsterLegs = legsWorker.requiredpart(cblegs.SelectedIndex);
 
+            // pass full monster and list of picture boxes to prin to
             UIworker.printMonster(outputImageBoxeList, monsterbuilderWorker);
 
 
         }
 
-
+        //populate combobox and set initally selected item
         public void populateComboBox(ComboBox combobox, List<String> stringList)
         {
             foreach(String currentStrin in stringList)
@@ -68,9 +75,6 @@ namespace MonsterFactory
             combobox.SelectedIndex = 1;
         }
 
-        private void pbLegs_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

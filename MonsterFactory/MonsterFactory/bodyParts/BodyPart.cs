@@ -9,7 +9,7 @@ namespace MonsterFactory
     
     public class BodyPart
     {
-
+        // Class than can be set to any type of body part
         protected String pathToImage;
         protected String monsterType;
 

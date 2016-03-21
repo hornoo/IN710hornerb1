@@ -17,10 +17,12 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        // set reference to factory worker
         IComputerfactory FactoryWorker;
 
         private void btPritnSpeck_Click(object sender, EventArgs e)
         {
+            //Check which button is selected, set worker as required factory,
             if (rbGame.Checked)
             {
                 FactoryWorker = new GameCompFactory();
@@ -36,16 +38,16 @@ namespace WindowsFormsApplication1
             }
 
             
-
+            // set parts
             CPU curCPU = FactoryWorker.makeCpu();
             GPU curGPU = FactoryWorker.makeGPU();
             RAM curRAM = FactoryWorker.makeRAM();
             PowerSupply curPSU = FactoryWorker.makePSU();
-
+            //calculate price
             int totalPrice = curCPU.ComponentPrice + curGPU.ComponentPrice + curRAM.ComponentPrice + curPSU.ComponentPrice;
 
             listBox1.Items.Clear();
-
+            //print to screen
             listBox1.Items.Add("Prices\tComponent");
             listBox1.Items.Add("=====================================");
 

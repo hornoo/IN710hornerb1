@@ -8,6 +8,7 @@ namespace MonsterFactory
 {
     public class Legfactory : IBodyPartFactory
     {
+        //Class to return part of monster required
         public Legfactory()
         {
         }
