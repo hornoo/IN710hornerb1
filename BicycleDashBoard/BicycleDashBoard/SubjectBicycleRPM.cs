@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace BicycleDashBoard
 {
 
-    class SubjectBicycle : ISubject
+    public class SubjectBicycle : ISubject
     {
         private List<IObserver> observerList;
         private int currentRPM;

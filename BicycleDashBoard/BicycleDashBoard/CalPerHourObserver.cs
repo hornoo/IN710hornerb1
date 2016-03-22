@@ -7,11 +7,12 @@ using System.Windows.Forms;
 
 namespace BicycleDashBoard
 {
-    class RPMObserver : BicycleObserver
+    public class CalPerHourObserver : BicycleObserver
     {
-        
-        public RPMObserver(SubjectBicycle bikeSubject, Label displayLabel )
-            : base(bikeSubject, displayLabel)
+        const int CAL_PER_HOUR_MUTIPLIER = 5;
+
+        public CalPerHourObserver(SubjectBicycle bikeSubject, Label displayLabel)
+         : base(bikeSubject, displayLabel)
         {
 
         }
@@ -20,7 +21,7 @@ namespace BicycleDashBoard
         {
             currentRPM = data;
 
-            currentComputedValue = currentRPM;
+            currentComputedValue = currentRPM * CAL_PER_HOUR_MUTIPLIER;
 
             Display();
         }

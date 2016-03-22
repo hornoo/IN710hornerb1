@@ -46,10 +46,11 @@
             this.btTrigger.TabIndex = 0;
             this.btTrigger.Text = "Change Speed";
             this.btTrigger.UseVisualStyleBackColor = true;
+            this.btTrigger.Click += new System.EventHandler(this.btTrigger_Click);
             // 
             // tbspeed
             // 
-            this.tbspeed.Location = new System.Drawing.Point(159, 43);
+            this.tbspeed.Location = new System.Drawing.Point(159, 54);
             this.tbspeed.Name = "tbspeed";
             this.tbspeed.Size = new System.Drawing.Size(100, 20);
             this.tbspeed.TabIndex = 1;
@@ -72,7 +73,6 @@
             this.lbRPM.Size = new System.Drawing.Size(71, 31);
             this.lbRPM.TabIndex = 3;
             this.lbRPM.Text = "label";
-            this.lbRPM.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbCal
             // 
