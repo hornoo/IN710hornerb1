@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BicycleDashBoard
-{
+{//Interface setting required methods for observer classes
     public interface ISubject
     {
         void AddObserver(IObserver o);
         void RemoveObserver(IObserver o);
-        void NofityObserver();
+        void NotifyObserver();
         void InputTrigger(String inputstring);
     }
 }

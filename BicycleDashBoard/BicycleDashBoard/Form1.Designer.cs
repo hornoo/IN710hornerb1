@@ -40,9 +40,9 @@
             // 
             // btTrigger
             // 
-            this.btTrigger.Location = new System.Drawing.Point(44, 40);
+            this.btTrigger.Location = new System.Drawing.Point(51, 50);
             this.btTrigger.Name = "btTrigger";
-            this.btTrigger.Size = new System.Drawing.Size(75, 46);
+            this.btTrigger.Size = new System.Drawing.Size(75, 38);
             this.btTrigger.TabIndex = 0;
             this.btTrigger.Text = "Change Speed";
             this.btTrigger.UseVisualStyleBackColor = true;
@@ -50,15 +50,17 @@
             // 
             // tbspeed
             // 
-            this.tbspeed.Location = new System.Drawing.Point(159, 54);
+            this.tbspeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbspeed.Location = new System.Drawing.Point(166, 50);
             this.tbspeed.Name = "tbspeed";
-            this.tbspeed.Size = new System.Drawing.Size(100, 20);
+            this.tbspeed.Size = new System.Drawing.Size(61, 38);
             this.tbspeed.TabIndex = 1;
+            this.tbspeed.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 167);
+            this.label1.Location = new System.Drawing.Point(95, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 2;
@@ -68,36 +70,36 @@
             // 
             this.lbRPM.AutoSize = true;
             this.lbRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRPM.Location = new System.Drawing.Point(153, 167);
+            this.lbRPM.Location = new System.Drawing.Point(160, 115);
             this.lbRPM.Name = "lbRPM";
-            this.lbRPM.Size = new System.Drawing.Size(71, 31);
+            this.lbRPM.Size = new System.Drawing.Size(67, 31);
             this.lbRPM.TabIndex = 3;
-            this.lbRPM.Text = "label";
+            this.lbRPM.Text = "0.00";
             // 
             // lbCal
             // 
             this.lbCal.AutoSize = true;
             this.lbCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCal.Location = new System.Drawing.Point(153, 237);
+            this.lbCal.Location = new System.Drawing.Point(160, 185);
             this.lbCal.Name = "lbCal";
-            this.lbCal.Size = new System.Drawing.Size(71, 31);
+            this.lbCal.Size = new System.Drawing.Size(67, 31);
             this.lbCal.TabIndex = 4;
-            this.lbCal.Text = "label";
+            this.lbCal.Text = "0.00";
             // 
             // lbkmsh
             // 
             this.lbkmsh.AutoSize = true;
             this.lbkmsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbkmsh.Location = new System.Drawing.Point(153, 314);
+            this.lbkmsh.Location = new System.Drawing.Point(160, 262);
             this.lbkmsh.Name = "lbkmsh";
-            this.lbkmsh.Size = new System.Drawing.Size(71, 31);
+            this.lbkmsh.Size = new System.Drawing.Size(67, 31);
             this.lbkmsh.TabIndex = 5;
-            this.lbkmsh.Text = "label";
+            this.lbkmsh.Text = "0.00";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 237);
+            this.label2.Location = new System.Drawing.Point(37, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 6;
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 314);
+            this.label3.Location = new System.Drawing.Point(54, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 7;
@@ -116,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 418);
+            this.ClientSize = new System.Drawing.Size(297, 393);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbkmsh);
