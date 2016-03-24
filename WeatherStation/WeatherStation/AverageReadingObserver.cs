@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms
+namespace WeatherStation
+{
+   public class AverageReadingObserver : SensorObserver
+    {
+        
+       public AverageReadingObserver(ListBox outputDisplay, SensorSubject subject)
+        : base(outputDisplay, subject)
+        {
+
+        }
+
+
+        public override void Update(int tempData, int HumidData, int barData)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
