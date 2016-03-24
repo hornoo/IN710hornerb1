@@ -30,7 +30,28 @@ namespace sensorTestUnit
         }
 
         [TestMethod]
-        public void CuttentTempObserver_DisplayOutput_tempINputShouldEqualOutput()
+        public void CuttentTempObserver_DisplayOutput_HumidINputShouldEqualOutput()
+        {
+            SensorSubject testSubject = new SensorSubject();
+
+            ListBox testListbox = new ListBox();
+
+            CurrentReadingsObserver CReadOb = new CurrentReadingsObserver(testListbox, testSubject);
+
+
+            testSubject.InputTrigger("10", " 20", "30");
+
+            String output = testListbox.Items[1].ToString();
+
+            String expectedOutput = "Humidity:\t20";
+
+            Assert.AreEqual(expectedOutput, output);
+
+
+        }
+
+        [TestMethod]
+        public void CuttentTempObserver_DisplayOutput_PressureINputShouldEqualOutput()
         {
             SensorSubject testSubject = new SensorSubject();
 
