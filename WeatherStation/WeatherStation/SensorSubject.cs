@@ -10,12 +10,14 @@ namespace WeatherStation
     class SensorSubject : ISubject
     {
         private List<ISensorObserver> observerList;
-        int currentReading;
+        int tempReading;
+        int humidReading;
+        int barReaiding;
 
         public SensorSubject()
         {
             observerList = new List<ISensorObserver>();
-            currentReading = 0;
+            tempReading = 0;
 
         }
 
@@ -33,22 +35,36 @@ namespace WeatherStation
         {
             foreach (ISensorObserver currentObserver in observerList)
 
-                currentObserver.update(currentReading);
+                currentObserver.Update(tempReading, humidReading, barReaiding);
         }
 
-        public void InputTrigger(string inputString)
+        public void InputTrigger(String tempString,String humidString,String barString )
         {
-            try 
+            tempReading = readdata(tempString);
+            humidReading = readdata(humidString);
+            barReaiding = readdata(barString);
+
+
+            notifyObserver();
+
+        }
+
+
+        private int readdata(String inputString)
+        {
+            
+            int returnValue = 0;
+
+             try 
             {
-                currentReading = Int32.Parse(inputString);
+               returnValue = Int32.Parse(inputString);
             }
             catch(FormatException e)
             {
                 MessageBox.Show(e.Message);
             }
 
-            notifyObserver();
-
+            return returnValue;
         }
     }
 }

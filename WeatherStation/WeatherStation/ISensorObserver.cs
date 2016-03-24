@@ -8,8 +8,8 @@ namespace WeatherStation
 {
     public interface ISensorObserver
     {
-        void update(int data);
-        void display();
+        void Update(int data);
+        void Display();
 
     }
 }
