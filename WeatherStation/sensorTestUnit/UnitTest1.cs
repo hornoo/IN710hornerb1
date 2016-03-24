@@ -62,9 +62,9 @@ namespace sensorTestUnit
 
             testSubject.InputTrigger("10", " 20", "30");
 
-            String output = testListbox.Items[0].ToString();
+            String output = testListbox.Items[2].ToString();
 
-            String expectedOutput = "Temperature:\t10";
+            String expectedOutput = "Pressure:\t30";
 
             Assert.AreEqual(expectedOutput, output);
 
