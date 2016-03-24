@@ -9,18 +9,50 @@ namespace WeatherStation
 {
     public abstract class SensorObserver : ISensorObserver
     {
-        protected int currentDataReading;
-
-        protected double currentComputerValue;
-
+        protected int currentDataReadingTemp;
+        protected double currentComputerValueTemp;
 
 
-        public abstract void Update(int data);
-    
+        protected int currentDatareadingHumid;
+        protected double currentComputedValueHumid;
 
-        public void Display()
+
+        protected int currentDatareadingBar;
+        protected double currentComputedBar;
+
+
+
+        protected ListBox dataDisplay;
+
+        protected SensorSubject sensorSubject;
+
+        public SensorObserver(ListBox outputDisplay, SensorSubject subject )
         {
-            
+            sensorSubject = subject;
+
+            dataDisplay = outputDisplay;
+
+            sensorSubject.addObserver(this);
+
+            currentDatareadingBar = 0;
+            currentDatareadingHumid = 0;
+            currentDataReadingTemp = 0;
+
+
+            currentComputedBar = 0;
+            currentComputedValueHumid = 0;
+            currentComputerValueTemp = 0;
+
         }
+
+        public virtual void Display()
+        {
+            dataDisplay.Items.Add("Temperature:/t " + currentComputerValueTemp);
+            dataDisplay.Items.Add("Humidity:/t " + currentComputedValueHumid);
+            dataDisplay.Items.Add("Pressure:/t" + currentDatareadingBar);
+        }
+
+        public abstract void Update(int tempData, int HumidData, int barData);
+  
     }
 }

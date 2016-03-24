@@ -8,7 +8,7 @@ namespace WeatherStation
 {
     public interface ISensorObserver
     {
-        void Update(int data);
+        void Update(int tempData, int HumidData, int barData);
         void Display();
 
     }
