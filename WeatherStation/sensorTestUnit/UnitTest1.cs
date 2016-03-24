@@ -70,5 +70,29 @@ namespace sensorTestUnit
 
 
         }
+
+    [TestMethod]
+        public void AverageConditionObserver_DisplayOutput_TempAverageOutputShouldBeAverageOFInputs()
+        {
+        SensorSubject testSubject = new SensorSubject();
+        ListBox testListbox = new ListBox();
+
+        AverageReadingObserver = new AverageReadingObserver(testListbox, testSubject);
+
+        testSubject.InputTrigger("10", " 20", "30");
+        testSubject.InputTrigger("10", " 20", "30");
+        testSubject.InputTrigger("30", " 20", "10");
+
+
+       // testSubject.InputTrigger("16.66", " 20", "23.33");
+
+        String output = testListbox.Items[2].ToString();
+
+        String expectedOutput = "Pressure:\t20";
+
+        Assert.AreEqual(expectedOutput, output);
+
+
+        }
     }
 }
