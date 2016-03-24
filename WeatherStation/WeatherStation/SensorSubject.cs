@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WeatherStation
 {
-    class SensorSubject : ISubject
+   public class SensorSubject : ISubject
     {
         private List<ISensorObserver> observerList;
         int tempReading;

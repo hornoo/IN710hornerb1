@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStation", "WeatherStation\WeatherStation.csproj", "{F7BA9DB0-AE29-4681-888E-2A8962A8AE4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sensorTestUnit", "sensorTestUnit\sensorTestUnit.csproj", "{E591D022-33BF-4CB5-808C-233C6DE5AD94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7BA9DB0-AE29-4681-888E-2A8962A8AE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BA9DB0-AE29-4681-888E-2A8962A8AE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7BA9DB0-AE29-4681-888E-2A8962A8AE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E591D022-33BF-4CB5-808C-233C6DE5AD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E591D022-33BF-4CB5-808C-233C6DE5AD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E591D022-33BF-4CB5-808C-233C6DE5AD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E591D022-33BF-4CB5-808C-233C6DE5AD94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,7 +28,7 @@ namespace WeatherStation
         protected ListBox dataDisplay;
         protected SensorSubject sensorSubject;
 
-        public SensorObserver(ListBox outputDisplay, SensorSubject subject )
+        public SensorObserver(ListBox outputDisplay, SensorSubject subject)
         {
             sensorSubject = subject;
 
@@ -46,8 +46,9 @@ namespace WeatherStation
             currentComputedBar = 0;
             currentComputedValueHumid = 0;
             currentComputerValueTemp = 0;
-
         }
+
+        
 
         public virtual void Display()
         {
