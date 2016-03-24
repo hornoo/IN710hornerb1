@@ -11,7 +11,7 @@ namespace WeatherStation
         void addObserver(ISensorObserver o);
         void removeObserver(ISensorObserver o);
         void notifyObserver();
-        void InputTrigger(String inputString);
+        void InputTrigger(String tempString, String humidString, String barString);
 
     }
 }
