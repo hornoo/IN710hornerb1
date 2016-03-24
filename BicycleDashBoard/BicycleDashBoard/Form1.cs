@@ -32,6 +32,8 @@ namespace BicycleDashBoard
             bikeWorker.InputTrigger(tbspeed.Text);
         }
 
+
+
  
     }
 }

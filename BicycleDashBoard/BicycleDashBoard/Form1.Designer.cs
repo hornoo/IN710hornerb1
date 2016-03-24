@@ -75,6 +75,7 @@
             this.lbRPM.Size = new System.Drawing.Size(67, 31);
             this.lbRPM.TabIndex = 3;
             this.lbRPM.Text = "0.00";
+            
             // 
             // lbCal
             // 
