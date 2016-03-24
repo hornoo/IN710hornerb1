@@ -9,6 +9,9 @@ namespace WeatherStation
 {
     public abstract class SensorObserver : ISensorObserver
     {
+
+        protected bool firstRun;
+
         protected int currentDataReadingTemp;
         protected double currentComputerValueTemp;
 
@@ -23,7 +26,6 @@ namespace WeatherStation
 
 
         protected ListBox dataDisplay;
-
         protected SensorSubject sensorSubject;
 
         public SensorObserver(ListBox outputDisplay, SensorSubject subject )
@@ -33,6 +35,8 @@ namespace WeatherStation
             dataDisplay = outputDisplay;
 
             sensorSubject.addObserver(this);
+
+            firstRun = true;
 
             currentDatareadingBar = 0;
             currentDatareadingHumid = 0;
@@ -53,6 +57,16 @@ namespace WeatherStation
         }
 
         public abstract void Update(int tempData, int HumidData, int barData);
+
+       
+        public double AverageData(int newData, double oldAverage)
+        {
+            double returnValue = oldAverage;
+
+            returnValue = (returnValue + newData) / 2;
+
+            return returnValue;
+        }
   
     }
 }
