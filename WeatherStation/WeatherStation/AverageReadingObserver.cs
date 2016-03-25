@@ -10,17 +10,12 @@ namespace WeatherStation
     {
 
        protected int runCount;
-       protected int humidRunningTotal;
-       protected int tempRunningTotal;
-       protected int barRunningTotal;
         
        public AverageReadingObserver(ListBox outputDisplay, SensorSubject subject)
         : base(outputDisplay, subject)
         {
             runCount = 0;
-            humidRunningTotal = 0;
-            tempRunningTotal = 0;
-            barRunningTotal = 0;
+
         }
 
 
@@ -30,10 +25,6 @@ namespace WeatherStation
             currentDatareadingHumid = HumidData;
             currentDataReadingTemp = tempData;
 
-
-            barRunningTotal += currentDatareadingBar;
-            tempRunningTotal += currentDataReadingTemp;
-            humidRunningTotal += currentDatareadingHumid;
 
             if (runCount == 0 )
             {
@@ -50,9 +41,9 @@ namespace WeatherStation
             {
                 runCount++;
 
-                currentComputedBar = AverageData(runCount,currentDatareadingBar, barRunningTotal);
-                currentComputedHumid = AverageData(runCount, currentDatareadingHumid, humidRunningTotal);
-                currentComputedTemp = AverageData(runCount, currentDataReadingTemp, tempRunningTotal);
+                currentComputedBar = AverageData(runCount,currentDatareadingBar, currentComputedBar);
+                currentComputedHumid = AverageData(runCount, currentDatareadingHumid, currentComputedHumid);
+                currentComputedTemp = AverageData(runCount, currentDataReadingTemp, currentComputedTemp);
                 
                 
             }
@@ -64,11 +55,11 @@ namespace WeatherStation
         }
 
 
-        public double AverageData(int dataruns,int newData, int runningTotal)
+        public double AverageData(int dataruns,int newData, double runningTotal)
         {
             double returnValue = 0;
 
-            returnValue = (double)runningTotal / dataruns;
+            returnValue = ((runningTotal * (dataruns - 1)) + newData) / dataruns;
           
             return returnValue;
         }
