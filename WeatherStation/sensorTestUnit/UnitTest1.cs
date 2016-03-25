@@ -22,7 +22,7 @@ namespace sensorTestUnit
 
             String output = testListbox.Items[0].ToString();
 
-            String expectedOutput = "Temperature:\t10";
+            String expectedOutput = "Temperature:\t10.00";
 
             Assert.AreEqual(expectedOutput, output);
 
@@ -43,7 +43,7 @@ namespace sensorTestUnit
 
             String output = testListbox.Items[1].ToString();
 
-            String expectedOutput = "Humidity:\t20";
+            String expectedOutput = "Humidity:\t20.00";
 
             Assert.AreEqual(expectedOutput, output);
 
@@ -64,7 +64,7 @@ namespace sensorTestUnit
 
             String output = testListbox.Items[2].ToString();
 
-            String expectedOutput = "Pressure:\t30";
+            String expectedOutput = "Pressure:\t30.00";
 
             Assert.AreEqual(expectedOutput, output);
 
@@ -77,14 +77,17 @@ namespace sensorTestUnit
         SensorSubject testSubject = new SensorSubject();
         ListBox testListbox = new ListBox();
 
-        AverageReadingObserver = new AverageReadingObserver(testListbox, testSubject);
+        AverageReadingObserver testAverageObserver = new AverageReadingObserver(testListbox, testSubject);
 
         testSubject.InputTrigger("10", " 20", "30");
+        testListbox.Items.Clear();
         testSubject.InputTrigger("10", " 20", "30");
+        testListbox.Items.Clear();
         testSubject.InputTrigger("30", " 20", "10");
+        
 
 
-       // testSubject.InputTrigger("16.66", " 20", "23.33");
+       
 
         String output = testListbox.Items[2].ToString();
 
@@ -101,16 +104,18 @@ namespace sensorTestUnit
         SensorSubject testSubject = new SensorSubject();
         ListBox testListbox = new ListBox();
 
-        AverageReadingObserver = new AverageReadingObserver(testListbox, testSubject);
+        AverageReadingObserver testAverageObserver  = new AverageReadingObserver(testListbox, testSubject);
 
         testSubject.InputTrigger("10", " 20", "30");
+        testListbox.Items.Clear();
         testSubject.InputTrigger("10", " 20", "30");
+        testListbox.Items.Clear();
         testSubject.InputTrigger("30", " 20", "10");
 
 
         // testSubject.InputTrigger("16.66", " 20", "23.33");
 
-        String output = testListbox.Items[2].ToString();
+        String output = testListbox.Items[0].ToString();
 
         String expectedOutput = "Temperature:\t16.66";
 
@@ -124,18 +129,19 @@ namespace sensorTestUnit
         SensorSubject testSubject = new SensorSubject();
         ListBox testListbox = new ListBox();
 
-        AverageReadingObserver = new AverageReadingObserver(testListbox, testSubject);
+        AverageReadingObserver testAverageObserver = new AverageReadingObserver(testListbox, testSubject);
 
-        testSubject.InputTrigger("10", " 20", "30");
-        testSubject.InputTrigger("10", " 20", "30");
-        testSubject.InputTrigger("30", " 20", "10");
+        testSubject.InputTrigger("10", "1", "30");
+        testListbox.Items.Clear();
+        testSubject.InputTrigger("10", "1", "30");
+       
 
 
-        // testSubject.InputTrigger("16.66", " 20", "23.33");
+        
 
-        String output = testListbox.Items[2].ToString();
+        String output = testListbox.Items[1].ToString();
 
-        String expectedOutput = "Humidity:\t20";
+        String expectedOutput = "Humidity:\t20.00";
 
         Assert.AreEqual(expectedOutput, output);
 

@@ -24,11 +24,11 @@ namespace WeatherStation
             currentDatareadingHumid = HumidData;
             currentDataReadingTemp = tempData;
 
-            currentComputedValueHumid = currentDatareadingHumid;
+            currentComputedHumid = currentDatareadingHumid;
 
             currentComputedBar = currentDatareadingBar;
 
-            currentComputerValueTemp = currentDataReadingTemp;
+            currentComputedTemp = currentDataReadingTemp;
 
             Display();
         }

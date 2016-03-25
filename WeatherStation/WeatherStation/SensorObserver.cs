@@ -10,14 +10,14 @@ namespace WeatherStation
     public abstract class SensorObserver : ISensorObserver
     {
 
-        protected bool firstRun;
+        
 
         protected int currentDataReadingTemp;
-        protected double currentComputerValueTemp;
+        protected double currentComputedTemp;
 
 
         protected int currentDatareadingHumid;
-        protected double currentComputedValueHumid;
+        protected double currentComputedHumid;
 
 
         protected int currentDatareadingBar;
@@ -36,7 +36,7 @@ namespace WeatherStation
 
             sensorSubject.addObserver(this);
 
-            firstRun = true;
+            
 
             currentDatareadingBar = 0;
             currentDatareadingHumid = 0;
@@ -44,30 +44,22 @@ namespace WeatherStation
 
 
             currentComputedBar = 0;
-            currentComputedValueHumid = 0;
-            currentComputerValueTemp = 0;
+            currentComputedHumid = 0;
+            currentComputedTemp = 0;
         }
 
         
 
         public virtual void Display()
         {
-            dataDisplay.Items.Add("Temperature:\t" + currentComputerValueTemp);
-            dataDisplay.Items.Add("Humidity:\t" + currentComputedValueHumid);
-            dataDisplay.Items.Add("Pressure:\t" + currentDatareadingBar);
+            dataDisplay.Items.Add("Temperature:\t" + currentComputedTemp.ToString("F2"));
+            dataDisplay.Items.Add("Humidity:\t" + currentComputedHumid.ToString("F2"));
+            dataDisplay.Items.Add("Pressure:\t" + currentComputedBar.ToString("F2"));
         }
 
         public abstract void Update(int tempData, int HumidData, int barData);
 
        
-        public double AverageData(int newData, double oldAverage)
-        {
-            double returnValue = oldAverage;
-
-            returnValue = (returnValue + newData) / 2;
-
-            return returnValue;
-        }
   
     }
 }
