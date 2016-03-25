@@ -52,9 +52,11 @@ namespace WeatherStation
 
         public virtual void Display()
         {
+            dataDisplay.Items.Clear();
+
             dataDisplay.Items.Add("Temperature:\t" + currentComputedTemp.ToString("F2"));
-            dataDisplay.Items.Add("Humidity:\t" + currentComputedHumid.ToString("F2"));
-            dataDisplay.Items.Add("Pressure:\t" + currentComputedBar.ToString("F2"));
+            dataDisplay.Items.Add("Humidity:\t\t" + currentComputedHumid.ToString("F2"));
+            dataDisplay.Items.Add("Pressure:\t\t" + currentComputedBar.ToString("F2"));
         }
 
         public abstract void Update(int tempData, int HumidData, int barData);

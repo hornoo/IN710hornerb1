@@ -28,6 +28,8 @@ namespace WeatherStation
 
         public override void Display()
         {
+            dataDisplay.Items.Clear();
+
 
             if (currentDatareadingBar > 1020)
             {

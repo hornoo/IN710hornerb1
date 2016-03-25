@@ -51,6 +51,7 @@
             this.btUpdateM.TabIndex = 0;
             this.btUpdateM.Text = "Update Measurements";
             this.btUpdateM.UseVisualStyleBackColor = true;
+            this.btUpdateM.Click += new System.EventHandler(this.btUpdateM_Click);
             // 
             // textBox1
             // 
@@ -171,6 +172,7 @@
             this.Controls.Add(this.btUpdateM);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
