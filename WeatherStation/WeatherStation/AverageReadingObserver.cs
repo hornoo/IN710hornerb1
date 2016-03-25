@@ -37,23 +37,24 @@ namespace WeatherStation
 
             if (runCount == 0 )
             {
+                runCount++;
                 currentComputedHumid = currentDatareadingHumid;
 
                 currentComputedBar = currentDatareadingBar;
 
                 currentComputedTemp = currentDataReadingTemp;
 
-                runCount++;
+                
 
             }else
             {
-
+                runCount++;
 
                 currentComputedBar = AverageData(runCount,currentDatareadingBar, barRunningTotal);
                 currentComputedHumid = AverageData(runCount, currentDatareadingHumid, humidRunningTotal);
                 currentComputedTemp = AverageData(runCount, currentDataReadingTemp, tempRunningTotal);
                 
-                runCount++;
+                
             }
 
 
@@ -67,8 +68,8 @@ namespace WeatherStation
         {
             double returnValue = 0;
 
-            returnValue = (double)(runningTotal + newData) / (dataruns + 1);
-
+            returnValue = (double)runningTotal / dataruns;
+          
             return returnValue;
         }
 
