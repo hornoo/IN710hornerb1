@@ -150,5 +150,29 @@ namespace sensorTestUnit
 
 
         }
+
+
+        [TestMethod]
+        public void ForcastConditionObserver_DisplayOutput_MediumPressureIndicatewetWeather()
+        {
+            SensorSubject testSubject = new SensorSubject();
+            ListBox testListbox = new ListBox();
+
+            ForcastObserver testAverageObserver = new ForcastObserver(testListbox, testSubject);
+
+            testSubject.InputTrigger("10", " 20", "1000");
+
+
+
+
+            String output = testListbox.Items[0].ToString();
+
+            String expectedOutput = "Wet weather coming";
+
+            Assert.AreEqual(expectedOutput, output);
+
+
+        }
+
     }
 }
