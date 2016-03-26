@@ -17,6 +17,7 @@ namespace SocialNetworkObserverPattern
         FriendObserver friend1;
         FriendObserver friend2;
         FriendObserver friend3;
+        FriendObserver friend4;
         FriendObserver mainSubjectObserver;
         
 
@@ -33,6 +34,7 @@ namespace SocialNetworkObserverPattern
             friend1 = new FriendObserver(lbf1, mainSubject);
             friend2 = new FriendObserver(lbf2, mainSubject);
             friend3 = new FriendObserver(lbf3, mainSubject);
+            friend4 = new FriendObserver(lbf4, mainSubject);
 
         }
 

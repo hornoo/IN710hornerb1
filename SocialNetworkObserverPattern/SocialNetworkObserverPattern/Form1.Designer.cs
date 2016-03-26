@@ -39,11 +39,14 @@
             this.lbf1 = new System.Windows.Forms.ListBox();
             this.lbf2 = new System.Windows.Forms.ListBox();
             this.lbf3 = new System.Windows.Forms.ListBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lbf4 = new System.Windows.Forms.ListBox();
             this.TabBox.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabBox
@@ -52,6 +55,7 @@
             this.TabBox.Controls.Add(this.tabPage2);
             this.TabBox.Controls.Add(this.tabPage3);
             this.TabBox.Controls.Add(this.tabPage4);
+            this.TabBox.Controls.Add(this.tabPage5);
             this.TabBox.Location = new System.Drawing.Point(12, 12);
             this.TabBox.Name = "TabBox";
             this.TabBox.SelectedIndex = 0;
@@ -153,6 +157,25 @@
             this.lbf3.Size = new System.Drawing.Size(445, 303);
             this.lbf3.TabIndex = 1;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.lbf4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(457, 366);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Friend 4";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // lbf4
+            // 
+            this.lbf4.FormattingEnabled = true;
+            this.lbf4.Location = new System.Drawing.Point(6, 6);
+            this.lbf4.Name = "lbf4";
+            this.lbf4.Size = new System.Drawing.Size(445, 303);
+            this.lbf4.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +191,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -185,6 +209,8 @@
         private System.Windows.Forms.ListBox lbf2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.ListBox lbf3;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.ListBox lbf4;
     }
 }
 
