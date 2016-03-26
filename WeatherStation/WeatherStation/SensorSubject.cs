@@ -18,6 +18,8 @@ namespace WeatherStation
         {
             observerList = new List<ISensorObserver>();
             tempReading = 0;
+            humidReading = 0;
+            barReaiding = 0;
 
         }
 

@@ -127,6 +127,7 @@
             this.btInput.TabIndex = 1;
             this.btInput.Text = "Update Status";
             this.btInput.UseVisualStyleBackColor = true;
+            this.btInput.Click += new System.EventHandler(this.btInput_Click);
             // 
             // lbf1
             // 
@@ -160,6 +161,7 @@
             this.Controls.Add(this.TabBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.TabBox.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
