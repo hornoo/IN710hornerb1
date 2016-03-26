@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SocialNetworkObserverPattern
 {
-    interface ISubject
+    public interface ISubject
     {
+        void addObserver(ISocialObserver o);
+        void removeObserver (ISocialObserver o);
+        void notifyObserver();
+        void InputTrigger(String statusUpdate); 
+
     }
 }
