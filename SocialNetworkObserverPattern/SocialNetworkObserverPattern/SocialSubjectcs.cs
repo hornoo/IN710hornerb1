@@ -12,6 +12,7 @@ namespace SocialNetworkObserverPattern
 
         List<ISocialObserver> observertList;
         String statusUpdate;
+        String timeStamp;
 
         public SocialSubject()
         {
@@ -33,7 +34,7 @@ namespace SocialNetworkObserverPattern
         {
             foreach(ISocialObserver currentObserver in observertList)
             {
-                currentObserver.Update(statusUpdate);
+                currentObserver.Update(statusUpdate, timeStamp);
             }
         }
 
@@ -42,6 +43,7 @@ namespace SocialNetworkObserverPattern
             try
             {
                 this.statusUpdate = statusUpdate;
+                timeStamp = DateTime.Now.ToString("ddd d MMM, yyyy HH:mm");
             }
             catch (Exception e)
             {

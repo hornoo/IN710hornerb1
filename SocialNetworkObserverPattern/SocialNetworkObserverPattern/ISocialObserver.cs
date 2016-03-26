@@ -8,7 +8,7 @@ namespace SocialNetworkObserverPattern
 {
     public interface ISocialObserver
     {
-        void Update(String statusUpdate);
+        void Update(String statusUpdate, String timeStamp);
         void Display();
     }
 }

@@ -11,12 +11,14 @@ namespace SocialNetworkObserverPattern
 
     {
         String currentStatus;
+        String currentTimeStamp;
         ISubject subject;
         ListBox displayOutputBox;
 
         public FriendObserver(ListBox DisplayOutPutBox, ISubject Subject)
         {
             currentStatus = null;
+            currentTimeStamp = null;
             subject = Subject;
             displayOutputBox = DisplayOutPutBox;
 
@@ -24,16 +26,17 @@ namespace SocialNetworkObserverPattern
         }
 
 
-        public void Update(string statusUpdate)
+        public void Update(string statusUpdate, String timeStamp)
         {
             currentStatus = statusUpdate;
+            currentTimeStamp = timeStamp;
             
             Display();
         }
 
         public void Display()
         {
-            displayOutputBox.Items.Add(DateTime.Now.ToString("ddd d MMM, yyyy HH:mm"));
+            displayOutputBox.Items.Add(currentTimeStamp);
             displayOutputBox.Items.Add(currentStatus);
         }
     }
