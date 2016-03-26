@@ -13,10 +13,11 @@ namespace SocialNetworkObserverPattern
     public partial class Form1 : Form
     {
 
-        SocialSubject MainSubject;
+        SocialSubject mainSubject;
         FriendObserver friend1;
         FriendObserver friend2;
         FriendObserver friend3;
+        FriendObserver mainSubjectObserver;
         
 
         public Form1()
@@ -26,17 +27,18 @@ namespace SocialNetworkObserverPattern
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MainSubject = new SocialSubject();
+            mainSubject = new SocialSubject();
 
-            friend1 = new FriendObserver(lbf1, MainSubject);
-            friend2 = new FriendObserver(lbf2, MainSubject);
-            friend3 = new FriendObserver(lbf3, MainSubject);
+            mainSubjectObserver = new FriendObserver(lbMain, mainSubject);
+            friend1 = new FriendObserver(lbf1, mainSubject);
+            friend2 = new FriendObserver(lbf2, mainSubject);
+            friend3 = new FriendObserver(lbf3, mainSubject);
 
         }
 
         private void btInput_Click(object sender, EventArgs e)
         {
-
+            mainSubject.InputTrigger(tbInput.Text.ToString().Trim());
         }
     }
 }
