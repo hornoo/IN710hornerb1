@@ -26,6 +26,8 @@ namespace WeatherStation
 
         }
 
+
+        //Override display method for this class of Sensor Observer as it displays text forcasts not the caclulated data.
         public override void Display()
         {
             dataDisplay.Items.Clear();

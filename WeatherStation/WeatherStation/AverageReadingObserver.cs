@@ -10,7 +10,7 @@ namespace WeatherStation
     {
 
        protected int runCount;
-        
+        // Average reading observer, revieves data from sunject , performas aver age calculation and displays to list box.
        public AverageReadingObserver(ListBox outputDisplay, SensorSubject subject)
         : base(outputDisplay, subject)
         {
@@ -21,13 +21,15 @@ namespace WeatherStation
 
         public override void Update(int tempData, int HumidData, int barData)
         {
+            //Set current reading data
             currentDatareadingBar = barData;
             currentDatareadingHumid = HumidData;
             currentDataReadingTemp = tempData;
 
-
+            //if count = 0, display data as it has not other data values to work out and average with.
             if (runCount == 0 )
             {
+                //Increase count, set computeddata values.
                 runCount++;
                 currentComputedHumid = currentDatareadingHumid;
 
@@ -38,7 +40,7 @@ namespace WeatherStation
                 
 
             }else
-            {
+            {// else run average method on each data value and pass result back to computed value.
                 runCount++;
 
                 currentComputedBar = AverageData(runCount,currentDatareadingBar, currentComputedBar);
@@ -48,19 +50,20 @@ namespace WeatherStation
                 
             }
 
-
+            //Run display method to show new data on form.
             Display();
 
 
         }
 
-
+       //Work out average from current data
         public double AverageData(int dataruns,int newData, double runningTotal)
         {
             double returnValue = 0;
-
+            // returnvalue = the running total times the number of times data has been updated, add on the new data and devide but the new count to give the running average over all inputs.
             returnValue = ((runningTotal * (dataruns - 1)) + newData) / dataruns;
           
+                //retuen the result.
             return returnValue;
         }
 

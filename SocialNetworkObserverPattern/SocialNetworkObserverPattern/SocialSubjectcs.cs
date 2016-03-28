@@ -8,16 +8,19 @@ using System.Windows.Forms;
 namespace SocialNetworkObserverPattern
 {
     public class SocialSubject : ISubject
-    {
+    {//Social subject inplements isubject interface;
 
+        //Set references to required fields.
         List<ISocialObserver> observertList;
         String statusUpdate;
         String timeStamp;
 
         public SocialSubject()
         {
+            //Allocate memory to class fields.
             observertList = new List<ISocialObserver>();
             statusUpdate = null;
+            timeStamp = null;
         }
 
         public void addObserver(ISocialObserver o)
@@ -32,6 +35,7 @@ namespace SocialNetworkObserverPattern
 
         public void notifyObserver()
         {
+            //update observes and pass in new data.
             foreach(ISocialObserver currentObserver in observertList)
             {
                 currentObserver.Update(statusUpdate, timeStamp);
@@ -40,6 +44,7 @@ namespace SocialNetworkObserverPattern
 
         public void InputTrigger(string statusUpdate)
         {
+            //try capture input, create date and set to cirrect format.
             try
             {
                 this.statusUpdate = statusUpdate;

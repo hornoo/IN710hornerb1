@@ -9,9 +9,9 @@ namespace WeatherStation
 {
     public abstract class SensorObserver : ISensorObserver
     {
-
+        // base sensor observer class, implements I sensor Observer
         
-
+        // Set References to Current input data nd Computed data
         protected int currentDataReadingTemp;
         protected double currentComputedTemp;
 
@@ -24,12 +24,12 @@ namespace WeatherStation
         protected double currentComputedBar;
 
 
-
+        //Set reference to Subject and listbox.
         protected ListBox dataDisplay;
         protected SensorSubject sensorSubject;
 
         public SensorObserver(ListBox outputDisplay, SensorSubject subject)
-        {
+        {//Set reffentce to subject, display and then add this object to the subjects observer list.
             sensorSubject = subject;
 
             dataDisplay = outputDisplay;
@@ -37,7 +37,7 @@ namespace WeatherStation
             sensorSubject.addObserver(this);
 
             
-
+            //Allocate memory for computer and data readings.
             currentDatareadingBar = 0;
             currentDatareadingHumid = 0;
             currentDataReadingTemp = 0;
@@ -51,7 +51,7 @@ namespace WeatherStation
         
 
         public virtual void Display()
-        {
+        {// Clear list boc and then display computed data values.
             dataDisplay.Items.Clear();
 
             dataDisplay.Items.Add("Temperature:\t" + currentComputedTemp.ToString("F2"));
@@ -59,6 +59,8 @@ namespace WeatherStation
             dataDisplay.Items.Add("Pressure:\t\t" + currentComputedBar.ToString("F2"));
         }
 
+
+        //Abstracmethod to be degined in child classes.
         public abstract void Update(int tempData, int HumidData, int barData);
 
        
