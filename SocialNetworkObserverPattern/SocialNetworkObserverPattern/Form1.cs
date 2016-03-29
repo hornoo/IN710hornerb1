@@ -18,7 +18,7 @@ namespace SocialNetworkObserverPattern
         FriendObserver friend2;
         FriendObserver friend3;
         FriendObserver friend4;
-        FriendObserver mainSubjectObserver;
+        
         
 
         public Form1()
@@ -31,7 +31,7 @@ namespace SocialNetworkObserverPattern
             //allocate memory to objects and pass in required objects to instantiate correctly
             mainSubject = new SocialSubject();
 
-            mainSubjectObserver = new FriendObserver(lbMain, mainSubject);
+            
             friend1 = new FriendObserver(lbf1, mainSubject);
             friend2 = new FriendObserver(lbf2, mainSubject);
             friend3 = new FriendObserver(lbf3, mainSubject);
@@ -43,6 +43,8 @@ namespace SocialNetworkObserverPattern
         {
             //trigger update to all subscribers.
             mainSubject.InputTrigger(tbInput.Text.ToString().Trim());
+            lbMain.Items.Clear();
+            lbMain.Items.Add(tbInput.Text.ToString().Trim());
         }
     }
 }
