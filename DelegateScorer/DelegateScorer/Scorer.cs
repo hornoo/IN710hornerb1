@@ -8,7 +8,7 @@ namespace DelegateScorer
 {
     public static class Scorer
     {
-        public static int ChildScore(int correct, int incorrect)
+        public static int AdultScore(int correct, int incorrect)
         {
             int returnValue = (correct * 10) - incorrect;
 
@@ -16,7 +16,7 @@ namespace DelegateScorer
         }
 
 
-        public static int AdultScore(int correct, int incorrect)
+        public static int ChildScore(int correct, int incorrect)
         {
             int returnValue = correct * 15;
 
