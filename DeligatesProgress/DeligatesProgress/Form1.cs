@@ -28,13 +28,15 @@ namespace DeligatesProgress
             if(rbProgressBar.Checked)
             {
                 progresDelegate = new FeedBackDelegate(updateProgressBar);
-            }if(rbSpinBox.Checked)
+            }else if(rbSpinBox.Checked)
             {
                 progresDelegate = new FeedBackDelegate(updateSpinBox);
             }else
             {
                 progresDelegate = new FeedBackDelegate(updatetrackbar);
             }
+
+            setProgressToZero();
 
             for( int i =0 ; i < 10; i ++)
             {
@@ -48,6 +50,7 @@ namespace DeligatesProgress
 
         private void updateSpinBox()
         {
+          
             UD1.Value++;
         }
 
@@ -59,6 +62,13 @@ namespace DeligatesProgress
         private void updatetrackbar()
         {
             TB1.Value++;
+        }
+
+        private void setProgressToZero()
+        {
+            UD1.Value = 0;
+            PB1.Value = 0;
+            TB1.Value = 0;
         }
 
 
