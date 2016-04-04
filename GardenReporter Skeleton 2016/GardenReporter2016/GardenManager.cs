@@ -5,9 +5,11 @@ using System.Text;
 
 namespace GardenReporter2016
 {
+    public delegate String RepotDelegate(Garden gardentToProcess);
+
     public class GardenManager
     {
-        public delegate String repotDelegate(Garden gardentToProcess);
+        
 
         List<Garden> gardenList;
 
@@ -21,7 +23,7 @@ namespace GardenReporter2016
             gardenList.Add(garden1);
         }
 
-        public List<String> ProcessGardens(repotDelegate inputDel)
+        public List<String> ProcessGardens(RepotDelegate inputDel)
         {
             List<String> returnList = new List<string>();
 

@@ -10,9 +10,15 @@ using System.Windows.Forms;
 
 namespace GardenReporter2016
 {
+
+
     public partial class Form1 : Form
     {
         GardenManager gardenManager;
+        RepotDelegate reportDelegate;
+        List<String> outputList;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +28,7 @@ namespace GardenReporter2016
         {
             gardenManager = new GardenManager();
             populateDummyData();
+            outputList = new List<String>();
         }
 
         private void populateDummyData()
@@ -48,11 +55,31 @@ namespace GardenReporter2016
         private void btnArea_Click(object sender, EventArgs e)
         {
             /* YOUR CODE HERE */
+            reportDelegate = new RepotDelegate(ReportGenerator.Area);
+
+            outputList = gardenManager.ProcessGardens(reportDelegate);
+
+            printList();
         }
 
         private void btnCharges_Click(object sender, EventArgs e)
         {
             /* YOUR CODE HERE */
+            reportDelegate = new RepotDelegate(ReportGenerator.OutStandingBal);
+
+            outputList = gardenManager.ProcessGardens(reportDelegate);
+
+            printList();
+        }
+
+        private void printList()
+        {
+            listBox1.Items.Clear();
+            foreach(String currentString in outputList)
+            {
+                listBox1.Items.Add(currentString);
+            }
+
         }
     }
 }
