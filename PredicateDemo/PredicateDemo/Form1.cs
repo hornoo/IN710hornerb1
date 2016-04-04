@@ -35,26 +35,59 @@ namespace PredicateDemo
 
         private void btEven_Click(object sender, EventArgs e)
         {
+            Predicate<int> isEvenPred = new Predicate<int>(isAnEvenNumber);
+
+            List<int> returnList = new List<int>();
+
+            returnList = numbersList.FindAll(isEvenPred);
+
+            printList(returnList, lbOutPut);
 
         }
 
         private void btLessThan_Click(object sender, EventArgs e)
         {
+            Predicate<int> isLeesThanTenPred = new Predicate<int>(isLessThanTen);
 
+            List<int> returnList = new List<int>();
+
+            returnList = numbersList.FindAll(isLeesThanTenPred);
+
+            printList(returnList, lbOutPut);
         }
 
         private void GenerateNumbers()
         {
+            numbersList.Clear();
+
             for(int i = 0; i < 100; i++)
             {
                 numbersList.Add(rand.Next(100));
             }
+
+            printList(numbersList, lbGen);
         }
 
         private bool isAnEvenNumber(int inputInt)
         {
             bool returnValue = ((inputInt % 2) == 0);
             return returnValue;
+        }
+
+        private bool isLessThanTen(int inputInt)
+        {
+            bool returnValue = (inputInt < 10);
+            return returnValue;
+        }
+
+        private void printList(List<int> inputList, ListBox outputBox)
+        {
+            outputBox.Items.Clear();
+
+            foreach(int currentInt in inputList)
+            {
+                outputBox.Items.Add(currentInt);
+            }
         }
 
 
