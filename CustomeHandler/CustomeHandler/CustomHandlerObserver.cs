@@ -16,10 +16,27 @@ namespace CustomeHandler
         public CustomHandlerObserver(Button Subject, int Randomnumber)
         {
 
+            EventHandler messageEvent = new EventHandler(ShowMessage);
+
             subject = Subject;
-            randomNumber = Randomnumber
+            randomNumber = Randomnumber;
+
+            subject.Click += messageEvent;
 
         }
+
+
+     public void ShowMessage(object o, EventArgs e)
+     {
+         String messageOutput = "This is a Custom Handler \n";
+
+         messageOutput += "My code is " + randomNumber + "\n";
+         messageOutput += "My Type is " + this.GetType() + "\n";
+         messageOutput += "I am Responding to button "  + subject.Name;
+
+
+         MessageBox.Show(messageOutput);
+     }
 
     }
 }
