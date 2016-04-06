@@ -15,6 +15,9 @@ namespace EventsProgress
     {
 
         SlowWorker slowWorker;
+        SpinBoxObserver spinboxObserver;
+        TrackbarObserver trackbarObserver;
+        ProgressBarObserver progressbarObserver;
 
         public Form1()
         {
@@ -23,25 +26,11 @@ namespace EventsProgress
 
         private void btStart_Click(object sender, EventArgs e)
         {
-
+            setProgressToZero();
+          
             slowWorker.SlowMetthod();
         }
 
-
-        private void updateSpinBox()
-        {
-            UD1.Value++;
-        }
-
-        private void updateProgressBar()
-        {
-            PB1.PerformStep();
-        }
-
-        private void updatetrackbar()
-        {
-            TB1.Value++;
-        }
 
         private void setProgressToZero()
         {
@@ -53,11 +42,11 @@ namespace EventsProgress
         private void Form1_Load(object sender, EventArgs e)
         {
             slowWorker = new SlowWorker();
+            spinboxObserver = new SpinBoxObserver(slowWorker, UD1);
+            trackbarObserver = new TrackbarObserver(slowWorker, TB1);
+            progressbarObserver = new ProgressBarObserver(slowWorker, PB1);
+
         }
-
-
-
-
 
     }
 }
