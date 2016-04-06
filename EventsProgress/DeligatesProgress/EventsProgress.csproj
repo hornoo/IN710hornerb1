@@ -51,8 +51,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SlowWorker.cs" />
+    <Compile Include="SpinBoxObserver.cs" />
+    <Compile Include="TrackbarObserver.cs" />
     <Compile Include="TrackingObserver.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

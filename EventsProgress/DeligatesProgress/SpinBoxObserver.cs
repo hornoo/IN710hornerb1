@@ -7,20 +7,19 @@ using System.Windows.Forms;
 
 namespace EventsProgress
 {
-    public class TrackbarObserver : TrackingObserver
+    class SpinBoxObserver : TrackingObserver
     {
-        TrackBar inputTrackBar;
 
+        NumericUpDown inputSpinBox;
 
-        public TrackbarObserver(SlowWorker Subject, TrackBar InputTrackBar)
-            :base(Subject)
+        public SpinBoxObserver(SlowWorker Subject, NumericUpDown InputSpinBox)
+            : base(Subject)
         {
-            inputTrackBar = InputTrackBar;
+            inputSpinBox = InputSpinBox;
         }
-
         public override void UpdateProgress(object o, EventArgs e)
         {
-            inputTrackBar.Value++;
+            inputSpinBox.Value++;
         }
     }
 }
