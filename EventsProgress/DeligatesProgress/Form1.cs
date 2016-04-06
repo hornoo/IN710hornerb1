@@ -14,9 +14,7 @@ namespace EventsProgress
     public partial class Form1 : Form
     {
 
-        public delegate void FeedBackDelegate();
-
-        FeedBackDelegate progresDelegate;
+        SlowWorker slowWorker;
 
         public Form1()
         {
@@ -25,32 +23,13 @@ namespace EventsProgress
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            if(rbProgressBar.Checked)
-            {
-                progresDelegate = new FeedBackDelegate(updateProgressBar);
-            }else if(rbSpinBox.Checked)
-            {
-                progresDelegate = new FeedBackDelegate(updateSpinBox);
-            }else
-            {
-                progresDelegate = new FeedBackDelegate(updatetrackbar);
-            }
 
-            setProgressToZero();
-
-            for( int i =0 ; i < 10; i ++)
-            {
-                progresDelegate();
-                Thread.Sleep(500);
-                Application.DoEvents();
-            }
-
+            slowWorker.SlowMetthod();
         }
 
 
         private void updateSpinBox()
         {
-          
             UD1.Value++;
         }
 
@@ -69,6 +48,11 @@ namespace EventsProgress
             UD1.Value = 0;
             PB1.Value = 0;
             TB1.Value = 0;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            slowWorker = new SlowWorker();
         }
 
 
