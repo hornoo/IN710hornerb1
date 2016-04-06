@@ -14,6 +14,7 @@ namespace EventsFireAlarm
     {
         AlarmSubject subject;
         AlarmMessageAlertObserver messageAlert;
+        AlarmBeepObserver beepAlert;
 
         public Form1()
         {
@@ -24,6 +25,7 @@ namespace EventsFireAlarm
         {
             subject = new AlarmSubject();
             messageAlert = new AlarmMessageAlertObserver(subject);
+            beepAlert = new AlarmBeepObserver(subject);
         }
 
         private void btAlarm_Click(object sender, EventArgs e)
