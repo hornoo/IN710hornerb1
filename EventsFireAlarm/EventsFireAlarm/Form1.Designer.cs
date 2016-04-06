@@ -44,6 +44,7 @@
             this.btAlarm.TabIndex = 0;
             this.btAlarm.Text = "Fire Alarm";
             this.btAlarm.UseVisualStyleBackColor = true;
+            this.btAlarm.Click += new System.EventHandler(this.btAlarm_Click);
             // 
             // groupBox1
             // 
@@ -99,6 +100,7 @@
             this.Controls.Add(this.btAlarm);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -21,7 +21,6 @@ namespace EventsFireAlarm
 
             subject.fireEvent += alertMethodDelegate;
 
-
         }
 
         public abstract void AlertMethod(object o, FireAlarmEventArgs e);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EventsFireAlarm
 {
 
-    enum FireCatEnum { Minor, Serious, Inferno };
+    public enum FireCatEnum { Minor, Serious, Inferno };
 
     public class FireAlarmEventArgs : EventArgs
     {
