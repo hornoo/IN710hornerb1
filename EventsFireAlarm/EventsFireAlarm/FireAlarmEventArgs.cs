@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace EventsFireAlarm
 {
-    class FireAlarmEventArgs : EventArgs
-    {
-        public String AlertString { get; set; }
 
-        public FireAlarmEventArgs(String inputString)
+    enum FireCatEnum { Minor, Serious, Inferno };
+
+    public class FireAlarmEventArgs : EventArgs
+    {
+        public FireCatEnum Alert { get; set; }
+
+        public FireAlarmEventArgs(FireCatEnum AlertLevel)
         {
-            AlertString = inputString;
+            Alert = AlertLevel;
         }
     }
 }
