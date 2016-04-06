@@ -11,15 +11,18 @@ namespace EventsProgress
     {
 
         NumericUpDown inputSpinBox;
+        Form inputForm;
 
-        public SpinBoxObserver(SlowWorker Subject, NumericUpDown InputSpinBox)
+        public SpinBoxObserver(SlowWorker Subject, NumericUpDown InputSpinBox, Form InputForm)
             : base(Subject)
         {
             inputSpinBox = InputSpinBox;
+            inputForm = InputForm;
         }
         public override void UpdateProgress(object o, EventArgs e)
         {
             inputSpinBox.Value++;
+            inputForm.Refresh();
         }
     }
 }

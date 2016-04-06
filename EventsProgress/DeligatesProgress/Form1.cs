@@ -18,7 +18,7 @@ namespace EventsProgress
         SpinBoxObserver spinboxObserver;
         TrackbarObserver trackbarObserver;
         ProgressBarObserver progressbarObserver;
-        UpdateFormObserver formrefresher;
+        
 
         public Form1()
         {
@@ -43,10 +43,10 @@ namespace EventsProgress
         private void Form1_Load(object sender, EventArgs e)
         {
             slowWorker = new SlowWorker();
-            spinboxObserver = new SpinBoxObserver(slowWorker, UD1);
+            spinboxObserver = new SpinBoxObserver(slowWorker, UD1, this);
             trackbarObserver = new TrackbarObserver(slowWorker, TB1);
             progressbarObserver = new ProgressBarObserver(slowWorker, PB1);
-            formrefresher = new UpdateFormObserver(slowWorker);
+           
 
         }
 

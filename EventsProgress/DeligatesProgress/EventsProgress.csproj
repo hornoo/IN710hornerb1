@@ -57,7 +57,6 @@
     <Compile Include="SpinBoxObserver.cs" />
     <Compile Include="TrackbarObserver.cs" />
     <Compile Include="TrackingObserver.cs" />
-    <Compile Include="UpdateFormObserver.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
