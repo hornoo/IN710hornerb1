@@ -17,7 +17,7 @@ namespace PetrolBot
         int shipSize;
         EShipState sipState;
         int shipVelocity;
-
+        Rectangle boundsRectangle;
 
 
 
@@ -32,18 +32,25 @@ namespace PetrolBot
         public event EventHandler FullOfFuelEvent;
 
 
-        public Ship(Graphics ShipCanvas, int ShipSize)
+        public Ship(Graphics ShipCanvas, int ShipSize, Rectangle Rectangle)
         {
+            rgen = new Random();
+            boundsRectangle = Rectangle;
             shipCanvas = ShipCanvas;
             shipSize = ShipSize;
+            shipColour = Color.Red;
+
+            ShipLocation = new Point(rgen.Next(boundsRectangle.Width), rgen.Next(boundsRectangle.Height));
+
         }
 
-        public void drawShip()
+        void drawShip()
         {
-
+            SolidBrush shipBrush = new SolidBrush(shipColour);
+            shipCanvas.FillRectangle(shipBrush, ShipLocation.X, ShipLocation.Y, shipSize, shipSize);
         }
 
-        public void moveShip()
+         void moveShip()
         {
 
         }
@@ -68,17 +75,17 @@ namespace PetrolBot
             }
         }
 
-        public void refuel()
+         void refuel()
         {
 
         }
 
         public void ShipCycle()
         {
-
+            drawShip();
         }
 
-        public void usePetrol()
+         void usePetrol()
         {
 
         }

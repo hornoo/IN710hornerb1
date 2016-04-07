@@ -25,7 +25,7 @@ namespace PetrolBot
 
        }
 
-       public void drawBot()
+        void drawBot()
        {
 
        }

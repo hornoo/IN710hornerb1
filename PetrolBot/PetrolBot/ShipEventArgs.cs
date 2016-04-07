@@ -11,7 +11,7 @@ namespace PetrolBot
     {
 
 
-       public Point ShipLocation { get; set; }
+        Point ShipLocation { get; set; }
 
        public ShipEventArgs(Point coordonate)
        {

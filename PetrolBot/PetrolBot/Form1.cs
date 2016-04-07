@@ -30,12 +30,14 @@ namespace PetrolBot
         {
             botList = new List<PetrolBot>();
             shipList = new List<Ship>();
-
+            mainCanvas = CreateGraphics();
+            Rectangle boundsRectangle = new Rectangle(0, 0, Width, Height);
+            
             numberOfShips = 5;
 
             for(int i =0; i < numberOfShips; i ++)
             {
-                shipList.Add(new Ship(mainCanvas, SHIP_SIZE));
+                shipList.Add(new Ship(mainCanvas, SHIP_SIZE,boundsRectangle));
                 botList.Add(new PetrolBot(shipList[i], mainCanvas));
             }
 
@@ -45,7 +47,10 @@ namespace PetrolBot
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            foreach(Ship currentShip in shipList)
+            {
+                currentShip.ShipCycle();
+            }
 
 
         }
