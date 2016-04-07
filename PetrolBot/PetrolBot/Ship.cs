@@ -82,6 +82,7 @@ namespace PetrolBot
 
         public void ShipCycle()
         {
+            ShipLocation = new Point(rgen.Next(boundsRectangle.Width), rgen.Next(boundsRectangle.Height));
             drawShip();
         }
 

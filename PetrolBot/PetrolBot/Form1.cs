@@ -12,7 +12,7 @@ namespace PetrolBot
 {
     public partial class Form1 : Form
     {
-        const int SHIP_SIZE = 10;
+        const int SHIP_SIZE = 50;
         
         
         Graphics mainCanvas;
@@ -37,19 +37,27 @@ namespace PetrolBot
 
             for(int i =0; i < numberOfShips; i ++)
             {
-                shipList.Add(new Ship(mainCanvas, SHIP_SIZE,boundsRectangle));
+                shipList.Add(new Ship(mainCanvas, SHIP_SIZE, boundsRectangle));
                 botList.Add(new PetrolBot(shipList[i], mainCanvas));
             }
 
+
+            timer1.Interval = 500;
             timer1.Start();
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            int count = 0;
             foreach(Ship currentShip in shipList)
             {
                 currentShip.ShipCycle();
+
+                Console.WriteLine(count);
+
+                    count ++;
             }
 
 
