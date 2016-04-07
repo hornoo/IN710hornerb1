@@ -19,7 +19,7 @@ namespace PetrolBot
         Graphics shipCanvas;
         Color shipColour;
         int shipSize;
-        EShipState sipState;
+        EShipState shipState;
         int shipXVelocity;
         int shipYVelocity;
         Rectangle boundsRectangle;
@@ -48,6 +48,10 @@ namespace PetrolBot
             shipXVelocity = rgen.Next(MAX_SHIP_VELOCITY) + MIN_SHIP_VELOCITY;
             shipYVelocity = rgen.Next(MAX_SHIP_VELOCITY) + MIN_SHIP_VELOCITY;
 
+            Petrol = 100;
+
+            shipState = EShipState.wandering;
+
             shipLocation = new Point(rgen.Next(boundsRectangle.Width), rgen.Next(boundsRectangle.Height));
 
             if( shipLocation.X + shipSize > boundsRectangle.Right)
@@ -74,25 +78,34 @@ namespace PetrolBot
 
         void drawShip()
         {
+
+            double petrolRatio = Petrol / 100.0;
+            double redValue = 255 * petrolRatio;
+            shipColour = Color.FromArgb((int)redValue, 0, 0);
+
             SolidBrush shipBrush = new SolidBrush(shipColour);
             shipCanvas.FillRectangle(shipBrush, shipLocation.X, shipLocation.Y, shipSize, shipSize);
         }
 
          void moveShip()
         {
-            shipLocation.X += shipXVelocity;
-            shipLocation.Y += shipYVelocity;
 
-          if ((shipLocation.X < boundsRectangle.Left) || (shipLocation.X + shipSize > boundsRectangle.Right))
-              {
-              shipXVelocity *= -1;
-              }
-          else if((shipLocation.Y < boundsRectangle.Top) || (shipLocation.Y + shipSize > boundsRectangle.Bottom))
-          {
-              shipYVelocity *= -1;
-          }
+            if (shipState == EShipState.wandering)
+            {
 
-            
+                shipLocation.X += shipXVelocity;
+                shipLocation.Y += shipYVelocity;
+
+                if ((shipLocation.X < boundsRectangle.Left) || (shipLocation.X + shipSize > boundsRectangle.Right))
+                {
+                    shipXVelocity *= -1;
+                }
+                else if ((shipLocation.Y < boundsRectangle.Top) || (shipLocation.Y + shipSize > boundsRectangle.Bottom))
+                {
+                    shipYVelocity *= -1;
+                }
+
+            }
            
 
         }
@@ -119,11 +132,26 @@ namespace PetrolBot
 
          void refuel()
         {
+            Petrol += 5;
 
+             if(Petrol == 100)
+             {
+                 OnFullOfFuelEvent();
+                 shipState = EShipState.wandering;
+             }
         }
 
         public void ShipCycle()
         {
+            if (shipState == EShipState.wandering)
+            {
+                usePetrol();
+                moveShip();
+            }else if(shipState == EShipState.refueling)
+            {
+                refuel();
+            }
+
             moveShip();
             drawShip();
         }
@@ -131,6 +159,22 @@ namespace PetrolBot
          void usePetrol()
         {
 
+             int usePetrolRate = 0;
+             
+             if(shipXVelocity < 0)
+             {
+                 usePetrolRate = shipXVelocity * -1;
+             }else{
+                 usePetrolRate =  shipXVelocity;
+             }
+
+            Petrol -= usePetrolRate;
+
+             if(Petrol == 0)
+             {
+                 OnOutOfFuelEvent(shipLocation);
+                 shipState = EShipState.refueling;
+             }
         }
 
     }
