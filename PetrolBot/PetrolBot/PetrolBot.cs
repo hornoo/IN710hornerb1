@@ -18,8 +18,10 @@ namespace PetrolBot
        Point shipLocation;
 
 
-       public PetrolBot()
+       public PetrolBot(Ship BotShip, Graphics BotCanvas)
        {
+           botShip = BotShip;
+           botCanvas = BotCanvas;
 
        }
 

@@ -26,14 +26,16 @@ namespace PetrolBot
 
 
         public delegate void outOfFuelEventHandler(object o, ShipEventArgs e);
+
         public event outOfFuelEventHandler OutOfFuelEvent;
 
         public event EventHandler FullOfFuelEvent;
 
 
-        public Ship()
-        { 
-        
+        public Ship(Graphics ShipCanvas, int ShipSize)
+        {
+            shipCanvas = ShipCanvas;
+            shipSize = ShipSize;
         }
 
         public void drawShip()
