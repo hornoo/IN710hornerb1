@@ -13,12 +13,13 @@ namespace PetrolBot
     public partial class Form1 : Form
     {
         const int SHIP_SIZE = 50;
-        
+        Random rand;
         
         Graphics mainCanvas;
         List<PetrolBot> botList;
         List<Ship> shipList;
         int numberOfShips;
+        Brush backGroundBroush;
 
 
         public Form1()
@@ -28,29 +29,34 @@ namespace PetrolBot
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            rand = new Random();
             botList = new List<PetrolBot>();
             shipList = new List<Ship>();
             mainCanvas = CreateGraphics();
             Rectangle boundsRectangle = new Rectangle(0, 0, Width, Height);
-            
+            backGroundBroush = new SolidBrush(Color.Blue);
             numberOfShips = 5;
 
             for(int i =0; i < numberOfShips; i ++)
             {
-                shipList.Add(new Ship(mainCanvas, SHIP_SIZE, boundsRectangle));
+
+              
+
+                shipList.Add(new Ship(mainCanvas, SHIP_SIZE, boundsRectangle, rand));
                 botList.Add(new PetrolBot(shipList[i], mainCanvas));
             }
 
 
-            timer1.Interval = 500;
+            timer1.Interval = 100;
             timer1.Start();
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            mainCanvas.FillRectangle(backGroundBroush, 0, 0, Width, Height);
             int count = 0;
+
             foreach(Ship currentShip in shipList)
             {
                 currentShip.ShipCycle();
