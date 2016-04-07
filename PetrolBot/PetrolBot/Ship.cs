@@ -170,8 +170,9 @@ namespace PetrolBot
 
             Petrol -= usePetrolRate;
 
-             if(Petrol == 0)
+             if(Petrol < 0)
              {
+                 Petrol = 0;
                  OnOutOfFuelEvent(shipLocation);
                  shipState = EShipState.refueling;
              }

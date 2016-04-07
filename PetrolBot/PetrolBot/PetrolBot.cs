@@ -22,6 +22,7 @@ namespace PetrolBot
        {
            botShip = BotShip;
            botCanvas = BotCanvas;
+           botColour = Color.Green;
 
        }
 
