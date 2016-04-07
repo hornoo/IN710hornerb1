@@ -28,6 +28,18 @@ namespace PetrolBot
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            botList = new List<PetrolBot>();
+            shipList = new List<Ship>();
+
+            numberOfShips = 5;
+
+            for(int i =0; i < numberOfShips; i ++)
+            {
+                shipList.Add(new Ship(mainCanvas, SHIP_SIZE));
+                botList.Add(new PetrolBot(shipList[i], mainCanvas));
+            }
+
+            timer1.Start();
 
         }
 
