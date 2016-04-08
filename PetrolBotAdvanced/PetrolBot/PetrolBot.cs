@@ -38,7 +38,7 @@ namespace PetrolBot
            botStartingLocation = InitalLocation;
            botCurrentlocation = InitalLocation;
            double radiansToship = 0;
-           botVelovity = 3;
+           botVelovity = 10;
 
            botState = BotState.waiting;
 
@@ -101,8 +101,8 @@ namespace PetrolBot
 
        public void calculateAngletoship()
        {
-           double tanX = shipLocation.X - botStartingLocation.X;
-           double tanY = shipLocation.Y - botStartingLocation.Y;
+           double tanX = shipLocation.X - botCurrentlocation.X;
+           double tanY = shipLocation.Y - botCurrentlocation.Y;
 
            radiansToship = Math.Atan2(tanY + 25, tanX + 25);
 
@@ -112,6 +112,8 @@ namespace PetrolBot
 
        public void calculateNextStepToShip()
        {
+           calculateAngletoship();
+
            double xAxis = botVelovity * Math.Cos(radiansToship);
            double yAxis = botVelovity * Math.Sin(radiansToship);
 
