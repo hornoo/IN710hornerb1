@@ -11,8 +11,8 @@ namespace PetrolBot
     public class Ship
     {
 
-        const int MAX_SHIP_VELOCITY = 20;
-        const int MIN_SHIP_VELOCITY = -20;
+        const int MAX_SHIP_VELOCITY = 10;
+        const int MIN_SHIP_VELOCITY = -10;
 
 
         Random rgen;
@@ -28,7 +28,7 @@ namespace PetrolBot
 
 
         int Petrol { get; set; }
-        Point ShipLocation {get; set;}
+        //Point ShipLocation {get; set;}
 
 
         public delegate void outOfFuelEventHandler(object o, ShipEventArgs e);

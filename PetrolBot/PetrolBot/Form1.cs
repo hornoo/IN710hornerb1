@@ -22,6 +22,7 @@ namespace PetrolBot
         List<Ship> shipList;
         int numberOfShips;
         Brush backGroundBroush;
+        Brush dockBrush;
 
         Point petBotInitalLocation;
 
@@ -37,12 +38,13 @@ namespace PetrolBot
             botList = new List<PetrolBot>();
             shipList = new List<Ship>();
             mainCanvas = CreateGraphics();
-            Rectangle boundsRectangle = new Rectangle(0, 0, Width, Height);
+            Rectangle boundsRectangle = new Rectangle(0, 0, Width - 25, Height -100 );
             backGroundBroush = new SolidBrush(Color.Blue);
+            dockBrush = new SolidBrush(Color.LawnGreen);
             numberOfShips = 5;
             
             petBotInitalLocation.X = 30;
-            petBotInitalLocation.Y = Height - 100;
+            petBotInitalLocation.Y = Height - 75 ;
 
             for(int i =0; i < numberOfShips; i ++)
             {
@@ -65,6 +67,7 @@ namespace PetrolBot
         private void timer1_Tick(object sender, EventArgs e)
         {
             mainCanvas.FillRectangle(backGroundBroush, 0, 0, Width, Height);
+            mainCanvas.FillRectangle(dockBrush, 0, Height - 100, Width, 100);
             int count = 0;
 
             for (int i = 0; i < shipList.Count; i ++ )
