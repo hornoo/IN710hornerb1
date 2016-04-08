@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetrolBot
 {
-    public enum EShipState { wandering, refueling};
+    public enum EShipState { wandering, refueling, waiting};
     public class Ship
     {
 
@@ -24,6 +24,7 @@ namespace PetrolBot
         int shipYVelocity;
         Rectangle boundsRectangle;
         Point shipLocation;
+        PetrolBot petrolBot;
 
 
 
@@ -74,6 +75,20 @@ namespace PetrolBot
         }
 
 
+        public void addPetrolbot(PetrolBot ReferenceToBot)
+        {
+            petrolBot = ReferenceToBot;
+
+            EventHandler petBotAtShipDeledate = new EventHandler(WaitingForShip);
+
+            petrolBot.AtShipLocation += petBotAtShipDeledate;
+        }
+
+
+       public void WaitingForShip(object o, EventArgs e)
+       {
+           shipState = EShipState.refueling;
+       }
 
 
         void drawShip()
@@ -174,7 +189,7 @@ namespace PetrolBot
              {
                  Petrol = 0;
                  OnOutOfFuelEvent(shipLocation);
-                 shipState = EShipState.refueling;
+                 shipState = EShipState.waiting;
              }
         }
 

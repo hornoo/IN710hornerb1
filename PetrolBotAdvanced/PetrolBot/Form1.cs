@@ -56,6 +56,9 @@ namespace PetrolBot
                 petBotInitalLocation.X += PETBOT_SPACER;
 
                 botList.Add(new PetrolBot(shipList[i], mainCanvas, rand, petBotInitalLocation));
+
+                shipList[i].addPetrolbot(botList[i]);
+
             }
 
 
@@ -68,16 +71,12 @@ namespace PetrolBot
         {
             mainCanvas.FillRectangle(backGroundBroush, 0, 0, Width, Height);
             mainCanvas.FillRectangle(dockBrush, 0, Height - 100, Width, 100);
-            int count = 0;
 
             for (int i = 0; i < shipList.Count; i ++ )
             {
                 shipList[i].ShipCycle();
                 botList[i].drawBot();
 
-                Console.WriteLine(count);
-
-                count++;
             }
 
 
