@@ -13,6 +13,8 @@ namespace PetrolBot
     public partial class Form1 : Form
     {
         const int SHIP_SIZE = 50;
+        const int PETBOT_SPACER = 30;
+        
         Random rand;
         
         Graphics mainCanvas;
@@ -20,6 +22,8 @@ namespace PetrolBot
         List<Ship> shipList;
         int numberOfShips;
         Brush backGroundBroush;
+
+        Point petBotInitalLocation;
 
 
         public Form1()
@@ -36,6 +40,9 @@ namespace PetrolBot
             Rectangle boundsRectangle = new Rectangle(0, 0, Width, Height);
             backGroundBroush = new SolidBrush(Color.Blue);
             numberOfShips = 5;
+            
+            petBotInitalLocation.X = 30;
+            petBotInitalLocation.Y = Height - 100;
 
             for(int i =0; i < numberOfShips; i ++)
             {
@@ -43,7 +50,10 @@ namespace PetrolBot
               
 
                 shipList.Add(new Ship(mainCanvas, SHIP_SIZE, boundsRectangle, rand));
-                botList.Add(new PetrolBot(shipList[i], mainCanvas));
+
+                petBotInitalLocation.X += PETBOT_SPACER;
+
+                botList.Add(new PetrolBot(shipList[i], mainCanvas, rand, petBotInitalLocation));
             }
 
 
@@ -57,13 +67,14 @@ namespace PetrolBot
             mainCanvas.FillRectangle(backGroundBroush, 0, 0, Width, Height);
             int count = 0;
 
-            foreach(Ship currentShip in shipList)
+            for (int i = 0; i < shipList.Count; i ++ )
             {
-                currentShip.ShipCycle();
+                shipList[i].ShipCycle();
+                botList[i].drawBot();
 
                 Console.WriteLine(count);
 
-                    count ++;
+                count++;
             }
 
 

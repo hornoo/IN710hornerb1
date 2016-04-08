@@ -16,18 +16,26 @@ namespace PetrolBot
        Ship botShip;
        Point botStartingLocation;
        Point shipLocation;
+       Random rand;
 
 
-       public PetrolBot(Ship BotShip, Graphics BotCanvas)
+       public PetrolBot(Ship BotShip, Graphics BotCanvas, Random Rand, Point InitalLocation)
        {
+           rand = Rand;
            botShip = BotShip;
            botCanvas = BotCanvas;
-           botColour = Color.Green;
+           botColour = Color.FromArgb(rand.Next(255), rand.Next(255), rand.Next(255));
+           botStartingLocation = InitalLocation;
+           botCurrentlocation = InitalLocation;
 
        }
 
-        void drawBot()
+        public void drawBot()
        {
+
+           SolidBrush botBrush = new SolidBrush(botColour);
+
+           botCanvas.FillEllipse(botBrush, botCurrentlocation.X, botCurrentlocation.Y, 10, 10);
 
        }
 
