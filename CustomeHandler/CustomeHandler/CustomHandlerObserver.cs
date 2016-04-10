@@ -15,17 +15,19 @@ namespace CustomeHandler
 
         public CustomHandlerObserver(Button Subject, int Randomnumber)
         {
-
+            //Delegate event handler, no data is passed.
             EventHandler messageEvent = new EventHandler(ShowMessage);
-
+            //subject is the form button that is passed in.
             subject = Subject;
             randomNumber = Randomnumber;
 
+            //Subscibing tot he buttons click event.
             subject.Click += messageEvent;
 
         }
 
 
+        //methof that is run when the button is clicked.
      public void ShowMessage(object o, EventArgs e)
      {
          String messageOutput = "This is a Custom Handler \n";

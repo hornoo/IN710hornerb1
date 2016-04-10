@@ -25,7 +25,7 @@ namespace CustomeHandler
         private void Form1_Load(object sender, EventArgs e)
         {
             rand = new Random();
-
+            //when instantaing classes to subscribe to cutton events, passed in button to then subscribe to its click event.
             ob1 = new CustomHandlerObserver(btTestHandler, rand.Next(100));
             ob2 = new CustomHandlerObserver(btTestHandler, rand.Next(100));
 

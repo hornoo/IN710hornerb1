@@ -15,6 +15,7 @@ namespace EventsProgress
         public ProgressBarObserver(SlowWorker Subject, ProgressBar InputProgressBar)
             :base(Subject)
         {
+            // subject is passed in, and subscribed to in the parent class.
             inputProgressBar = InputProgressBar;
         }
 

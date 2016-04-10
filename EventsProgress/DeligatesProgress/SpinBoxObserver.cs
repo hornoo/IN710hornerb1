@@ -16,6 +16,7 @@ namespace EventsProgress
         public SpinBoxObserver(SlowWorker Subject, NumericUpDown InputSpinBox, Form InputForm)
             : base(Subject)
         {
+            // subject is passed in, and subscribed to in the parent class.
             inputSpinBox = InputSpinBox;
             inputForm = InputForm;
         }
