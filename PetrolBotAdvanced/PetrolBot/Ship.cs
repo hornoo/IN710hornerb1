@@ -29,13 +29,15 @@ namespace PetrolBot
 
 
         int Petrol { get; set; }
-        //Point ShipLocation {get; set;}
+        
 
-
+        //Delegate  eventhandler fot custom event data bucket.
         public delegate void outOfFuelEventHandler(object o, ShipEventArgs e);
 
+        //Event that uses a custome eventhandler to pass data.
         public event outOfFuelEventHandler OutOfFuelEvent;
 
+        //Full of fuel event, does not pass any data.
         public event EventHandler FullOfFuelEvent;
 
 
@@ -75,16 +77,19 @@ namespace PetrolBot
         }
 
 
+        //Custom method to add petrolbot to ship propeties, so that the bot can rases an  event and the hsi knows when t start refueling.
         public void addPetrolbot(PetrolBot ReferenceToBot)
         {
             petrolBot = ReferenceToBot;
 
+            //creting new event handler delegate , to run ships method "waitingFor Ship" when the pertorl bot arrives
             EventHandler petBotAtShipDeledate = new EventHandler(WaitingForShip);
 
+            //subscribe methof to runn when petrolbot raises event.
             petrolBot.AtShipLocation += petBotAtShipDeledate;
         }
 
-
+        //Method that is run when petrol bot arrives
        public void WaitingForShip(object o, EventArgs e)
        {
            shipState = EShipState.refueling;
@@ -125,6 +130,7 @@ namespace PetrolBot
 
         }
 
+        //Method to run when ship is full, no data is passed.
         public void OnFullOfFuelEvent()
         {
             EventArgs se = new EventArgs();
@@ -135,6 +141,7 @@ namespace PetrolBot
 
         }
 
+        //Custom event that is run when the ship is out of fuel, the current location of the ship is passed via custom eventargs when this event is run.
         public void OnOutOfFuelEvent(Point ShipCurrentlocation)
         {
             ShipEventArgs se = new ShipEventArgs(ShipCurrentlocation);
