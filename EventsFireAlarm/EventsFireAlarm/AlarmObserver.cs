@@ -16,13 +16,15 @@ namespace EventsFireAlarm
         public AlarmObserver(AlarmSubject Subject)
         {
             subject = Subject;
-
+            // Create alarm delegate event handler and assign method to run when  event is rased
             AlarmSubject.alarmDelegateEventHandler alertMethodDelegate = new AlarmSubject.alarmDelegateEventHandler(AlertMethod);
 
+            //Subscribe to event.
             subject.fireEvent += alertMethodDelegate;
 
         }
 
+        //Abstract method to run when event occours.
         public abstract void AlertMethod(object o, FireAlarmEventArgs e);
         
     }

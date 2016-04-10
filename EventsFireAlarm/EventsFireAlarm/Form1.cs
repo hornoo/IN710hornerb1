@@ -24,6 +24,8 @@ namespace EventsFireAlarm
         private void Form1_Load(object sender, EventArgs e)
         {
             subject = new AlarmSubject();
+
+            //instantiate observers and pass in subject.
             messageAlert = new AlarmMessageAlertObserver(subject);
             beepAlert = new AlarmBeepObserver(subject);
         }
