@@ -16,8 +16,11 @@ namespace PetrolBot
         const int PETBOT_SPACER = 30;
         
         Random rand;
-        
+
+        Bitmap offScreenBitMap;
+        Graphics offScreenGraphics;
         Graphics mainCanvas;
+
         List<PetrolBot> botList;
         List<Ship> shipList;
         int numberOfShips;
@@ -37,7 +40,11 @@ namespace PetrolBot
             rand = new Random();
             botList = new List<PetrolBot>();
             shipList = new List<Ship>();
-            mainCanvas = CreateGraphics();
+
+            mainCanvas = this.CreateGraphics();
+            offScreenBitMap = new Bitmap(this.Width, this.Height);
+            offScreenGraphics = Graphics.FromImage(offScreenBitMap);
+
             Rectangle boundsRectangle = new Rectangle(0, 0, Width - 25, Height -100 );
             backGroundBroush = new SolidBrush(Color.Blue);
             dockBrush = new SolidBrush(Color.LawnGreen);
@@ -50,13 +57,14 @@ namespace PetrolBot
             {
 
               
-
-                shipList.Add(new Ship(mainCanvas, SHIP_SIZE, boundsRectangle, rand));
+                //Instiantiateing ships
+                shipList.Add(new Ship(offScreenGraphics, SHIP_SIZE, boundsRectangle, rand));
 
                 petBotInitalLocation.X += PETBOT_SPACER;
+                //instantiating petrolbots and passing in ship as the subject.
+                botList.Add(new PetrolBot(shipList[i], offScreenGraphics, rand, petBotInitalLocation));
 
-                botList.Add(new PetrolBot(shipList[i], mainCanvas, rand, petBotInitalLocation));
-
+                //passing in the bot so the ship can subscrib to  when the bot has arrivedat the ships location event.
                 shipList[i].addPetrolbot(botList[i]);
 
             }
@@ -69,8 +77,8 @@ namespace PetrolBot
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            mainCanvas.FillRectangle(backGroundBroush, 0, 0, Width, Height);
-            mainCanvas.FillRectangle(dockBrush, 0, Height - 100, Width, 100);
+            offScreenGraphics.FillRectangle(backGroundBroush, 0, 0, Width, Height);
+            offScreenGraphics.FillRectangle(dockBrush, 0, Height - 100, Width, 100);
 
             for (int i = 0; i < shipList.Count; i ++ )
             {
@@ -79,9 +87,10 @@ namespace PetrolBot
 
             }
 
-
+            mainCanvas.DrawImage(offScreenBitMap, 0, 0);
         }
 
+       
 
     }
 }
