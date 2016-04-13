@@ -14,6 +14,7 @@ namespace CityData
     {
         List<City> cityList;
 
+        //this takes a search string and a list of city objects and returns a list of citry objects in which the search string matches the country name of the city object;
         Func<string,List<City>,List<City>> findCitiesInCountry = (countryName, citylist) => (citylist.FindAll(City => City.CountryName == countryName));
            
 
