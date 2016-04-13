@@ -64,5 +64,17 @@ namespace CityData
             searchCityInCountry();
         }
 
+        private void multiplyPopulation()
+        {
+            //For each city in city list multiply population by 3 - one liner lambada;
+            cityList.ForEach(currentCity => currentCity.Population = currentCity.Population * 3);
+            cityList.ForEach(currentCity => listBox1.Items.Add(currentCity.CityName + " of " + currentCity.CountryName + " with a population of " + currentCity.Population));
+        }
+
+        private void btPopFix_Click(object sender, EventArgs e)
+        {
+            multiplyPopulation();
+        }
+
     }
 }
