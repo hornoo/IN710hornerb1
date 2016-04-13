@@ -35,11 +35,11 @@ namespace PredicateDemo
 
         private void btEven_Click(object sender, EventArgs e)
         {
-            Predicate<int> isEvenPred = new Predicate<int>(isAnEvenNumber);
 
             List<int> returnList = new List<int>();
 
-            returnList = numbersList.FindAll(isEvenPred);
+            //lambada expreccsing used to test if each int in the list it less than 10, if it is it is added to the return list.
+            returnList = numbersList.FindAll(x => (x < 10));
 
             printList(returnList, lbOutPut);
 
@@ -47,11 +47,11 @@ namespace PredicateDemo
 
         private void btLessThan_Click(object sender, EventArgs e)
         {
-            Predicate<int> isLeesThanTenPred = new Predicate<int>(isLessThanTen);
 
             List<int> returnList = new List<int>();
 
-            returnList = numbersList.FindAll(isLeesThanTenPred);
+            //lambada expreccsing used to test if each int in the list is a even number, if it is it is added to the return list.
+            returnList = numbersList.FindAll(x => (x % 2) == 0);
 
             printList(returnList, lbOutPut);
         }
@@ -68,17 +68,6 @@ namespace PredicateDemo
             printList(numbersList, lbGen);
         }
 
-        private bool isAnEvenNumber(int inputInt)
-        {
-            bool returnValue = ((inputInt % 2) == 0);
-            return returnValue;
-        }
-
-        private bool isLessThanTen(int inputInt)
-        {
-            bool returnValue = (inputInt < 10);
-            return returnValue;
-        }
 
         private void printList(List<int> inputList, ListBox outputBox)
         {
