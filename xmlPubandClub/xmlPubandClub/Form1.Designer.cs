@@ -92,6 +92,7 @@
             this.btUpcoming.TabIndex = 1;
             this.btUpcoming.Text = "Upcoming Gigs";
             this.btUpcoming.UseVisualStyleBackColor = true;
+            this.btUpcoming.Click += new System.EventHandler(this.btUpcoming_Click);
             // 
             // btHardRock
             // 
@@ -101,6 +102,7 @@
             this.btHardRock.TabIndex = 3;
             this.btHardRock.Text = "HardRock Gigs";
             this.btHardRock.UseVisualStyleBackColor = true;
+            this.btHardRock.Click += new System.EventHandler(this.btHardRock_Click);
             // 
             // btThisMonth
             // 
@@ -110,6 +112,7 @@
             this.btThisMonth.TabIndex = 4;
             this.btThisMonth.Text = "Gigs This Month";
             this.btThisMonth.UseVisualStyleBackColor = true;
+            this.btThisMonth.Click += new System.EventHandler(this.btThisMonth_Click);
             // 
             // Form1
             // 
@@ -122,6 +125,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

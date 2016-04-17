@@ -12,9 +12,35 @@ namespace xmlPubandClub
 {
     public partial class Form1 : Form
     {
+        XMLWorker xmlWorker;
+        DisplayWorker displayWorker;
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            xmlWorker = new XMLWorker("pubsAndClubs.xml");
+            displayWorker = new DisplayWorker();
+        }
+
+        private void btUpcoming_Click(object sender, EventArgs e)
+        {
+            displayWorker.PrintToDataGrid(dataGridView1, xmlWorker.upcommingGigs());
+        }
+
+        private void btHardRock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btThisMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
