@@ -28,17 +28,17 @@ namespace xmlPubandClub
 
         private void btUpcoming_Click(object sender, EventArgs e)
         {
-            displayWorker.PrintToDataGrid(dataGridView1, xmlWorker.upcommingGigs());
+            displayWorker.PrintToDataGrid(dataGridView1, xmlWorker.UpcommingGigs());
         }
 
         private void btHardRock_Click(object sender, EventArgs e)
         {
-
+            displayWorker.PrintToDataGrid(dataGridView1, xmlWorker.HardRockGigs());
         }
 
         private void btThisMonth_Click(object sender, EventArgs e)
         {
-
+            displayWorker.PrintToDataGrid(dataGridView1, xmlWorker.currentMonthGigs());
         }
 
 
