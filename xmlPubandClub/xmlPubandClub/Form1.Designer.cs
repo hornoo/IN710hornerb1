@@ -37,6 +37,9 @@
             this.btUpcoming = new System.Windows.Forms.Button();
             this.btHardRock = new System.Windows.Forms.Button();
             this.btThisMonth = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btSShakes = new System.Windows.Forms.Button();
+            this.btAddGig = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,11 +117,42 @@
             this.btThisMonth.UseVisualStyleBackColor = true;
             this.btThisMonth.Click += new System.EventHandler(this.btThisMonth_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(91, 385);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(545, 95);
+            this.listBox1.TabIndex = 5;
+            // 
+            // btSShakes
+            // 
+            this.btSShakes.Location = new System.Drawing.Point(91, 341);
+            this.btSShakes.Name = "btSShakes";
+            this.btSShakes.Size = new System.Drawing.Size(116, 38);
+            this.btSShakes.TabIndex = 6;
+            this.btSShakes.Text = "Alabama Shakes";
+            this.btSShakes.UseVisualStyleBackColor = true;
+            this.btSShakes.Click += new System.EventHandler(this.btSShakes_Click);
+            // 
+            // btAddGig
+            // 
+            this.btAddGig.Location = new System.Drawing.Point(457, 75);
+            this.btAddGig.Name = "btAddGig";
+            this.btAddGig.Size = new System.Drawing.Size(116, 38);
+            this.btAddGig.TabIndex = 7;
+            this.btAddGig.Text = "Add Gig";
+            this.btAddGig.UseVisualStyleBackColor = true;
+            this.btAddGig.Click += new System.EventHandler(this.btAddGig_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 347);
+            this.ClientSize = new System.Drawing.Size(770, 550);
+            this.Controls.Add(this.btAddGig);
+            this.Controls.Add(this.btSShakes);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btThisMonth);
             this.Controls.Add(this.btHardRock);
             this.Controls.Add(this.btUpcoming);
@@ -142,6 +176,9 @@
         private System.Windows.Forms.Button btUpcoming;
         private System.Windows.Forms.Button btHardRock;
         private System.Windows.Forms.Button btThisMonth;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btSShakes;
+        private System.Windows.Forms.Button btAddGig;
     }
 }
 
