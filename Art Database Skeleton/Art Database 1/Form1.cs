@@ -55,7 +55,7 @@ namespace Art_Database_1
             paintings.Add(new Painting { Artist = "Pollock", Title = "The Key", Method = "Oil on canvas", Year = 1946, Width = 84, Height = 213 });
             paintings.Add(new Painting { Artist = "Picasso", Title = "The Three Musicians", Method = "Oil on canvas", Year = 1921, Width = 200, Height = 222 });
 
-
+            
 
         }
 
@@ -64,7 +64,8 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            listBox1.Items.Clear();
+            paintings.ForEach(p => listBox1.Items.Add(p.ToString()));
         }
 
 
@@ -73,7 +74,13 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button2_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            IEnumerable<Artist> artistsFromItaly = artists.Where(a => a.Country.Equals("Italy"));
 
+            foreach(Artist a in artistsFromItaly)
+            {
+                listBox1.Items.Add(a.ToString());
+            }
         }
 
         //------------------------------------------------------
@@ -81,7 +88,12 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnBefore1800_Click(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Clear();
+            IEnumerable<Painting> paintingBefore1800 = paintings.Where(p => p.Year <= 1800).OrderBy(p => p.Year);
+            foreach(Painting p in paintingBefore1800)
+            {
+                listBox1.Items.Add(p.ToString());
+            }
         }
 
         //------------------------------------------------------
@@ -89,7 +101,16 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnOldest_Click(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Clear();
+
+            IEnumerable<Painting> oldestPainting = from p in paintings
+                                                   where p.Year == paintings.Min(y => y.Year)
+                                                   select p;
+
+            foreach(Painting p in oldestPainting)
+            {
+                listBox1.Items.Add(p.ToString());
+            }
         }
 
         //------------------------------------------------------
@@ -97,7 +118,17 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            listBox1.Items.Clear();
+            String inputArtist = textBox1.Text.Trim();
+
+            IEnumerable<Painting> searchedPainting = from p in paintings
+                                                     where p.Artist == inputArtist
+                                                     select p;
+
+            foreach (Painting p in searchedPainting)
+            {
+                listBox1.Items.Add(p.ToString());
+            }
         }
 
         //------------------------------------------------------
@@ -105,7 +136,7 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnNbyCountry_Click(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Clear();
         }
 
         //------------------------------------------------------
@@ -113,7 +144,7 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button8_Click(object sender, EventArgs e)
         {
-                      
+            listBox1.Items.Clear();        
         }
 
         //------------------------------------------------------
@@ -121,7 +152,7 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button7_Click(object sender, EventArgs e)
         {
-          
+            listBox1.Items.Clear();
         }
 
         //------------------------------------------------------
@@ -129,7 +160,7 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button4_Click(object sender, EventArgs e)
         {
-          
+            listBox1.Items.Clear();
         }
 
         //------------------------------------------------------
@@ -137,7 +168,7 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button9_Click(object sender, EventArgs e)
         {
-          
+            listBox1.Items.Clear();
         }
 
  
