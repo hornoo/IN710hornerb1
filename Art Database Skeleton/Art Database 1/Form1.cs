@@ -65,6 +65,8 @@ namespace Art_Database_1
         private void button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
+            //Foreach through all paintings int he painting list using a lamba expression.
             paintings.ForEach(p => listBox1.Items.Add(p.ToString()));
         }
 
@@ -75,6 +77,8 @@ namespace Art_Database_1
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
+            //where LINQ method artist country equals Italy.
             IEnumerable<Artist> artistsFromItaly = artists.Where(a => a.Country.Equals("Italy"));
 
             foreach(Artist a in artistsFromItaly)
@@ -89,6 +93,8 @@ namespace Art_Database_1
         private void btnBefore1800_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
+            //Where LINQ method paiting years is less than or equal to 1800, order the returned list.
             IEnumerable<Painting> paintingBefore1800 = paintings.Where(p => p.Year <= 1800).OrderBy(p => p.Year);
             foreach(Painting p in paintingBefore1800)
             {
@@ -103,6 +109,7 @@ namespace Art_Database_1
         {
             listBox1.Items.Clear();
 
+            //LINQ query operator syntax,return the painting that's year equals the painting in the set with the lowest year.
             IEnumerable<Painting> oldestPainting = from p in paintings
                                                    where p.Year == paintings.Min(y => y.Year)
                                                    select p;
@@ -120,7 +127,7 @@ namespace Art_Database_1
         {
             listBox1.Items.Clear();
             String inputArtist = textBox1.Text.Trim();
-
+            //Save input name to a variable, return the painting where the paintings artist equals the input name.
             IEnumerable<Painting> searchedPainting = from p in paintings
                                                      where p.Artist == inputArtist
                                                      select p;
@@ -138,6 +145,7 @@ namespace Art_Database_1
         {
             listBox1.Items.Clear();
 
+            // Join artist and painting on painting artist and artist lastname, group by coutry into a sub group, then order by a count of each country. Select the key and count of each key and return this as its own var type.
             var NumPaitingsfromCountry = from p in paintings
                                          join a in artists
                                          on p.Artist equals a.LastName
@@ -167,8 +175,10 @@ namespace Art_Database_1
         {
             listBox1.Items.Clear();
 
+            //Group whole Artists list by artist country
             var ArtistsGroupedByCountry = artists.GroupBy(a => a.Country);
 
+            //Unwrap each var object, print key(country) then all artists in that group.
             foreach(var a in ArtistsGroupedByCountry)
             {
                 listBox1.Items.Add(a.Key + ":");
@@ -185,7 +195,23 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button7_Click(object sender, EventArgs e)
         {
+
+
             listBox1.Items.Clear();
+
+            //Join artists and paintings on last name and artist, return the joit items that have Netherlands as their country, and order by the painting year. return only the paintings.
+            IEnumerable<Painting> dutchPaintings = from p in paintings
+                                 join a in artists
+                                 on p.Artist equals a.LastName
+                                 where a.Country == "Netherlands"
+                                 orderby p.Year
+                                 select p;
+
+            foreach(Painting p in dutchPaintings)
+            {
+                listBox1.Items.Add(p.ToString());
+            }
+
         }
 
         //------------------------------------------------------
@@ -194,6 +220,18 @@ namespace Art_Database_1
         private void button4_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            //Join artists and paintings on last name and artist, order by artist last name and make new object with first and last name, country and paintint title to return.
+            var paintingWithArtist = from p in paintings
+                                     join a in artists
+                                     on p.Artist equals a.LastName
+                                     orderby a.LastName
+                                     select new {a.FirstName, a.LastName, a.Country, p.Title};
+
+            foreach(var pa in paintingWithArtist)
+            {
+                listBox1.Items.Add(pa.FirstName + " " + pa.LastName + "\t" + pa.Country + "\t\t" + pa.Title);
+            }
+
         }
 
         //------------------------------------------------------
@@ -202,6 +240,22 @@ namespace Art_Database_1
         private void button9_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
+            //Join artists and paintings on last name and artist, order by artist last name, returh where artist country == Italy or France, return custom object of Lastname, country and painting title.
+            var fromFranceOrItlay = from p in paintings
+                                    join a in artists
+                                    on p.Artist equals a.LastName
+                                    orderby a.LastName
+                                    where a.Country == "Italy" || a.Country == "France"
+                                    select new { a.LastName, a.Country, p.Title };
+            
+            foreach(var fi in fromFranceOrItlay)
+            {
+                listBox1.Items.Add(fi.LastName + "\t" + fi.Country + "\t" + fi.Title);
+            }
+
+
+
         }
 
  
