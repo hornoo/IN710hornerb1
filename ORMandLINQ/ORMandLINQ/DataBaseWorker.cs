@@ -70,9 +70,10 @@ namespace ORMandLINQ
                                select f;
                 
                 
-                               var testQuery = from ls in db.tblStrikes
+                  var testQuery = from ls in db.tblStrikes
                                join f in db.tblFires
-                               on new { ls.strikeDate, ls.strikeLatitude, ls.strikeLongitude } equals new { f.fireDate, f.fireLatitude, f.fireLongitude }
+                               on new { ls.strikeDate, ls.strikeLatitude, ls.strikeLongitude } 
+                               equals new { f.fireDate, f.fireLatitude, f.fireLongitude }
                                select f;
                                 
                 
