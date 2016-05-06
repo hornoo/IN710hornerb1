@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LightningStriksDB">
+  <DataContextMoniker Name="/LightningStriksDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1eba638a-ae8e-4db7-81c3-816959eba51d" absoluteBounds="0.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LightningStriksDBDataContext/tblFire" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cba8701f-9259-4605-87d2-4c8ea6b4b137" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6978ba5a-76bd-4dad-9dfc-a9b0ffef72a4" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/LightningStriksDBDataContext/tblStrike" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d112f805-38e0-4c8f-b6ce-b0aa8c2538c9" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e087d22c-7692-42c9-bfc8-53083c4bcd23" absoluteBounds="3.5, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/LightningStriksDBDataContext/tblPicture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="829a0cb2-e716-494a-9e0c-8368a7c90574" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LightningStriksDBDataContext/tblStrike/tblStrike_tblPicture" />
+      <nodes>
+        <classShapeMoniker Id="6978ba5a-76bd-4dad-9dfc-a9b0ffef72a4" />
+        <classShapeMoniker Id="e087d22c-7692-42c9-bfc8-53083c4bcd23" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
