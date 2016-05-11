@@ -12,6 +12,8 @@ namespace ADOPractical
 {
     public partial class Form1 : Form
     {
+        DatabaseWorker dbworker;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,12 +21,12 @@ namespace ADOPractical
 
         private void btCreateTablesAddData_Click(object sender, EventArgs e)
         {
-
+            dbworker.SetUpDatabase(tbUserName.Text.Trim().ToString(), tbPassword.Text.Trim().ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dbworker = new DatabaseWorker();
         }
     }
 }
