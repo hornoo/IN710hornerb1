@@ -21,7 +21,7 @@ namespace ADOPractical
 
         private void btCreateTablesAddData_Click(object sender, EventArgs e)
         {
-            dbworker.SetUpDatabase(tbUserName.Text.Trim().ToString(), tbPassword.Text.Trim().ToString());
+            lbRowsFeedBack.Text = Convert.ToString(dbworker.SetUpDatabase(tbUserName.Text.Trim().ToString(), tbPassword.Text.Trim().ToString()));
         }
 
         private void Form1_Load(object sender, EventArgs e)

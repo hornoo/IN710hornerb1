@@ -33,13 +33,15 @@
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbRowsFeedBack = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btCreateTablesAddData
             // 
-            this.btCreateTablesAddData.Location = new System.Drawing.Point(83, 128);
+            this.btCreateTablesAddData.Location = new System.Drawing.Point(70, 157);
             this.btCreateTablesAddData.Name = "btCreateTablesAddData";
-            this.btCreateTablesAddData.Size = new System.Drawing.Size(131, 23);
+            this.btCreateTablesAddData.Size = new System.Drawing.Size(171, 23);
             this.btCreateTablesAddData.TabIndex = 0;
             this.btCreateTablesAddData.Text = "Create tables add data";
             this.btCreateTablesAddData.UseVisualStyleBackColor = true;
@@ -56,7 +58,7 @@
             // 
             // tbUserName
             // 
-            this.tbUserName.Location = new System.Drawing.Point(141, 54);
+            this.tbUserName.Location = new System.Drawing.Point(150, 54);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(100, 20);
             this.tbUserName.TabIndex = 2;
@@ -73,17 +75,36 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(141, 84);
+            this.tbPassword.Location = new System.Drawing.Point(150, 84);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(67, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Rows created:";
+            // 
+            // lbRowsFeedBack
+            // 
+            this.lbRowsFeedBack.AutoSize = true;
+            this.lbRowsFeedBack.Location = new System.Drawing.Point(147, 124);
+            this.lbRowsFeedBack.Name = "lbRowsFeedBack";
+            this.lbRowsFeedBack.Size = new System.Drawing.Size(0, 13);
+            this.lbRowsFeedBack.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 211);
+            this.Controls.Add(this.lbRowsFeedBack);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbUserName);
@@ -104,6 +125,8 @@
         private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbRowsFeedBack;
     }
 }
 
