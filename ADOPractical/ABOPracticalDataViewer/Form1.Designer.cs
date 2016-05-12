@@ -67,7 +67,6 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 2;
-            this.tbPassword.Text = "RHo_0621";
             // 
             // lbuser
             // 

@@ -21,11 +21,12 @@ namespace ADOPractical
 
         private void btCreateTablesAddData_Click(object sender, EventArgs e)
         {
+            //Run set up query and display about of rows modified.
             lbRowsFeedBack.Text = Convert.ToString(dbworker.SetUpDatabase(tbUserName.Text.Trim().ToString(), tbPassword.Text.Trim().ToString()));
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {//Instantiate database worker
             dbworker = new DatabaseWorker();
         }
     }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOPractical", "ADOPractical\ADOPractical.csproj", "{B1EFD100-8239-4293-B47D-0C129E40EBEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOPracticalTableBuilder", "ADOPractical\ADOPracticalTableBuilder.csproj", "{B1EFD100-8239-4293-B47D-0C129E40EBEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABOPracticalDataViewer", "ABOPracticalDataViewer\ABOPracticalDataViewer.csproj", "{51129195-7DFC-4D5D-8F8F-373E40B53558}"
 EndProject

@@ -13,19 +13,20 @@ namespace ADOPractical
 
 
         public DatabaseWorker()
-        {
+        {   //Instantiate connection
             bitDevConnection = new SqlConnection();
         }
 
         public int SetUpDatabase(String Username, String Password)
         {
+            //Set up connection
             SetUpdatebaseConnection(Username, Password);
-
+            //set up command
             SqlCommand setUpTables = new SqlCommand();
-
+            //Pass connection  to command.
             setUpTables.Connection = bitDevConnection;
 
-
+            //Query String
             String inputQuery = @"IF OBJECT_ID('tblAssignment') IS NOT NULL DROP TABLE tblAssignment
                                 IF OBJECT_ID('tblPaper') IS NOT NULL DROP TABLE tblPaper  
                                 IF OBJECT_ID('tblLecturer') IS NOT NULL DROP TABLE tblLecturer
@@ -76,17 +77,18 @@ namespace ADOPractical
                                 (5,'Google Google','show ability to break the Internet',0,'2016-05-11'),
                                 (5,'Python Jango','Show Competency using creating a database driven website',null,'2016-05-20')";
 
-
+            //pass in query string
             setUpTables.CommandText = inputQuery;
-
+            //Run the query and cappture how man rows were modified
             int RowsCreated = setUpTables.ExecuteNonQuery();
-
+            //close connection to server
             bitDevConnection.Close();
-
+            //pass out amount of rows modified.
             return RowsCreated;
 
         }
 
+        //method to se uo connection to sql server with a username and password that is passed in.
         private void SetUpdatebaseConnection(String Username, String Password)
         {
             bitDevConnection.ConnectionString = "Data Source = bitdev.ict.op.ac.nz;"+

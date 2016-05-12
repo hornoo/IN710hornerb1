@@ -20,14 +20,16 @@ namespace ABOPracticalDataViewer
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {//Instantiate worker
             databaseWorker = new DatabaseWorker();
             
         }
 
+        //this method is run on the dataGridViewend Edit event
         public void SetInputDataFromDGV(object o, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine();
+            //Checks which column was edited, if it was mark, it works out which cell and the id of  the row in the data base, gets
+            // the value from the cell and runs the updateMark method.
             if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "mark")
             {
                 Console.WriteLine("made it into to if");
@@ -49,6 +51,7 @@ namespace ABOPracticalDataViewer
 
         }
 
+        //Runs connection method and if successful, enables query buttons, (need to fix up spelling of buttons).
         private void btdbConnect_Click(object sender, EventArgs e)
         {
             String username = tbUsername.Text.Trim().ToString();
@@ -72,6 +75,7 @@ namespace ABOPracticalDataViewer
    
         }
 
+        //the following methods run the passed in query to the run query method..
         private void blListAllPTandE_Click(object sender, EventArgs e)
         {
             String queryString = @"SELECT tblPaper.paperCode, tblLecturer.firstName, tblLecturer.lastName, tblLecturer.email FROM tblPaper
