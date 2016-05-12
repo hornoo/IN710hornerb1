@@ -68,9 +68,12 @@ namespace ADOPractical
                                 (3,'Project 1'),
                                 (4,'Web 3')
                                 INSERT INTO tblAssignment VALUES
-                                (1,'Diffusion Simulator','Demonstrate Architecture Knowledge',100,'2016-05-02')
-                                (1,'DB and Multi-thread','Demonstrate DB and MultiThread Knowledge','2016-05-18')
-                                (2,'Portfolio','Show work from first semester','2016-3105-31');
+                                (1,'Diffusion Simulator','Demonstrate Architecture Knowledge',100,'2016-05-02'),
+                                (1,'DB and Multi-thread','Demonstrate DB and MultiThread Knowledge',null,'2016-05-18'),
+                                (4,'Portfolio','Show work from first semester',null,'2016-05-31'),
+                                (5,'HTMLCSS','Show Competency using HTML and CSS',100,'2016-04-24'),
+                                (5,'Java-script','Show Competency using Java-script',100,'2016-05-02'),
+                                (5,'Python Jango','Show Competency using creating a database driven website',null,'2016-05-20')";
 
 
             setUpTables.CommandText = inputQuery;
