@@ -73,6 +73,7 @@ namespace ADOPractical
                                 (4,'Portfolio','Show work from first semester',null,'2016-05-31'),
                                 (5,'HTMLCSS','Show Competency using HTML and CSS',100,'2016-04-24'),
                                 (5,'Java-script','Show Competency using Java-script',100,'2016-05-02'),
+                                (5,'Google Google','show ability to break the Internet',0,'2016-05-11'),
                                 (5,'Python Jango','Show Competency using creating a database driven website',null,'2016-05-20')";
 
 
