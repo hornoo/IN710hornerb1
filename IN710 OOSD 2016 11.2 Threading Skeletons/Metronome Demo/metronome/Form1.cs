@@ -18,6 +18,8 @@ namespace metronome
         private Beeper mainBeeper;
         private Counter mainCounter;
         private TimeDisplay mainTimeDisplay;
+        //Define Thread so it can be accessed by all form buttons 
+        Thread t1;
 
 
         public Form1()
@@ -37,7 +39,10 @@ namespace metronome
         {
            int currInterval = Convert.ToInt16(textBox1.Text);
            mainMetronome.Interval = currInterval;
-           mainMetronome.start();
+            //Instantiate thread and pass in method to run on thread.
+           t1 = new Thread(mainMetronome.start);
+            //Run the method.
+           t1.Start();
         }
 
         public void clearBuffer()
@@ -47,7 +52,8 @@ namespace metronome
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Code needed here to stop the metronome
+            //Abort the separate thread.
+            t1.Abort();   
         }
 
     }

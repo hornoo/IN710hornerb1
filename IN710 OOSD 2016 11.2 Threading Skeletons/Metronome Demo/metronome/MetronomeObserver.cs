@@ -8,8 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.Media;
 
+
 namespace metronome
 {
+    //Define Delegate signature to pass into invoke method to update form controls. I made this delegate generic so I didn't have to create 2 different delegates 
+    //one for the spin box(no data required, and one for the list box where a DateTime is required.)
+    delegate void UpdateFormControlDelegate(metronomeEventArgs e);
+
     public class MetronomeObserver
     {
         protected Metronome metronome;
@@ -53,6 +58,8 @@ namespace metronome
     //----------------------------------------------------------------------------
     public class Counter : MetronomeObserver
     {
+        
+
         private NumericUpDown spinBox;
 
         public Counter(Metronome metronome, NumericUpDown spinBox)
@@ -61,9 +68,27 @@ namespace metronome
             this.spinBox = spinBox;
         }
 
+        //Method to update spinBox, method signature matches Delegate that will be invoked by spinBox thread.
+        private void updateSpinbox(metronomeEventArgs e)
+        {
+            spinBox.Value++;
+        }
+
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
-                spinBox.Value++;  
+            //Compare if the calling thread is the same as the creating thread of the spinBox. if different, returns true.
+            if (spinBox.InvokeRequired)
+            {
+                //Create delegate and pass in method to run from delegate.
+                UpdateFormControlDelegate updateSpinBoxDelegate = new UpdateFormControlDelegate(updateSpinbox);
+                //Get the spinbox(original Creating thread) to invoke\call\run the delegate and pass in the arguments as an array. 
+                spinBox.Invoke(updateSpinBoxDelegate, new object[] { e });//spinbox updates on form, 
+
+            }
+            else
+            {
+                spinBox.Value++;
+            }
         }
     } // end TCounter
 
@@ -71,6 +96,9 @@ namespace metronome
     //----------------------------------------------------------------------------
     public class TimeDisplay : MetronomeObserver
     {
+        //Define delegate 
+        delegate void UpdateListBoxDateTime(DateTime InputDateTime);
+
         private ListBox listBox;
 
         public TimeDisplay(Metronome metronome, ListBox listBox)
@@ -79,10 +107,29 @@ namespace metronome
             this.listBox = listBox;
         }
 
+        //Method to print DateTime to listBox, method signature matches Delegate that will be invoked by listBox thread.
+        public void updateDateTimeListBox(metronomeEventArgs e)
+        {
+            //Create date time from passed in object.
+            DateTime currDateTime = e.currentTime;
+            listBox.Items.Add(currDateTime.ToString());
+        }
+
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
-            DateTime currDateTime = e.currentTime;
-            listBox.Items.Add(currDateTime.ToString());         
+            if(listBox.InvokeRequired)
+            {
+                //Create delegate and pass in method to run from delegate.
+                UpdateFormControlDelegate updateListBoxDateTimeDelegate = new UpdateFormControlDelegate(updateDateTimeListBox);
+                //Get the listBox(original Creating thread) to invoke\call\run the delegate and pass in the arguments as an array.
+                listBox.Invoke(updateListBoxDateTimeDelegate, new object[]{e});   //update list box from passed in array of arguments.  
+
+            }
+            else{
+
+                updateDateTimeListBox(e);
+ 
+            }
         }
     }
 
