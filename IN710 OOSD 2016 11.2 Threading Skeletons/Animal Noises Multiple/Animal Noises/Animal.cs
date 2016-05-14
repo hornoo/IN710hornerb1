@@ -10,20 +10,30 @@ namespace Animal_Noises
     public class Animal
     {
         private SoundPlayer soundPlayer;
-        private String soundFileName;
+        String lockString;
 
-        public Animal(String soundFileName)
+
+        public Animal(String soundFileName,String LockString)
         {
             soundPlayer = new SoundPlayer(soundFileName);
+            lockString = LockString;
         }
 
         public void speak()
         {
-            while (true)
-            {
-                    soundPlayer.Play();
-                    Thread.Sleep(500);
-            }
+
+            
+                while (true)
+                    {
+                        lock (lockString)
+                        {
+                            soundPlayer.Play();
+
+                            Thread.Sleep(500);
+                        }
+                    }
+                       
+            
         }
 
     }
