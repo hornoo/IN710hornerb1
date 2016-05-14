@@ -16,6 +16,7 @@ namespace Animal_Noises
         public Animal(String soundFileName,String LockString)
         {
             soundPlayer = new SoundPlayer(soundFileName);
+            //Pass in reference to the shared object.
             lockString = LockString;
         }
 
@@ -25,11 +26,11 @@ namespace Animal_Noises
             
                 while (true)
                     {
+                        //Lock the code below on the shared object, so that the current thread with the lock is the only one that can run the code. 
                         lock (lockString)
                         {
                             soundPlayer.Play();
-
-                            Thread.Sleep(500);
+                            Thread.Sleep(2000);
                         }
                     }
                        

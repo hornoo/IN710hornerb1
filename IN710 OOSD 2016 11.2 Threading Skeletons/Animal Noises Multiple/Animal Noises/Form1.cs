@@ -19,6 +19,8 @@ namespace Animal_Noises
 
         private List<Animal> animalList;
         private List<Thread> threadList;
+
+        //Shared object to lock on
         string sharedString;
       
 
@@ -29,10 +31,12 @@ namespace Animal_Noises
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Set value of locking object
             sharedString = "value not used for anything";
             animalList = new List<Animal>();
             threadList = new List<Thread>();
 
+            //Pass shared object into each instance that will be run by a separate thread.
             animalList.Add(new Animal("bss.wav", sharedString));
             animalList.Add(new Animal("frog.wav",sharedString));
             animalList.Add(new Animal("duck.wav",sharedString));
