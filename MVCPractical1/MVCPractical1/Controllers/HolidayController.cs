@@ -28,24 +28,24 @@ namespace MVCPractical1.Controllers
                     holidayDetails.HolidayName = "Queens Birthday";
                     //Generate queens birthday, check it has been or not and return the days until.
                     holidayDetails.DaysTo = DaysUntil(getQueensBirthday());
-                    holidayDetails.PathToImage = "coin.jpg";
+                    holidayDetails.PathToImage = "../../content/queen.jpg";
                     break;
                 case 1:
                     holidayDetails.HolidayName = "Halloween";
                     //Pass in the date of current years Halloween, check if it has been or not and pass back the days until.
                     holidayDetails.DaysTo = DaysUntil(new DateTime(currentdate.Year, 10, 31));
-                    holidayDetails.PathToImage = "halloween.jpg";
+                    holidayDetails.PathToImage = "./../content/halloween.jpg";
                     break;
                 case 2:
-                    holidayDetails.HolidayName = "Boxing Day";
+                    holidayDetails.HolidayName = "Boxing day";
                     //Pass in the date of current years BoxingDay, check if it has been or not and pass back the days until.
                     holidayDetails.DaysTo = DaysUntil(new DateTime(currentdate.Year, 12, 26));
-                    holidayDetails.PathToImage = "boxing.jpg";
+                    holidayDetails.PathToImage = "../../content/boxing.jpg";
                     break;
 
             }
 
-            return View();
+            return View(holidayDetails);
         }
 
         private int DaysUntil(DateTime UntilThisDate)
@@ -63,10 +63,6 @@ namespace MVCPractical1.Controllers
             returnDays = (int)(UntilThisDate - currenDate).TotalDays;
 
             return returnDays;
-
-
-
-
 
         }
 

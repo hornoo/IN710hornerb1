@@ -80,6 +80,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\boxing.jpg" />
+    <Content Include="Content\halloween.jpg" />
+    <Content Include="Content\queen.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

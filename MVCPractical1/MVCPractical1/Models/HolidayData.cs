@@ -7,8 +7,8 @@ namespace MVCPractical1.Models
 {
     public class HolidayData
     {
-        String HolidayName { get; set; }
-        int DaysTo { get; set; }
-        String PathToimage { get; set; }
+        public String HolidayName { get; set; }
+        public int DaysTo { get; set; }
+        public String PathToImage { get; set; }
     }
 }
