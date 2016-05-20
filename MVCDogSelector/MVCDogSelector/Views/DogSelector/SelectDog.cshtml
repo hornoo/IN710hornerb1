@@ -8,13 +8,234 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <title>SelectDog</title>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class="row">
 
+            <div class="col-md-12">
+
+                <h2>Dog Selector</h2>
+                <h2><small>We'll help you choose the perfect dog</small></h2>
+
+                <form class="">
+
+                    <div class="form-group">
+                        <label class="control-label">Must be good with children</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren1" value="true" checked>
+                                Yes
+                            </label>
+                        </div>
+                    
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren2" value="false">
+                                no
+                            </label>
+                        </div>
+                    </div>
+                    <label class="control-label">Drooling</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Drools" id="Drools1" value="true" checked>
+                            No Drooling
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Drools" id="Drools2" value="false">
+                            Don't mind
+                        </label>
+                    </div>
+
+
+                    <label class="control-label">Coat length</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Coatlength" id="Coatlength1" value="Short" checked>
+                            Short
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Coatlength" id="Coatlength2" value="Medium">
+                            Medium
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Coatlength" id="Coatlength3" value="Long">
+                            Long
+                        </label>
+                    </div>
+
+                    <h4>Preferences</h4>
+
+                    <table class="table">
+                        <tr><th></th><th>Low</th><th>Medium</th><th>High</th><th>No Preference</th></tr>
+                        <tr>
+                            <td>Activity Level</td>
+
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ActivityLevel" id="ActivityLevel1" value="Low">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ActivityLevel" id="ActivityLevel2" value="Medium">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ActivityLevel" id="ActivityLevel3" value="High">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ActivityLevel" id="ActivityLevel4" value="NoPreference">
+
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shedding Level</td>
+
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="SheddingLevel" id="SheddingLevel1" value="Low">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="SheddingLevel" id="SheddingLevel2" value="Medium">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="SheddingLevel" id="SheddingLevel3" value="High">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="SheddingLevel" id="SheddingLevel4" value="NoPreference">
+
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Grooming Level</td>
+
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="GroomingLevel" id="GroomingLevel1" value="Low">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="GroomingLevel" id="GroomingLevel2" value="Medium">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="GroomingLevel" id="GroomingLevel3" value="High">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="GroomingLevel" id="GroomingLevel4" value="NoPreference">
+
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence Level</td>
+
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel1" value="Low">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel2" value="Medium">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel3" value="High">
+
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="IntelligenceLevel4" id="IntelligenceLevel4" value="NoPreference">
+
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </form>
+
+
+
+
+            </div>
+
+        </div>
 
     </div>
 </body>
