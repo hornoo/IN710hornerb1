@@ -38,7 +38,7 @@ namespace MVCDogSelector.Controllers
 
             foreach(Dog d in lowestScoringDog)
             {
-                System.Diagnostics.Debug.WriteLine(d.DisplayName);
+                System.Diagnostics.Debug.WriteLine(d.DisplayName + " " + d.MatchScore);
             }
 
             return View("DisplayDog", matchchedDog);
@@ -59,19 +59,14 @@ namespace MVCDogSelector.Controllers
             }
 
             score += Math.Abs((int)UserDog.ActivityLevel - (int)DatabaseDog.ActivityLevel);
-            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.ActivityLevel - (int)DatabaseDog.ActivityLevel));
 
             score += Math.Abs((int)UserDog.SheddingLevel - (int)DatabaseDog.SheddingLevel);
-            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.SheddingLevel - (int)DatabaseDog.SheddingLevel));
 
             score += Math.Abs((int)UserDog.IntelligenceLevel - (int)DatabaseDog.IntelligenceLevel);
-            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.IntelligenceLevel - (int)DatabaseDog.IntelligenceLevel));
 
             score += Math.Abs((int)UserDog.Coatlength - (int)DatabaseDog.Coatlength);
-            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.Coatlength - (int)DatabaseDog.Coatlength));
 
             score += Math.Abs((int)UserDog.Size - (int)DatabaseDog.Size);
-            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.Size - (int)DatabaseDog.Size));
 
             return score;
         }
