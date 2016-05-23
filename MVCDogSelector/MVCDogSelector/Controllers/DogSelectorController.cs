@@ -41,7 +41,7 @@ namespace MVCDogSelector.Controllers
                 System.Diagnostics.Debug.WriteLine(d.DisplayName + " " + d.MatchScore);
             }
 
-            return View("DisplayDog", matchchedDog);
+            return View("DisplayDog", lowestScoringDog);
         }
 
         private int computeMatchScore(Dog UserDog, Dog DatabaseDog)

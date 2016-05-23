@@ -28,3 +28,8 @@ th{
     width: 100%;
 }
 
+.spacer{
+	height:20px;
+    clear:both;
+}
+

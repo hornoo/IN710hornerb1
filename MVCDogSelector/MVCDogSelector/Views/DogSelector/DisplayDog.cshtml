@@ -1,4 +1,5 @@
-﻿@model MVCDogSelector.Models.Dog
+﻿
+@model IEnumerable<MVCDogSelector.Models.Dog>
 
 @{
     Layout = null;
@@ -24,7 +25,7 @@
                 <div class="jumbotron">
 
                     <h1>Recommended Dog:</h1>
-                    <h4>We suggest the @Model.BreedName @Model.DisplayName</h4>
+
 
                 </div>
 
@@ -32,56 +33,76 @@
 
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
+        
 
-                <table class="table table-striped">
-                    <tr>
-                        <td>Activity level:</td>
-                        <td>@Model.ActivityLevel</td>
-                    </tr>
-                    <tr>
-                        <td>Shedding Level:</td>
-                        <td>@Model.SheddingLevel</td>
-                    </tr>
-                    <tr>
-                        <td>Grooming Level:</td>
-                        <td>@Model.GroomingLevel</td>
-                    </tr>
-                    <tr>
-                        <td>Intelligence Level:</td>
-                        <td>@Model.IntelligenceLevel</td>
-                    </tr>
-                    <tr>
-                        <td>Good with Children:</td>
-                        <td>@Model.GoodWithChildren</td>
-                    </tr>
-                    <tr>
-                        <td>Drools:</td>
-                        <td>@Model.Drools</td>
-                    </tr>
-                    <tr>
-                        <td>Coal Length:</td>
-                        <td>@Model.Coatlength</td>
-                    </tr>
-                    <tr>
-                        <td>Size:</td>
-                        <td>@Model.Size</td>
-                    </tr>
-                    <tr>
-                        <td>Match Score(Lower is better)</td>
-                        <td>@Model.MatchScore</td>
-                    </tr>
-                </table>
-                <a href="~/DogSelector/Index">Return to Dog Selector</a>
-            </div>
-            <div class="col-md-6">
-                <img class="img-rounded dogImage" src="~/Content/Images/@Model.ImageName" />
-            </div>
+            @foreach (MVCDogSelector.Models.Dog d in Model)
+            {
 
-        </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <table class="table table-striped">
+                            <tr>
+                                <td>Activity level:</td>
+                                <td>@d.ActivityLevel</td>
+                            </tr>
+                            <tr>
+                                <td>Shedding Level:</td>
+                                <td>@d.SheddingLevel</td>
+                            </tr>
+                            <tr>
+                                <td>Grooming Level:</td>
+                                <td>@d.GroomingLevel
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>Intelligence Level:</td>
+                                <td>@d.IntelligenceLevel</td>
+                            </tr>
+                            <tr>
+                                <td>Good with Children:</td>
+                                <td>@d.GoodWithChildren</td>
+                            </tr>
+                            <tr>
+                                <td>Drools:</td>
+                                <td>@d.Drools</td>
+                            </tr>
+                            <tr>
+                                <td>Coal Length:</td>
+                                <td>@d.Coatlength</td>
+                            </tr>
+                            <tr>
+                                <td>Size:</td>
+                                <td>@d.Size</td>
+                            </tr>
+                            <tr>
+                                <td>Match Score(Lower is better)</td>
+                                <td>@d.MatchScore</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <img class="img-rounded dogImage" src="~/Content/Images/@d.ImageName" />
+                    </div>
+
+                </div>
+                
+                <div class="spacer"></div>
+
+            }
+               
+
+        <a class="btn btn-default" href="~/DogSelector/Index">Return to Dog Selector</a>
 
     </div>
+
+       
+        
+    
 
 </body>
 </html>
