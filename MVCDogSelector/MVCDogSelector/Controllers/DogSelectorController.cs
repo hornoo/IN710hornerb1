@@ -10,54 +10,54 @@ namespace MVCDogSelector.Controllers
     public class DogSelectorController : Controller
     {
         const int No_MATCH = 50;
+        const int INITIAL_MATCH_SCORE = 0;
 
         // GET: DogSelector
         [HttpGet]
         public ActionResult Index()
         {
-
             return View("SelectDog");
         }
 
         [HttpPost]
         public ActionResult Index(Dog selectedDog)
         {
-            Dog matchchedDog = null;
+            //Allocate memory and create list of Dogs
             List<Dog> dogDataBase = makeDatabase();
 
+            //For each dog in the database computer its matching score with the properties selected by a user. Store the calculated score in as a attribute of the dog database.
             foreach(Dog currentDog in dogDataBase)
             {
                 currentDog.MatchScore = computeMatchScore(selectedDog, currentDog);
             }
 
-
-
+            //Find the Dog/s with the lowest score and store in an object. (A lower score means a better match across all fields).
             IEnumerable<Dog> lowestScoringDog = dogDataBase.Where(d => (d.MatchScore == dogDataBase.Min(cd => cd.MatchScore)));
 
-            matchchedDog = lowestScoringDog.First();
-
-            foreach(Dog d in lowestScoringDog)
-            {
-                System.Diagnostics.Debug.WriteLine(d.DisplayName + " " + d.MatchScore);
-            }
-
+            //pass object to view to be displayed.
             return View("DisplayDog", lowestScoringDog);
         }
 
+        //This method computes a match score between 2 dog instances, a lower score is a better match.
         private int computeMatchScore(Dog UserDog, Dog DatabaseDog)
         {
-            int score = 0;
+            int score = INITIAL_MATCH_SCORE;
 
+            //if the dog is no good with children, do not check any further and return a high score. 
             if((UserDog.GoodWithChildren == true) && (DatabaseDog.GoodWithChildren == false))
             {
                 return No_MATCH;
             }
 
+            //if the dog drools, do not check any further and return a high score.
             if((UserDog.Drools == true) && (DatabaseDog.Drools == true))
             {
                 return No_MATCH;
             }
 
+            //For-each other property work out the numeric difference between the properties of the dogs and add this difference to the over all score. If the properties
+            //match the difference will be 0 eg 2 - 2 = 0. If the user picks low for a property and the comparing dogs property value is high the difference
+            //between these two values will be 1 - 3 = -2 this value is then converted to a positive number and added to the score. No preference value is 0.
             score += Math.Abs((int)UserDog.ActivityLevel - (int)DatabaseDog.ActivityLevel);
 
             score += Math.Abs((int)UserDog.SheddingLevel - (int)DatabaseDog.SheddingLevel);
@@ -75,7 +75,7 @@ namespace MVCDogSelector.Controllers
 
         //=========================================================================
         private List<Dog> makeDatabase()
-        {
+        {//Generate list of dogs to act as database.
             List<Dog> newDatabase = new List<Dog>();
 
             Dog afghanHound = new Dog();

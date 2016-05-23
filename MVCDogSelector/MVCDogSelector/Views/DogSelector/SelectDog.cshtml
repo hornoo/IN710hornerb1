@@ -17,71 +17,79 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-12 col-sm-12">
-
+            
+             <div class="col-md-12 col-sm-12">
                 <div class="jumbotron">
                     <h1>Dog Selector</h1>
                     <h2><small>We'll help you choose the perfect dog</small></h2>
                 </div>
+            </div>
+            </div>
+            <div class="row">
 
-                <form action="Index" method="post">
+                <div class="col-md-6 col-sm-6">
 
-                    <div class="form-group">
-                        <label class="control-label">Must be good with children</label>
+                    <form action="Index" method="post">
+
+                        <div class="form-group">
+                            <label class="control-label">Must be good with children</label>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="GoodWithChildren" id="GoodWithChildren1" value="True" checked>
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="GoodWithChildren" id="GoodWithChildren2" value="False">
+                                    no
+                                </label>
+                            </div>
+                        </div>
+                        <label class="control-label">Drooling</label>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren1" value="True" checked>
-                                Yes
+                                <input type="radio" name="Drools" id="Drools1" value="True" checked>
+                                No Drooling
                             </label>
                         </div>
-                    
+
                         <div class="radio">
                             <label>
-                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren2" value="False">
-                                no
+                                <input type="radio" name="Drools" id="Drools2" value="False">
+                                Don't mind
                             </label>
                         </div>
-                    </div>
-                    <label class="control-label">Drooling</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Drools" id="Drools1" value="True" checked>
-                            No Drooling
-                        </label>
-                    </div>
-
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Drools" id="Drools2" value="False">
-                            Don't mind
-                        </label>
-                    </div>
 
 
-                    <label class="control-label">Coat length</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Coatlength" id="Coatlength1" value="Short" checked>
-                            Short
-                        </label>
-                    </div>
+                        <label class="control-label">Coat length</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="Coatlength" id="Coatlength1" value="Short" checked>
+                                Short
+                            </label>
+                        </div>
 
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Coatlength" id="Coatlength2" value="Medium">
-                            Medium
-                        </label>
-                    </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="Coatlength" id="Coatlength2" value="Medium">
+                                Medium
+                            </label>
+                        </div>
 
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Coatlength" id="Coatlength3" value="Long">
-                            Long
-                        </label>
-                    </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="Coatlength" id="Coatlength3" value="Long">
+                                Long
+                            </label>
+                        </div>
 
-                    <h4>Preferences</h4>
+                </div>
 
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Preferences</label>
                     <table class="table table-striped centerRadio ">
                         <tr><th></th><th>Low</th><th>Medium</th><th>High</th><th>No Preference</th></tr>
                         <tr>
@@ -222,7 +230,7 @@
                             <td>
                                 <div class="radio-inline">
                                     <label>
-                                        <input type="radio" name="IntelligenceLevel4" id="IntelligenceLevel4" value="NoPreference">
+                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel4" value="NoPreference">
 
                                     </label>
                                 </div>
@@ -233,7 +241,7 @@
 
                     <label>Dog Size</label>
 
-                    <select class="form-control" name="Size" >
+                    <select class="form-control" name="Size">
                         <option>Miniature</option>
                         <option>Small</option>
                         <option>Medium</option>
@@ -241,19 +249,24 @@
                         <option>Giant</option>
                     </select>
 
-                   <br />
-                        <button type="submit" class="btn btn-default">Find Dog</button>
-                     
+                </div>
+                </div>
 
-                </form>
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+
+                    <br />
+                    <button type="submit" class="btn btn-default btn-block">Find Dog</button>
 
 
+                    </form>
+
+                </div>
+            </div>
 
 
             </div>
 
-        </div>
-
-    </div>
 </body>
 </html>
