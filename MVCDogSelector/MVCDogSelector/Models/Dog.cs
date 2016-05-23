@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MVCDogSelector.Models
 {
-    public enum EScale {Low, Medium, High, NoPreference}
+    public enum EScale {NoPreference, Low, Medium, High}
     public enum ESize {Miniature, Small, Medium, Large, Giant}
     public enum ELength { Short, Medium, Long}
 

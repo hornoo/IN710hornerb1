@@ -10,16 +10,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <title>SelectDog</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
 
-                <h2>Dog Selector</h2>
-                <h2><small>We'll help you choose the perfect dog</small></h2>
+                <div class="jumbotron">
+                    <h1>Dog Selector</h1>
+                    <h2><small>We'll help you choose the perfect dog</small></h2>
+                </div>
 
                 <form action="Index" method="post">
 
@@ -79,13 +82,13 @@
 
                     <h4>Preferences</h4>
 
-                    <table class="table">
+                    <table class="table table-striped centerRadio ">
                         <tr><th></th><th>Low</th><th>Medium</th><th>High</th><th>No Preference</th></tr>
                         <tr>
                             <td>Activity Level</td>
 
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="ActivityLevel" id="ActivityLevel1" value="Low" checked>
 
@@ -93,7 +96,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="ActivityLevel" id="ActivityLevel2" value="Medium">
 
@@ -101,7 +104,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="ActivityLevel" id="ActivityLevel3" value="High">
 
@@ -109,7 +112,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="ActivityLevel" id="ActivityLevel4" value="NoPreference">
 
@@ -121,7 +124,7 @@
                             <td>Shedding Level</td>
 
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="SheddingLevel" id="SheddingLevel1" value="Low" checked>
 
@@ -129,7 +132,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="SheddingLevel" id="SheddingLevel2" value="Medium">
 
@@ -137,7 +140,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="SheddingLevel" id="SheddingLevel3" value="High">
 
@@ -145,7 +148,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="SheddingLevel" id="SheddingLevel4" value="NoPreference">
 
@@ -157,7 +160,7 @@
                             <td>Grooming Level</td>
 
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="GroomingLevel" id="GroomingLevel1" value="Low" checked>
 
@@ -165,7 +168,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="GroomingLevel" id="GroomingLevel2" value="Medium">
 
@@ -173,7 +176,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="GroomingLevel" id="GroomingLevel3" value="High">
 
@@ -181,7 +184,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="GroomingLevel" id="GroomingLevel4" value="NoPreference">
 
@@ -193,7 +196,7 @@
                             <td>Intelligence Level</td>
 
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel1" value="Low" checked>
 
@@ -201,7 +204,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel2" value="Medium">
 
@@ -209,7 +212,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel3" value="High">
 
@@ -217,7 +220,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="radio">
+                                <div class="radio-inline">
                                     <label>
                                         <input type="radio" name="IntelligenceLevel4" id="IntelligenceLevel4" value="NoPreference">
 
@@ -228,6 +231,8 @@
 
                     </table>
 
+                    <label>Dog Size</label>
+
                     <select class="form-control" name="Size" >
                         <option>Miniature</option>
                         <option>Small</option>
@@ -236,7 +241,9 @@
                         <option>Large</option>
                     </select>
 
-                    <button type="submit" class="btn btn-default">Find Dog</button>
+                   <br />
+                        <button type="submit" class="btn btn-default">Find Dog</button>
+                     
 
                 </form>
 

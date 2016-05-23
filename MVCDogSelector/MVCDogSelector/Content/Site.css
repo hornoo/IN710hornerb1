@@ -16,3 +16,15 @@ textarea {
     max-width: 280px;
 }
 
+.centerRadio{
+    text-align:center;
+}
+
+th{
+    text-align:center;
+}
+
+.dogImage{
+    width: 100%;
+}
+

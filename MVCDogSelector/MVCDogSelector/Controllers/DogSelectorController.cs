@@ -28,7 +28,6 @@ namespace MVCDogSelector.Controllers
             foreach(Dog currentDog in dogDataBase)
             {
                 currentDog.MatchScore = computeMatchScore(selectedDog, currentDog);
-                System.Diagnostics.Debug.WriteLine(currentDog.ImageName + " " + currentDog.MatchScore);
             }
 
 
@@ -36,6 +35,11 @@ namespace MVCDogSelector.Controllers
             IEnumerable<Dog> lowestScoringDog = dogDataBase.Where(d => (d.MatchScore == dogDataBase.Min(cd => cd.MatchScore)));
 
             matchchedDog = lowestScoringDog.First();
+
+            foreach(Dog d in lowestScoringDog)
+            {
+                System.Diagnostics.Debug.WriteLine(d.DisplayName);
+            }
 
             return View("DisplayDog", matchchedDog);
         }

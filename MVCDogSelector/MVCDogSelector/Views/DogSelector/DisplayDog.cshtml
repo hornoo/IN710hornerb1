@@ -11,23 +11,73 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <title>DisplayDog</title>
 </head>
 <body>
-    <div> 
-        <p>Activ @Model.ActivityLevel</p>
-        <p>shre @Model.SheddingLevel</p>
-        <p> groom @Model.GroomingLevel</p>
-        <p> drool @Model.Drools</p>
-        <p> clen @Model.Coatlength</p>
-        <p>size @Model.Size</p>
-        <p>child @Model.GoodWithChildren</p>
-        <p> intel @Model.IntelligenceLevel</p>
-        <p> breed @Model.BreedName</p>
-        <p>Match Score @Model.MatchScore</p>
+    <div class="container">
 
-        <a href="~/DogSelector/Index">Return to Dog Selector</a>
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+
+                <div class="jumbotron">
+
+                    <h1>Recommended Dog:</h1>
+                    <h4>We suggest the @Model.BreedName @Model.DisplayName</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <table class="table table-striped">
+                    <tr>
+                        <td>Activity level:</td>
+                        <td>@Model.ActivityLevel</td>
+                    </tr>
+                    <tr>
+                        <td>Shedding Level:</td>
+                        <td>@Model.SheddingLevel</td>
+                    </tr>
+                    <tr>
+                        <td>Grooming Level:</td>
+                        <td>@Model.GroomingLevel</td>
+                    </tr>
+                    <tr>
+                        <td>Good with Children:</td>
+                        <td>@Model.GoodWithChildren</td>
+                    </tr>
+                    <tr>
+                        <td>Drools:</td>
+                        <td>@Model.Drools</td>
+                    </tr>
+                    <tr>
+                        <td>Coal Length:</td>
+                        <td>@Model.Coatlength</td>
+                    </tr>
+                    <tr>
+                        <td>Size:</td>
+                        <td>@Model.Size</td>
+                    </tr>
+                    <tr>
+                        <td>Match Score(Lower is better)</td>
+                        <td>@Model.MatchScore</td>
+                    </tr>
+                </table>
+                <a href="~/DogSelector/Index">Return to Dog Selector</a>
+            </div>
+            <div class="col-md-6">
+                <img class="img-rounded dogImage" src="~/Content/Images/@Model.ImageName" />
+            </div>
+
+        </div>
 
     </div>
+
 </body>
 </html>
