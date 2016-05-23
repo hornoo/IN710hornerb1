@@ -21,20 +21,20 @@
                 <h2>Dog Selector</h2>
                 <h2><small>We'll help you choose the perfect dog</small></h2>
 
-                <form class="">
+                <form action="Index" method="post">
 
                     <div class="form-group">
                         <label class="control-label">Must be good with children</label>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren1" value="true" checked>
+                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren1" value="True" checked>
                                 Yes
                             </label>
                         </div>
                     
                         <div class="radio">
                             <label>
-                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren2" value="false">
+                                <input type="radio" name="GoodWithChildren" id="GoodWithChildren2" value="False">
                                 no
                             </label>
                         </div>
@@ -42,14 +42,14 @@
                     <label class="control-label">Drooling</label>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="Drools" id="Drools1" value="true" checked>
+                            <input type="radio" name="Drools" id="Drools1" value="True" checked>
                             No Drooling
                         </label>
                     </div>
 
                     <div class="radio">
                         <label>
-                            <input type="radio" name="Drools" id="Drools2" value="false">
+                            <input type="radio" name="Drools" id="Drools2" value="False">
                             Don't mind
                         </label>
                     </div>
@@ -87,7 +87,7 @@
                             <td>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="ActivityLevel" id="ActivityLevel1" value="Low">
+                                        <input type="radio" name="ActivityLevel" id="ActivityLevel1" value="Low" checked>
 
                                     </label>
                                 </div>
@@ -123,7 +123,7 @@
                             <td>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="SheddingLevel" id="SheddingLevel1" value="Low">
+                                        <input type="radio" name="SheddingLevel" id="SheddingLevel1" value="Low" checked>
 
                                     </label>
                                 </div>
@@ -159,7 +159,7 @@
                             <td>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="GroomingLevel" id="GroomingLevel1" value="Low">
+                                        <input type="radio" name="GroomingLevel" id="GroomingLevel1" value="Low" checked>
 
                                     </label>
                                 </div>
@@ -195,7 +195,7 @@
                             <td>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel1" value="Low">
+                                        <input type="radio" name="IntelligenceLevel" id="IntelligenceLevel1" value="Low" checked>
 
                                     </label>
                                 </div>
@@ -227,6 +227,16 @@
                         </tr>
 
                     </table>
+
+                    <select class="form-control" name="Size" >
+                        <option>Miniature</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>Large</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-default">Find Dog</button>
 
                 </form>
 

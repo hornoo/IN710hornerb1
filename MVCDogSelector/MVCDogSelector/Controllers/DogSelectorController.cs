@@ -9,10 +9,67 @@ namespace MVCDogSelector.Controllers
 {
     public class DogSelectorController : Controller
     {
+        const int No_MATCH = 50;
+
         // GET: DogSelector
+        [HttpGet]
         public ActionResult Index()
         {
+
             return View("SelectDog");
+        }
+
+        [HttpPost]
+        public ActionResult Index(Dog selectedDog)
+        {
+            Dog matchchedDog = null;
+            List<Dog> dogDataBase = makeDatabase();
+
+            foreach(Dog currentDog in dogDataBase)
+            {
+                currentDog.MatchScore = computeMatchScore(selectedDog, currentDog);
+                System.Diagnostics.Debug.WriteLine(currentDog.ImageName + " " + currentDog.MatchScore);
+            }
+
+
+
+            IEnumerable<Dog> lowestScoringDog = dogDataBase.Where(d => (d.MatchScore == dogDataBase.Min(cd => cd.MatchScore)));
+
+            matchchedDog = lowestScoringDog.First();
+
+            return View("DisplayDog", matchchedDog);
+        }
+
+        private int computeMatchScore(Dog UserDog, Dog DatabaseDog)
+        {
+            int score = 0;
+
+            if((UserDog.GoodWithChildren == true) && (DatabaseDog.GoodWithChildren == false))
+            {
+                return No_MATCH;
+            }
+
+            if((UserDog.Drools == true) && (DatabaseDog.Drools == true))
+            {
+                return No_MATCH;
+            }
+
+            score += Math.Abs((int)UserDog.ActivityLevel - (int)DatabaseDog.ActivityLevel);
+            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.ActivityLevel - (int)DatabaseDog.ActivityLevel));
+
+            score += Math.Abs((int)UserDog.SheddingLevel - (int)DatabaseDog.SheddingLevel);
+            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.SheddingLevel - (int)DatabaseDog.SheddingLevel));
+
+            score += Math.Abs((int)UserDog.IntelligenceLevel - (int)DatabaseDog.IntelligenceLevel);
+            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.IntelligenceLevel - (int)DatabaseDog.IntelligenceLevel));
+
+            score += Math.Abs((int)UserDog.Coatlength - (int)DatabaseDog.Coatlength);
+            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.Coatlength - (int)DatabaseDog.Coatlength));
+
+            score += Math.Abs((int)UserDog.Size - (int)DatabaseDog.Size);
+            System.Diagnostics.Debug.WriteLine(Math.Abs((int)UserDog.Size - (int)DatabaseDog.Size));
+
+            return score;
         }
 
 

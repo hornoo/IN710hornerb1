@@ -22,6 +22,7 @@ namespace MVCDogSelector.Models
         public bool Drools { get; set; }
         public ELength Coatlength { get; set; }
         public ESize Size { get; set; }
+        public int MatchScore { get; set; }
 
      }
 }
